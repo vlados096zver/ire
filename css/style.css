@@ -373,6 +373,7 @@ main {
 
 .popup .select__item--active,
 .main-header .select__item--active {
+	display: none;
 	background-color: #fff;
 	color: #6B6C70;
 }
@@ -2168,7 +2169,6 @@ img {
 	padding: 20px 30px;
 	overflow-y: auto;
 	overflow-x: hidden;
-	margin: 0 20px;
 }
 
 .popup__block--elem {
@@ -2176,6 +2176,7 @@ img {
 	max-width: 445px;
 	height: initial;
 	background-color: #fff;
+	margin: 0 20px;
 }
 
 .popup--menu {
