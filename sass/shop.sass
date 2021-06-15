@@ -1,0 +1,359 @@
+@import 'responsive'
+
+.shop
+	background-color: #fff
+	padding-top: 80px
+	padding-bottom: 34px
+	+media(mdx)
+		padding-top: 50px
+	+media(sm)
+		padding-top: 12px
+		padding-bottom: 14px
+
+	&__inner
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+	&__elem
+		font-size: 12px
+		line-height: 1.2
+		color: #6B6C70
+		margin-bottom: 32px
+		+media(smdx)
+			display: none
+
+	.select__wrap
+		max-width: 290px
+		margin-bottom: 32px
+		+media(sm)
+			max-width: 172px
+			margin-bottom: 28px
+		&:after
+			+media(sm)
+				display: none
+
+	.select__placeholder
+		border: 1px solid #ECEDF3
+		border-radius: 4px
+		+media(sm)
+			background-image: url(../img/icons/filter.svg)
+			background-repeat: no-repeat
+			background-position: left 20px center
+			background-size: 16px 14px
+			font-size: 12px
+			color: #3D3F42
+			text-transform: uppercase
+			border-color: #3D3F42
+			padding-left: 48px
+			padding-right: 15px
+
+	.select__item
+		+media(sm)
+			font-size: 12px
+			color: #3D3F42
+
+	.select__list
+		margin-top: 10px
+		border: 1px solid #ECEDF3
+		border-radius: 4px
+		+media(sm)	
+			border-color: #3D3F42
+
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -20px
+		+media(smdx)
+			flex-direction: column
+			margin: 0px
+
+	&__slider
+		position: relative
+
+	&__item
+		position: relative
+		width: calc(100% / 3 - 40px)
+		margin: 0 20px
+		margin-bottom: 32px
+		+media(mdx)
+			width: calc(100% / 2 - 40px)
+		+media(smdx)
+			max-width: 300px
+			width: 100%
+			margin: 0 auto
+			margin-bottom: 16px
+		&:hover
+			.shop__size, 
+			.shop__btn
+				opacity: 1
+				visibility: visible
+
+		.slick-track
+			display: flex
+			align-items: center
+			justify-content: center
+
+	&--inner
+		.shop__wrap
+			+media(smdx)
+				flex-direction: row
+				margin: 0px -20px
+
+		.shop__item
+			+media(smdx)
+				width: calc(100% / 2 - 40px)
+				max-width: 100%	
+				margin: 0px 20px
+				margin-bottom: 16px
+
+	&__pic
+		display: block
+		img
+			display: block
+			margin: 0 auto
+		
+	&__holder
+		display: flex
+
+	&__box
+		&--aside
+			width: 290px
+			padding-top: 2px
+			+media(smdx)
+				display: none
+
+		&--content
+			width: calc(100% - 290px)
+			padding-right: 40px
+			+media(md)
+				padding-right: 30px
+			+media(smdx)
+				width: 100%
+				padding-right: 0px
+
+	&__subtitle
+		font-size: 14px
+		line-height: 1.2
+		color: #3D3F42
+		text-transform: uppercase
+		margin-bottom: 24px
+		font-weight: 600
+		&--price
+			margin-bottom: 18px
+
+	&__list
+		display: flex
+		flex-direction: column
+		padding-bottom: 48px
+		&--size
+			.shop__col
+				text-transform: uppercase
+
+	&__col
+		cursor: pointer
+		display: inline-block
+		width: max-content
+		font-size: 14px
+		line-height: 1.2
+		color: #9F9F9F
+		margin-bottom: 16px
+		transition: 0.3s color
+		&:hover
+			color: #212223
+
+	&__row
+		position: relative
+		margin-bottom: 16px
+		+media(smdx)
+			margin-bottom: 8px
+
+	&__add
+		cursor: pointer
+		position: absolute
+		display: none
+		top: 10px
+		left: 10px
+		width: 18px
+		height: 18px
+		border: none
+		outline: none
+		padding: 0px
+		background-color: transparent
+		&--active
+			display: block
+			.shop__icon
+				fill: #3D3F42
+		
+	&__icon
+		width: 100%
+		height: 100%
+
+	&__size
+		position: absolute
+		z-index: 2
+		left: 0px
+		bottom: 0px
+		width: 100%
+		opacity: 0
+		visibility: hidden
+		display: flex
+		justify-content: center
+		background-color: rgba(249, 249, 249, 0.8)
+		padding: 0 12px
+		padding-top: 23px
+		margin: 0 -12px
+		transition: 0.5s opacity, 0.5s visibility
+		+media(smdx)
+			display: none
+
+	&__user
+		user-select: none
+		cursor: default
+		font-size: 12px
+		line-height: 1.2
+		text-transform: uppercase
+		color: #9F9F9F
+		margin: 0 12px
+		margin-bottom: 23px
+		&--active
+			color: #212223
+
+	&__sale
+		cursor: default
+		user-select: none
+		position: absolute
+		top: 0px
+		right: 0px
+		max-width: 43px
+		width: 100%
+		font-size: 12px
+		line-height: 1.2
+		color: #fff
+		background-color: #212223
+		text-transform: uppercase
+		text-align: center
+		padding: 4px 0
+
+	&__title
+		font-size: 14px
+		line-height: 1.4
+		color: #3D3F42
+		text-align: center
+		margin-bottom: 8px
+		+media(smdx)
+			margin-bottom: 5px
+
+	&__block
+		display: flex
+		align-items: center
+		justify-content: center
+
+	&__price
+		font-size: 12px
+		line-height: 1.2
+		color: #9F9F9F
+		text-transform: uppercase
+		text-align: center
+		&--old
+			text-decoration: line-through
+			padding-right: 8px
+
+	&__inner
+		display: flex
+		align-items: center
+		margin-top: 9px
+
+	&__btn
+		position: absolute
+		opacity: 0
+		visibility: hidden
+		top: 50%
+		transform: translateY(-50%)
+		cursor: pointer
+		display: block
+		width: 44px
+		height: 44px
+		background-color: transparent
+		color: #ffffff
+		border: none
+		outline: none
+		transition: 0.5s opacity, 0.5s visibility
+		&--dir_left,
+		&--dir_right
+			&:after
+				position: absolute
+				content: ' '
+				width: 10px
+				height: 10px
+				top: calc(50% - 5px)
+				left: calc(50% - 3px)
+				border-left: 2px solid #6B6C70
+				border-top: 2px solid #6B6C70
+				transform: rotate(-45deg)
+
+		&--dir_right
+			right: 0px
+			transform: translateY(-50%) scaleX(-1)
+
+
+	&__dots-list
+		position: absolute
+		z-index: 3
+		left: 50%
+		transform: translateX(-50%)
+		bottom: 0px
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -4px
+		li
+			cursor: pointer
+			font-size: 0px
+			width: 5px
+			height: 5px
+			background-color: #E8E8E8
+			border-radius: 13px
+			margin: 0 4px
+			margin-bottom: 10px
+			&.slick-active
+				background-color: #9F9F9F
+
+	&__control
+		display: none
+		+media(sm)
+			display: flex
+			margin-bottom: 28px
+
+	&__rebuild
+		display: block
+		width: 100%
+		height: 100%
+
+	&__view
+		cursor: pointer
+		width: 16px
+		height: 16px
+		border: none
+		outline: none
+		background-repeat: no-repeat
+		background-size: 16px
+		background-position: center
+		padding: 0px
+		background-color: transparent
+		&--row
+			margin-right: 24px
+			.shop__rebuild	
+				fill: transparent
+				stroke: #6B6C70
+
+			&.shop__view--active
+				.shop__rebuild
+					stroke: #3D3F42
+
+		&--col
+			.shop__rebuild
+				fill: #6B6C70
+				stroke: transparent
+			&.shop__view--active
+				.shop__rebuild
+					fill: #3D3F42

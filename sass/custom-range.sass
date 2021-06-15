@@ -1,0 +1,72 @@
+
+.custom-range
+	cursor: pointer
+	--persent-min: 0%
+	--persent-max: 0%
+	--width-line: 1px
+	--width-pen: 1px
+	--pen-min: calc(var(--persent-min) - var(--width-pen) / 2)
+	--pen-max: calc(var(--persent-max) - var(--width-pen) / 2)
+	
+	position: relative
+	outline: none
+	padding: 10px var(--width-pen)
+	padding-bottom: 9px
+
+	&:before
+		content: ""
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		height: var(--width-line)
+		background: #6B6C70
+		pointer-events: none
+
+
+	&__inner
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+
+	&__min,
+	&__max
+		display: none
+
+	&__line 
+		position: relative
+		height: var(--width-line)
+		background: linear-gradient(to right, #6B6C70 var(--pen-min), #6B6C70 var(--pen-min), #6B6C70 var(--pen-max), #6B6C70 var(--pen-max))
+		pointer-events: none
+		
+		&:before, &:after 
+			content: ""
+			position: absolute
+			z-index: 3
+			top: 50%
+			width: var(--width-pen)
+			height: 8px
+			transform: translateY(-50%)
+			background: #6B6C70
+			pointer-events: none
+		
+		&:before 
+			left: var(--pen-min)
+		
+		&:after 
+			left: var(--pen-max)
+
+	&__min-value, 
+	&__max-value 
+		border: none
+		padding-right: 5px
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button 
+			-webkit-appearance: none
+		
+		-moz-appearance: textfield
+
+	&__desc
+		font-size: 12px
+		line-height: 1.2
+		color: #9F9F9F
+		text-transform: uppercase

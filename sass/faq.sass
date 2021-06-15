@@ -1,0 +1,84 @@
+@import 'responsive'
+
+.faq
+	background-color: #fff
+	padding: 80px 0
+	+media(mdx)
+		padding: 50px 0
+	+media(sm)
+		padding: 32px 0
+
+	&__title
+		display: flex
+		align-items: center
+		position: relative
+		font-size: 18px
+		line-height: 1.2
+		color: #3D3F42
+		margin-bottom: 30px
+		font-weight: 600
+		&:after
+			content: ' '
+			border-top: 1px solid #e8e8e8
+			flex: 1
+			margin-left: 16px
+
+	&__holder
+		counter-reset: list_faq
+		&:not(:last-child)
+			margin-bottom: 46px
+
+		&:nth-child(2)
+			.faq__box:first-child
+				.faq__text
+					display: block
+
+	&__box
+		&:not(:last-child)
+			margin-bottom: 20px
+			+media(sm)
+				margin-bottom: 16px
+
+	&__subtitle
+		user-select: none
+		cursor: pointer
+		position: relative
+		font-size: 14px
+		line-height: 1.45
+		color: #3d3f42
+		padding: 0 20px 
+		&:before,
+		&:after
+			position: absolute
+
+		&:before
+			left: 0px
+			top: 50%
+			transform: translateY(-50%)
+			font-size: 14px
+			color: #3D3F42
+			counter-increment: list_faq
+			content: counter(list_faq) '.'
+
+		&:after
+			content: ' '
+			top: calc(50% - 2px)
+			width: 9px
+			height: 9px
+			right: 2px
+			border-right: 2px solid #9f9f9f
+			border-bottom: 2px solid #9f9f9f
+			transform: translateY(-50%) rotate(45deg)
+			transition: 0.3s transform, 0.3s top
+
+		&.faq__subtitle--active:after
+			transform: translateY(-50%) rotate(45deg) scale(-1)
+			top: calc(50% + 2px)
+
+	&__text
+		display: none
+		padding-top: 8px
+		p
+			font-size: 14px
+			line-height: 1.45
+			color: #9f9f9f

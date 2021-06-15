@@ -1,0 +1,31 @@
+@import 'responsive'
+
+.collection
+	background-color: #fff
+	padding: 80px 0
+	+media(mdx)
+		padding: 50px 0
+	+media(smdx)
+		padding: 0
+		padding-bottom: 40px
+	&__wrap
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		grid-gap: 40px
+		padding-bottom: 40px
+		+media(smdx)
+			grid-template-columns: repeat(2, 1fr)
+		+media(sm)
+			grid-template-columns: 100%
+
+	&__item
+		height: 0px
+		padding-top: 150%
+		background-repeat: no-repeat
+		background-size: cover
+		
+	&--inner	
+		.collection__wrap
+			+media(sm)
+				grid-template-columns: repeat(2, 1fr)	
+				grid-gap: 16px

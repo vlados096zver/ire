@@ -1,0 +1,217 @@
+@import 'responsive'
+
+.main-header
+	background-color: #fff
+	&__wrap
+		position: relative
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 33px 30px
+		+media(smdx)
+			padding: 15px 30px
+			padding-top: 19px
+
+	&__logo
+		display: block
+		max-width: 55px
+		width: 100%
+		margin-top: -4px
+		+media(smdx)
+			max-width: 42px
+		img
+			display: block
+			width: 100%
+
+	&__menu
+		+media(smdx)
+			order: -1
+
+	&__list
+		display: flex
+		li:not(:last-child)
+			margin-right: 48px
+			+media(mdx)
+				margin-right: 25px
+			+media(smdx)
+				margin-right: 0px
+		+media(smdx)
+			display: none
+			background-color: #fff
+			margin-bottom: 35px	
+			border-bottom: 1px solid #E8E8E8
+
+	&__link
+		position: relative
+		display: inline-block
+		font-size: 14px
+		line-height: 1.2
+		color: #9F9F9F
+		text-transform: uppercase
+		font-weight: 400
+		transition: 0.3s color
+		+media(smdx)
+			margin-bottom: 35px
+		&--active
+			color: #3D3F42
+
+		&:hover:not(.main-header__link--active)
+			color: #3D3F42
+
+	&__holder
+		display: flex	
+		align-items: center
+
+	&__elem
+		display: flex
+		align-items: center
+		margin-right: 48px	
+		+media(smdx)
+			margin-right: 0px	
+
+	&__box
+		cursor: pointer
+		display: block
+		width: 16px
+		height: 16px
+		border: none
+		outline: none
+		background-color: transparent
+		padding: 0px
+		&--basket
+			width: 14px
+			margin-left: 24px
+			.main-header__icon
+				width: 14px
+
+	&__icon
+		display: block
+		width: 100%
+		height: 100%
+		fill: #6B6C70
+		+media(smdx)
+			fill: #3D3F42
+		&:hover
+			fill: #3D3F42
+			+media(smdx)
+				fill: #6B6C70
+
+	&__lang
+		position: relative
+		width: 40px
+		min-height: 24px
+	
+	.main-header__lang,
+	.select__wrap
+		+media(smdx)
+			display: none
+
+.mobile-wrap
+	display: none
+	align-items: center
+	justify-content: space-between
+	cursor: pointer
+	+media(smdx)
+		display: flex
+		background-color: #fff
+
+.main-nav__toggle
+	position: relative
+	cursor: pointer
+	display: none
+	width: 16px
+	height: 16px
+	+media(smdx)
+		display: block
+
+.line-burger
+	display: block
+	position: absolute
+	top: 50%
+	left: 0
+	width: 16px
+	height: 2px
+	background-color: #3D3F42
+	transition: 0.5s width
+	&:after,
+	&:before
+		content: ''
+		position: absolute
+		width: 16px
+		height: 2px
+		background-color: #3D3F42
+		left: 0
+		transition: 0.5s
+	&:after
+		top: calc(100% + 5px)
+	&:before
+		bottom: calc(100% + 5px)
+
+.line-active
+	width: 0
+	&:after
+		top: 6px
+		transform: rotate(-45deg)
+		transform-origin: 0 0
+	&:before
+		bottom: 6px
+		transform: rotate(45deg)
+		transform-origin: 0 100%
+
+.language-chooser
+	position: absolute
+	display: flex
+	flex-direction: column
+	z-index: 5
+	top: 5px
+	li
+		cursor: pointer
+		background-color: #fff
+		padding-bottom: 2px
+		&:not(.active)
+			display: none
+		&.active
+			order: -1
+	li, li a
+		display: block
+		font-size: 14px	
+		color: #6B6C70
+		text-transform: uppercase
+		transition: 0.3s color
+		&:hover
+			color: #3D3F42
+
+
+.popup, .main-header
+
+	.select__wrap
+		padding: 0px
+		width: 32px
+		max-width: initial
+		&:after
+			display: none
+
+	.select__placeholder
+		color: #6B6C70
+		padding: 0px
+		text-transform: uppercase
+
+	.select__item
+		color: #6B6C70
+		padding: 5px 0
+		text-transform: uppercase
+		&:hover
+			background-color: #fff
+			color: #6B6C70
+
+	.select__item--active
+		background-color: #fff
+		color: #6B6C70
+
+.main-header
+	.select__wrap
+		width: 42px
+	.select__placeholder,
+	.select__item
+		padding-left: 5px
+		padding-right: 5px	

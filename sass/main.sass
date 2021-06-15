@@ -1,0 +1,166 @@
+@import 'responsive'
+
+body
+	margin: 0
+	padding: 0
+	width: 100%
+	//min-height: 100vh
+	overflow-x: hidden
+	color: #333333
+	background-color: #f7f7f7
+	font-size: 16px
+	line-height: 1.2
+	font-weight: normal
+	font-style: normal
+	font-family: OpenSans
+
+* 
+	box-sizing: border-box
+
+img
+	max-width: 100%
+	height: auto
+
+.svg
+	&-about
+		position: absolute
+		width: 0px
+		height: 0px
+
+.container
+	max-width: 1290px
+	width: 100%
+	margin: 0 auto
+	padding: 0 30px
+	&--header
+		padding: 0px
+		max-width: 1290px
+
+	&--inner
+		max-width: 1390px
+		padding: 0px
+
+	&--about
+		max-width: 1080px
+
+	
+
+
+.input
+	display: block
+	width: 100%
+	font-size: 14px
+	color: #686868
+	background-color: transparent
+	border: 1px solid #e3e2e7
+	color: #686868
+	box-shadow: inset 0 0 0 1px #f6f6f6
+	padding: 11px 25px
+	font-weight: 300
+	&::placeholder
+		font-size: 14px
+		color: #686868
+		font-weight: 300
+
+	&:focus::placeholder
+		color: #e3e2e7
+
+	&--area
+		resize: vertical
+		min-height: 150px
+
+	&.form-fail
+		border-color: #b00
+
+	&.form-done
+		border-color: #90ee90
+
+.btn
+	display: block
+	cursor: pointer
+	font: inherit
+	font-size: 14px
+	line-height: 1.5
+	border: none
+	outline: none
+	background-color: #68bec4
+	color: #fff
+	text-align: center
+	text-transform: uppercase
+	border-radius: 4px
+	padding: 9px 12px
+	padding-bottom: 10px
+	font-weight: normal
+	transition: 0.3s background-color, 0.3s color, 0.3s border
+	&--agree
+		background-color: #fff
+		color: #3D3F42
+		border: 1px solid #fff
+		margin-right: 16px
+		+media(smdx)
+			max-width: 136px	
+			width: 100%
+			font-size: 12px
+			padding: 11px 15px
+			margin-right: 25px
+		&:hover
+			color: #fff
+			background-color: #3D3F42
+
+	&--link
+		max-width: 140px
+		width: 100%
+		background-color: transparent
+		border: 1px solid #fff
+		+media(smdx)
+			max-width: 136px
+			font-size: 12px
+			padding: 11px 15px
+		&:hover
+			color: #3D3F42
+			background-color: #fff
+
+	&--show
+		max-width: 104px
+		width: 100%
+		font-size: 12px
+		background: #212223
+		padding: 11px 15px
+
+	&--collection
+		max-width: 278px
+		width: 100%
+		font-size: 12px
+		background-color: #212223
+		margin: 0 auto
+		padding: 11px 10px
+
+	&--favorites
+		width: 100%
+		font-size: 12px
+		border: none
+		outline: none
+		background-color: transparent
+		color: #212223
+		border: 1px solid #212223
+		padding: 9px 5px
+		text-transform: uppercase
+		margin-top: 16px
+		&:hover
+			background-color: #212223
+			color: #fff
+
+	&--basket
+		max-width: 278px
+		width: 100%
+		font-size: 12px
+		background-color: #212223
+		color: #fff
+		padding: 11px 5px
+		margin-bottom: 32px
+
+	&--show,
+	&--collection,
+	&--basket
+		&:hover
+			background-color: #696d70

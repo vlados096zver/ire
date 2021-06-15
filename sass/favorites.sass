@@ -1,0 +1,27 @@
+@import 'responsive'
+
+.favorites
+	background-color: #fff
+	padding-top: 80px
+	padding-bottom: 48px
+	+media(sm)
+		padding-top: 16px
+		padding-bottom: 0px
+	.shop__wrap
+		+media(sm)
+			flex-direction: row
+			margin: 0 -20px
+		+media(xxs)
+			flex-direction: column
+
+	.shop__item
+		+media(sm)
+			max-width: initial
+			width: calc(100% / 2 - 40px)
+			margin: 0 20px	
+			margin-bottom: 32px
+		+media(xxs)
+			max-width: 300px
+			width: 100%
+			margin: 0px auto
+			margin-bottom: 32px

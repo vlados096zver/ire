@@ -1,0 +1,115 @@
+@import 'responsive'
+
+.breadcrumbs
+	background-color: #f8f8f8
+	padding: 64px 0
+	+media(mdx)
+		padding: 45px 0
+	+media(sm)
+		display: none
+
+	&--collection		
+		padding: 57px 0
+		+media(sm)
+			display: block	
+			background-color: #fff
+			padding-top: 13px
+			padding-bottom: 40px
+
+		.shop__control
+			margin-bottom: 0px
+
+		.select__wrap
+			max-width: 178px
+			background-image: url(../img/icons/decor-select.svg)
+			background-size: 10px 24px
+			background-repeat: no-repeat
+			background-position: right 2px center
+			+media(sm)
+			max-width: 165px
+			&:after
+				display: none
+				transform: none
+
+		.select__placeholder
+			font-size: 20px
+			color: #3D3F42
+			text-transform: none
+			background-color: transparent
+			padding-left: 0px
+			font-weight: 600
+			a
+				color: inherit
+
+		.select__list
+			display: flex	
+			flex-direction: column
+			padding: 24px
+			padding-bottom: 14px
+			border-top: 1px solid #cacbce	
+
+		.select__item
+			display: inline-block
+			font-size: 12px
+			padding: 0px
+			color: #3D3F42
+			margin-bottom: 10px	
+			a
+				display: inherit
+				width: max-content
+				color: inherit
+
+		.breadcrumbs__list
+			+media(sm)
+				display: none	
+
+	&__wrap
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+	&__title
+		font-size: 20px
+		line-height: 1.2
+		color: #3D3F42
+		text-transform: uppercase
+		font-weight: 600
+		&--mobile
+			display: none
+			+media(sm)
+				display: block
+				padding-bottom: 23px
+
+	&__list
+		display: flex
+		align-items: center
+		li
+			cursor: default
+			display: inline-block
+			text-transform: uppercase
+			a
+				cursor: pointer
+				position: relative
+				margin-right: 7px
+				transition: 0.3s color
+				&:hover
+					color: #3D3F42
+					
+				&:after
+					margin-left: 9px
+					content: '/'
+					color: #6B6C70
+
+			span
+				position: relative
+				display: block
+				margin-left: 9px
+				&:before
+					content: '/'
+					color: #6B6C70
+					margin-right: 9px
+
+		li, a
+			font-size: 12px
+			line-height: 1.2
+			color: #6B6C70

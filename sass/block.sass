@@ -1,0 +1,35 @@
+@import 'responsive'
+
+.block
+	background-color: #212223
+	position: fixed
+	z-index: 10
+	width: 100%
+	left: 0px
+	bottom: 0px
+	&__wrap
+		display: flex
+		align-items: center
+		padding: 23px 40px
+		+media(smdx)
+			display: block
+			padding: 23px 30px
+
+	&__desc
+		padding-right: 48px
+		+media(smdx)
+			padding-right: 0px
+			margin-bottom: 24px
+		p
+			font-size: 12px
+			line-height: 1.2
+			color: #E8E8E8
+			a
+				color: #E8E8E8
+				text-decoration: underline
+				&:hover
+					text-decoration: none
+
+	&__inner
+		display: flex
+		align-items: center

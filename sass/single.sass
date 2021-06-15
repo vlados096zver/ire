@@ -1,0 +1,310 @@
+@import 'responsive'
+
+.single
+	background-color: #fff
+	padding: 80px 0
+	+media(md)
+		padding: 45px 0
+	+media(sm)
+		padding: 30px 0
+
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -20px
+		+media(md)
+			margin: 0px
+
+	&__item
+		width: calc(100% / 2 - 40px)
+		margin: 0 20px
+		+media(md)
+			width: 100%
+			margin: 0px
+		&:first-child
+			+media(md)
+				margin-bottom: 14px
+		&:last-child
+			padding-left: 105px
+			+media(lgs)
+				padding-left: 0px
+
+	&__big
+		position: relative
+		
+		img
+			display: block
+
+	&__user
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-bottom: 40px
+		+media(md)
+			margin-bottom: 16px
+		.slick-track
+			display: flex
+			align-items: center
+
+	&__pic
+		img
+			display: block
+			margin: 0 auto
+
+	&__slider
+		+media(md)
+			display: none
+
+	&__gallery
+		display: flex
+		align-items: center
+		margin: 0 -20px
+		.slick-track
+			display: flex
+			align-items: center
+
+	&__box
+		width: calc(100% / 3 - 40px)
+		height: 172px
+		cursor: pointer
+		margin: 0 20px
+		margin-bottom: 40px
+		img
+			display: block
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+	&__title
+		font-size: 28px
+		line-height: 1.2
+		padding-bottom: 38px
+		font-weight: 600
+		+media(md)
+			font-size: 24px
+			padding-bottom: 24px
+		+media(sm)
+			font-size: 20px
+			padding-bottom: 16px
+
+	&__price
+		font-size: 20px
+		line-height: 1.2
+		text-transform: uppercase
+		padding-bottom: 18px
+		font-weight: 600
+		+media(md)
+			font-size: 17px
+		+media(sm)
+			font-size: 14px
+
+	&__text
+		p
+			font-size: 18px
+			line-height: 1.56
+			color: #6B6C70
+			padding-bottom: 24px
+			+media(md)
+				font-size: 16px
+			+media(sm)
+				font-size: 14px
+				line-height: 1.45
+
+	&__holder
+		display: flex
+		align-items: center
+		padding-bottom: 9px
+		margin: 0 -8px
+
+	&__elem
+		width: 32px
+		height: 32px
+		margin: 0 8px
+		margin-bottom: 15px
+
+
+	&__input
+		display: none
+
+	&__label
+		cursor: pointer
+		display: block
+		width: 100%
+		height: 100%
+		border-radius: 4px
+		border: 1px solid #6B6C70
+
+	&__line
+		cursor: pointer
+		user-select: none
+		width: max-content
+		font-size: 12px
+		line-height: 1.2
+		color: #9f9f9f
+		background-image: url(../img/icons/hint-text.svg)
+		background-size: 15px 16px
+		background-repeat: no-repeat
+		background-position: left center
+		padding-left: 23px
+		margin-left: auto
+		margin-bottom: 10px
+		font-weight: normal
+
+	&__container
+		position: relative
+
+	&__wrap-btn
+		border-top: 1px solid #9f9f9f
+		border-bottom: 1px solid #9f9f9f
+		margin-bottom: 24px
+
+	&__info
+		user-select: none
+		display: block
+		width: 100%
+		font-size: 14px
+		line-height: 1.2
+		text-transform: uppercase
+		padding: 12px 20px
+		transition: 0.3s background-color
+
+	&__add-info
+		user-select: none
+		position: absolute
+		top: 50%
+		right: 20px
+		transform: translateY(-50%)
+		font-size: 12px
+		line-height: 1.2	
+		color: #9f9f9f
+
+	&__point
+		display: none
+		&:checked + .single__info
+			background-color: #f8f8f8
+
+	&__content
+		p
+			font-size: 14px
+			line-height: 1.4
+			color: #3D3F42
+			margin-bottom: 20px
+			+media(md)
+				margin-bottom: 10px
+			span
+				color: #c9c9c9
+				padding-left: 5px
+		a
+			display: inline-block
+			color: #c9c9c9
+			margin-left: 5px
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+
+		&--delivery
+			border-bottom: 1px solid #E8E8E8
+			p
+				margin-bottom: 24px
+				+media(md)
+					margin-bottom: 22px
+
+	&__row
+		padding-bottom: 12px
+		p
+			font-size: 14px
+			line-height: 1.2
+			color: #c9c9c9
+			margin-bottom: 4px
+
+	&__socials
+		display: flex
+		align-items: center
+		padding-top: 22px
+
+	&__desc
+		font-size: 14px
+		line-height: 1.4
+		color: #3D3F42
+		margin-right: 40px
+
+	&__list
+		display: flex
+		align-items: center
+
+	&__col
+		display: block
+		font-size: 14px
+		line-height: 1.4
+		color: #9f9f9f
+		text-transform: uppercase
+		margin-right: 40px
+		transition: 0.3s color
+		&:hover
+			color: #3D3F42
+
+	.shop__add
+		top: 20px
+		left: 20px
+		+media(md)
+			top: 10px
+			left: 10px
+
+	.shop__icon
+		width: 28px
+		height: 32px
+		+media(md)
+			width: 18px
+			height: 18px
+
+	&__dots-list
+		display: flex
+		align-items: center
+		width: 100%
+		height: 4px
+		background-color: #e8e8e8
+		li
+			position: relative
+			cursor: pointer
+			font-size: 0px
+			flex: 1
+			height: 4px
+			background-color: inherit
+			&:after
+				position: absolute
+				content: ' '
+				top: calc(50% - 8px)
+				left: 0px
+				height: 16px
+				width: 100%
+				background-color: transparent
+			&.slick-active
+				position: relative
+				&:before
+					position: absolute
+					content: ' '
+					top: calc(50% - 2px)
+					left: 0px
+					height: 4px
+					width: 100%
+					background-color: #cacbce
+
+	&__controls-list
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 100%
+		height: 4px
+		margin: 0 -4px
+		li
+			position: relative
+			cursor: pointer
+			font-size: 0px
+			width: 8px
+			height: 8px
+			background-color: #e8e8e8
+			border-radius: 13px
+			margin: 0 4px
+			&.slick-active
+				position: relative
+				background-color: #9f9f9f

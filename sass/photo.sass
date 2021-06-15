@@ -1,0 +1,28 @@
+@import 'responsive'
+
+.photo
+	overflow: hidden
+	margin-top: 10px
+	+media(sm)
+		overflow: visible
+		margin-top: 0px
+	&__wrap
+		margin: 0 -10px
+		+media(sm)
+			margin: 0px
+
+	&__item		
+		height: 0px
+		padding-top: 5%
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: top center
+		margin: 0 10px
+		+media(sm)
+			width: 100%	
+			min-height: 585px
+			height: 585px
+			padding-top: 0px
+			margin: 0px auto
+			margin-bottom: 8px
+
