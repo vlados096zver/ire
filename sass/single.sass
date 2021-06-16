@@ -159,6 +159,7 @@
 		margin-bottom: 24px
 
 	&__info
+		cursor: pointer
 		user-select: none
 		display: block
 		width: 100%
@@ -182,6 +183,13 @@
 		display: none
 		&:checked + .single__info
 			background-color: #f8f8f8
+
+		&:disabled + .single__info
+			cursor: default
+
+	&__error
+		color: #cc0000
+		padding-bottom: 16px
 
 	&__content
 		p
@@ -308,3 +316,4 @@
 			&.slick-active
 				position: relative
 				background-color: #9f9f9f
+

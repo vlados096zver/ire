@@ -52,6 +52,18 @@
 		+media(sm)
 			font-size: 12px
 			color: #3D3F42
+		&[data-mob]
+			display: none
+			+media(sm)
+				display: block
+				text-transform: capitalize
+
+
+	.select__item--active
+		background-color: #3D3F42
+		color: #fff
+		+media(sm)
+			color: #fff
 
 	.select__list
 		margin-top: 10px
@@ -320,7 +332,7 @@
 
 	&__control
 		display: none
-		+media(sm)
+		+media(smdx)
 			display: flex
 			margin-bottom: 28px
 

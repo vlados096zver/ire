@@ -8,14 +8,17 @@
 		padding-top: 16px
 		padding-bottom: 0px
 	.shop__wrap
-		+media(sm)
+		+media(smdx)
 			flex-direction: row
 			margin: 0 -20px
 		+media(xxs)
 			flex-direction: column
 
 	.shop__item
-		+media(sm)
+		width: calc(100% / 4 - 40px)
+		+media(mdx)
+			width: calc(100% / 3 - 40px)
+		+media(smdx)
 			max-width: initial
 			width: calc(100% / 2 - 40px)
 			margin: 0 20px	

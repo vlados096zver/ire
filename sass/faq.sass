@@ -53,8 +53,7 @@
 
 		&:before
 			left: 0px
-			top: 50%
-			transform: translateY(-50%)
+			top: 1px
 			font-size: 14px
 			color: #3D3F42
 			counter-increment: list_faq
@@ -62,18 +61,18 @@
 
 		&:after
 			content: ' '
-			top: calc(50% - 2px)
+			top: 3px
 			width: 9px
 			height: 9px
 			right: 2px
 			border-right: 2px solid #9f9f9f
 			border-bottom: 2px solid #9f9f9f
-			transform: translateY(-50%) rotate(45deg)
+			transform: rotate(45deg)
 			transition: 0.3s transform, 0.3s top
 
 		&.faq__subtitle--active:after
-			transform: translateY(-50%) rotate(45deg) scale(-1)
-			top: calc(50% + 2px)
+			transform: rotate(45deg) scale(-1)
+			top: 8px
 
 	&__text
 		display: none

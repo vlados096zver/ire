@@ -38,6 +38,13 @@
 		color: #212223
 		padding-bottom: 38px
 		font-weight: 600
+		+media(md)
+			font-size: 26px
+			padding-bottom: 30px
+		+media(sm)
+			font-size: 20px
+			line-height: 1.2
+			padding-bottom: 24px
 
 	&__text
 		+media(sm)
@@ -45,6 +52,12 @@
 		p
 			font-size: 18px
 			line-height: 1.44
+			+media(md)
+				font-size: 16px
+			+media(sm)
+				font-size: 14px
 			&:not(:last-child)
 				padding-bottom: 2em
+				+media(sm)
+					padding-bottom: 1.2em
 
