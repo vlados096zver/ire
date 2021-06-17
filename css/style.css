@@ -566,6 +566,16 @@ img {
 	background-color: #696d70;
 }
 
+.msg-empty {
+	width: 100%;
+	text-align: center;
+	font-size: 25px;
+	font-weight: 900;
+	color: #3D3F42;
+	padding: 15px 10px;
+	padding-top: 25px;
+}
+
 .main-footer {
 	background-color: #212223;
 	padding: 32px 0;
@@ -2838,6 +2848,10 @@ img {
 	margin-right: 25px;
 }
 
+.msg-empty {
+	font-size: 20px;
+}
+
 .breadcrumbs {
 	padding: 45px 0;
 }
@@ -3298,6 +3312,10 @@ img {
 }
 
 @media screen and (max-width: 780px) {
+
+.msg-empty {
+	font-size: 16px;
+}
 
 .photo {
 	overflow: visible;
