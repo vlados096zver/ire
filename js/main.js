@@ -29,7 +29,6 @@ $(document).ready(function() {
     $('.info__wrap .basket__title').on('click', function() {
       if ($(document).width() <= 840) {
         $(this).next().slideToggle();
-        console.log(1)
         $(this).toggleClass('basket__title--active');
       }
     })
