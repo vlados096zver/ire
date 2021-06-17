@@ -9,6 +9,112 @@ $(document).ready(function() {
     $('.popup--size').addClass('popup--active');
   })
 
+  $('.info__item').on('click', function(e) {
+    if ($('.select__item--ua.select__item--active').length > 0) {
+      $('.select__item--new').show();
+    } else {
+      $('.select__item--new').hide();
+    }
+
+    if (e.target.closest('.select__item--new')) {
+      $('.info__col--departament').removeClass('info__col--hide');
+      $('.info__col--single').removeClass('info__col--hide');
+    } else if (e.target.closest('.select__item--ukr')) {
+      $('.info__col--departament').addClass('info__col--hide');
+      $('.info__col--single').removeClass('info__col--hide');
+    }
+  })
+
+  function TabsCorrect() {
+    $('.info__wrap .basket__title').on('click', function() {
+      if ($(document).width() <= 840) {
+        $(this).next().slideToggle();
+        console.log(1)
+        $(this).toggleClass('basket__title--active');
+      }
+    })
+  }
+  TabsCorrect();
+  $(window).resize(function() {
+    if ($(document).width() > 840) {
+      $('.info__block').attr('style', '');
+    }
+  })
+  $('.basket__box').on('click', function(e) {
+    let current = $(this);
+    let quantity = current.find('.select__placeholder').text();
+    let single = current.find('.basket__current').val();
+    let sum = current.find('.basket__sum span');
+    let btnClose = current.find('.basket__close');
+    let value;
+    let sale = current.find('.basket__sale').val();
+    let newSingle = Number(single) - (Number(single) * Number(sale)) / 100;
+
+    if (current.find('.basket__sale').hasClass('basket__current--active')) {
+      value = Number(quantity) * newSingle;
+    } else {
+      value = Number(quantity) * Number(single);
+    }
+    sum.text(value);
+
+    if ($(e.target).hasClass('basket__close')) {
+      $(e.target).parents('.basket__box').remove();
+    }
+    updateTotalSumm();
+    correctCount();
+    changeLang();
+
+  })
+
+  function updateTotalSumm() {
+    let val = 0;
+
+    let total = $('.basket__total span');
+    $('.basket__sum span').each(function(i, e) {
+      val += parseFloat($(e).text() || 0);
+    })
+
+    total.text(val);
+  }
+
+  function correctCount() {
+    let num = 0;
+    let count = $('.basket__result');
+    $('.basket .select__placeholder').each(function(i, e) {
+      num += parseFloat($(e).text());
+    })
+
+    count.text(num);
+  }
+
+
+  function changeLang() {
+
+    var arr_ua = ['товар', 'товари', 'товарів'];
+    var arr_en = ['product'];
+
+    var lang = window.location.href;
+
+    if (lang.indexOf('/ua') !== -1) {
+      curlang = arr_en;
+    } else {
+      curlang = arr_ua;
+    }
+
+    var count = $('.basket__result').text();
+    var result = $('.basket__text');
+
+    if (count == 1) {
+      result.text(curlang[0]);
+    } else if (count > 1 && count < 5) {
+      result.text(curlang[1]);
+    } else {
+      result.text(curlang[2]);
+    }
+  }
+
+  changeLang();
+
   let single__block = $('.single__user');
   let dotsBlock = $('.single__block').find('.single__controls');
   single__block.slick({
@@ -220,7 +326,6 @@ $(document).ready(function() {
 
         return false;
       } else {
-
         if ($(e.target).is('.select__input')) return false;
         var container = $(this).parents('.select__wrap').attr('id');
         if ($('#' + container + ' .select__item--active').length == 1) {

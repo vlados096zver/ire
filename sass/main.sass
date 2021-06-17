@@ -4,10 +4,10 @@ body
 	margin: 0
 	padding: 0
 	width: 100%
-	//min-height: 100vh
+	min-height: 100vh
 	overflow-x: hidden
 	color: #333333
-	background-color: #f7f7f7
+	background-color: #f8f8f8
 	font-size: 16px
 	line-height: 1.2
 	font-weight: normal
@@ -43,37 +43,12 @@ img
 	&--about
 		max-width: 1080px
 
-	
+	&--basket
+		max-width: 1440px
+		padding: 0px
 
-
-.input
-	display: block
-	width: 100%
-	font-size: 14px
-	color: #686868
-	background-color: transparent
-	border: 1px solid #e3e2e7
-	color: #686868
-	box-shadow: inset 0 0 0 1px #f6f6f6
-	padding: 11px 25px
-	font-weight: 300
-	&::placeholder
-		font-size: 14px
-		color: #686868
-		font-weight: 300
-
-	&:focus::placeholder
-		color: #e3e2e7
-
-	&--area
-		resize: vertical
-		min-height: 150px
-
-	&.form-fail
-		border-color: #b00
-
-	&.form-done
-		border-color: #90ee90
+	&--order
+		max-width: 532px
 
 .btn
 	display: block
@@ -83,7 +58,7 @@ img
 	line-height: 1.5
 	border: none
 	outline: none
-	background-color: #68bec4
+	background-color: #3D3F42
 	color: #fff
 	text-align: center
 	text-transform: uppercase
@@ -124,7 +99,7 @@ img
 		max-width: 104px
 		width: 100%
 		font-size: 12px
-		background: #212223
+		background-color: #212223
 		padding: 11px 15px
 
 	&--collection
@@ -159,8 +134,30 @@ img
 		padding: 11px 5px
 		margin-bottom: 32px
 
+	&--order
+		background-color: #212223
+		color: #fff
+		max-width: 100%
+		width: 100%
+		+media(smdx)
+			max-width: 253px
+			margin: 0 auto
+
+	&--use
+		width: calc(100% - 180px)
+		font-size: 12px
+		background-color: #212223
+		border-radius: 0 4px 4px 0
+		padding: 11px 5px
+		margin-bottom: 16px
+		+media(smdx)
+			width: 100%
+			max-width: 253px
+
 	&--show,
 	&--collection,
-	&--basket
+	&--basket,
+	&--use,
+	&--order
 		&:hover
 			background-color: #696d70

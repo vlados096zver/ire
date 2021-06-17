@@ -141,136 +141,26 @@
 		</div>
 	</header>
 
-
-	<section class="breadcrumbs">
-		<div class="container">
-			<div class="breadcrumbs__wrap">
-				<h2 class="breadcrumbs__title">item page</h2>
-				<ul class="breadcrumbs__list"> 
-					<li><a href="#">Головна</a></li>
-					<li>item page</li>
-				</ul>
+	<section class="order">
+		<div class="container container--order">
+			<div class="order__wrap">
+				<div class="order__image">
+			       	<img src="img/order-pic.png" alt="">
+			    </div>
+			    <div class="order__text">
+			    	<h3>Дякуємо, ваше замовлення отримано!</h3>
+			    	<p>Номер замовлення: <span>X</span></p>
+			    	<p>Дата: X</p>
+			    	<p>Вартість: X</p>
+			    	<p>Доставка: X 0 грн (Нова Пошта: доставка у відділення) </p>
+			    	<p>Спосіб оплати: X</p>
+			    	<p>Всього: Х</p>
+			    	<p>Будемо раді бачити Вас знову у нашому магазині. Гарного дня та вдалих покупок!</p>
+			    </div>
+			    <button class="order__close"></button>
 			</div>
 		</div>
 	</section>
-
-	<section class="single">
-		<div class="container">
-			<div class="single__wrap">
-				<div class="single__item">
-					<div class="single__big">
-						<div class="single__block">
-							<div class="single__user">
-								<div class="single__pic">
-									<img src="img/single/single-1.png" alt="">
-								</div>
-								<div class="single__pic">
-									<img src="img/single/single-2.png" alt="">
-								</div>
-								<div class="single__pic">
-									<img src="img/single/single-3.png" alt="">
-								</div>
-								<div class="single__pic">
-									<img src="img/single/single-1.png" alt="">
-								</div>
-							</div>
-							<div class="single__controls"></div>
-						</div>
-						<button class="shop__add">
-							<svg viewBox="0 0 19 17" class="shop__icon">
-								<use xlink:href="#favorites-no"></use>
-							</svg>
-						</button>
-						<button class="shop__add shop__add--active">
-							<svg viewBox="0 0 19 17" class="shop__icon">
-								<use xlink:href="#favorites-active"></use>
-							</svg>
-						</button>
-					</div>
-					<div class="single__slider">
-						<div class="single__gallery">
-						   <div class="single__box">
-						   	<img src="img/single/single-1.png" alt="">
-						   </div>
-						   <div class="single__box">
-						   	<img src="img/single/single-2.png" alt="">
-						   </div>
-						   <div class="single__box">
-						   	<img src="img/single/single-3.png" alt="">
-						   </div>
-						    <div class="single__box">
-						   	<img src="img/single/single-1.png" alt="">
-						   </div>
-				     	</div>
-				     	<div class="single__dots"></div>
-					</div>
-				</div><!--end single__item-->
-				<div class="single__item">
-					<h3 class="single__title">Сукня з гудзиками</h3>
-					<p class="single__price">4900 uah</p>
-					<div class="single__text">
-						<p>Сукня з італійської шерсті з шовком. Прямого крою, молочні гудзики на лівому плечі, прихована застібка-блискавка ззаду виробу.</p>
-					</div>
-					<div class="single__holder">
-						<div class="single__elem">
-							<label for="s_1" class="single__label" style="background-color: #e0d5bd;"></label>
-							<input id="s_1" type="radio" class="single__input" name="color1" checked>
-						</div>
-						<div class="single__elem">
-							<label for="s_2" class="single__label" style="background-color: #3D3F42;"></label>
-							<input id="s_2" type="radio" class="single__input" name="color1">
-						</div>
-					</div>
-					<div class="single__size">
-						<h3 class="single__line">Розмірна сітка</h3>
-						<div class="single__wrap-btn">
-							<div class="single__container">
-								<input id="i_1" type="radio" class="single__point" name="size">
-								<label for="i_1" class="single__info">xs</label>
-							</div>
-							<div class="single__container">
-								<p class="single__add-info">немає в наявності</p>
-								<input id="i_2" type="radio" disabled class="single__point" name="size">
-								<label for="i_2" class="single__info">s</label>
-							</div>
-							<div class="single__container">
-								<input id="i_3" type="radio" checked class="single__point" name="size">
-								<label for="i_3" class="single__info">m</label>
-							</div>
-							<div class="single__container">
-								<input id="i_4" type="radio" class="single__point" name="size">
-								<label for="i_4"  class="single__info">l</label>
-							</div>
-						</div>
-					</div>
-					<button class="btn btn--basket">Добавить у кошик</button>
-					<p class="single__error">Вы не выбрали размер</p>
-					<div class="single__content">
-						<p>Колір: <span>молочний</span></p>
-						<p>Країна виробництва:<span>Україна</span></p>
-						<p>Склад: <span>70% шерсть, 30% шовк</span></p>
-						<p>Додаткова інформація:</p>
-					</div>
-					<div class="single__row">
-						<p>На моделі - розмір S</p>
-						<p> Зріст моделі - 170 см</p>
-					</div>
-					<div class="single__content single__content--delivery">
-						<p>Умови доставки:<a href="">Ознайомитись</a></p>
-					</div>
-					<div class="single__socials">
-						<p class="single__desc">Поділитись:</p>
-						<ul class="single__list">
-							<li><a href="" class="single__col">ig.</a></li>
-							<li><a href="http://facebook.com/sharer.php?url=<?php the_permalink(); ?>" class="single__col">fb.</a></li>
-							<li><a href="https://www.pinterest.com/pin/create/button/?url=<yourURL>&media=<yourImgSrc>" class="single__col">pint.</a></li>
-						</ul>
-					</div>
-				</div><!--end single__item-->
-			</div>
-		</div>
-	</section>
-
 
 	<footer class="main-footer">
 		<div class="container">
@@ -343,59 +233,11 @@
 			</div>
 			<div class="select__wrap" id="select__val-2">
 		        <div class="select__placeholder">uah</div>
-		        <ul class="select__list">
-		            <li class="select__item select__item--active">uah</li>
-		            <li class="select__item">eur</li>
-		        </ul>
+		         <ul class="select__list">
+	                <li class="select__item select__item--active">uah</li>
+	                <li class="select__item">eur</li>
+	            </ul>
 		    </div>
-		</div>
-	</div>
-
-	<div class="popup popup--size">
-		<div class="popup__block popup__block--elem">
-			<button class="popup__close"></button>
-			<div class="popup__holder">
-				<div class="popup__image">
-					<img src="img/size-pic.png" alt="">
-				</div>
-				<div class="popup__wrap-table">
-						
-						<table class="popup__table">
-							<thead>
-								<tr>
-								   <th>size</th>
-								   <th>xs</th>
-								   <th>s</th>
-								   <th>m</th>
-								   <th>l</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>a</td>
-									<td>82-84</td>
-									<td>86-88</td>
-									<td>90-92</td>
-									<td>94-96</td>
-								</tr>
-								<tr>
-									<td>b</td>
-									<td>62-64</td>
-									<td>65-67</td>
-									<td>70-72</td>
-									<td>74-76</td>
-								</tr>
-								<tr>
-									<td>c</td>
-									<td>90-92</td>
-									<td>94-96</td>
-									<td>98-100</td>
-									<td>94-102-104</td>
-								</tr>
-							</tbody>
-						</table>
-				</div>
-			</div>
 		</div>
 	</div>
 

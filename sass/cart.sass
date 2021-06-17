@@ -1,14 +1,6 @@
 @import 'responsive'
 
 .cart
-	&--popup
-		&__wrap
-			position: relative
-			max-width: 1280px
-			width: 100%
-			margin: 0 auto
-			padding: 0 30px
-
 	&__holder
 		opacity: 0
 		visibility: hidden
@@ -17,8 +9,8 @@
 		max-height: calc(80vh - 50px)
 		overflow-y: auto
 		overflow-x: hidden
-		top: 0px
-		right: 0px
+		top: 100%
+		right: 10px
 		max-width: 343px
 		width: 100%
 		background-color: #fff
@@ -92,8 +84,8 @@
 		&:before
 			content: ''
 			position: absolute
-			top: 9px
-			left: 1px
+			top: 8px
+			left: 0px
 			width: 18px
 			height: 3px
 			background-color: #6B6C70

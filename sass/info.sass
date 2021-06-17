@@ -1,0 +1,152 @@
+@import 'responsive'
+
+.info
+	&__wrap
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		grid-column-gap: 40px
+		+media(md)
+			grid-template-columns: 100%
+			grid-column-gap: 0
+
+	&__item
+		+media(smdx)
+			margin-bottom: 8px	
+		.select__wrap
+			border: none
+			&:after
+				right: 20px
+				+media(smdx)
+					right: 12px
+
+		.select__placeholder
+			border: 1px solid #d9dbe9
+			padding-left: 20px
+			padding-right: 20px
+			+media(smdx)
+				padding-right: 12px
+
+		.select__list
+			border: 1px solid #d9dbe9
+			border-top: none
+
+		.select__item:not(.select__item--search)
+			padding-left: 20px
+
+		&:not(:last-child)
+			+media(smdx)
+				margin-bottom: 24px
+
+
+	&__block
+		padding-top: 24px
+
+	&__box,
+	&__col
+		margin-bottom: 16px
+		&:last-child
+			margin-bottom: 0px
+
+	&__col
+		&--hide
+			display: none
+
+		&--departament
+			.select__placeholder
+				padding-right: 40px
+
+		&--single
+			.info__input
+				padding-right: 40px
+
+	&__label
+		display: inline-block
+		cursor: pointer
+		user-select: none
+		font-size: 14px
+		line-height: 1.2
+		color: #3d3f42
+		padding-bottom: 7px
+		font-weight: 600
+
+	&__input
+		display: block
+		width: 100%
+		font-size: 14px
+		outline: none
+		border: 1px solid #d9dbe9
+		border-radius: 4px
+		padding: 9px 20px
+		padding-bottom: 10px
+
+	&__text
+		p
+			font-size: 10px	
+			line-height: 1.2	
+			color: #3d3f42
+			a
+				color: #195abb
+
+	&__holder
+		margin-top: 48px
+		margin-bottom: 15px
+		+media(sm)
+			margin-top: 16px
+
+	&__desc
+		cursor: pointer
+		position: relative
+		display: block
+		font-size: 10px
+		line-height: 1.2
+		user-select: none
+		padding-left: 30px
+		+media(smdx)
+			max-width: 250px
+		&:after
+			position: absolute
+			content: ' '
+			top: 2px
+			left: 0px
+			width: 20px
+			height: 20px
+			background-color: #3d3f42
+			border-radius: 2px
+
+	&__elem
+		display: none
+		&:checked + .info__desc:before
+			position: absolute
+			z-index: 2
+			content: ' '
+			top: 6px
+			left: 3px
+			width: 16px
+			height: 16px
+			background-image: url(../img/icons/check.svg)
+			background-repeat: no-repeat
+			background-size: 16px
+
+	&__list
+		display: none
+		position: absolute
+		top: 100%
+		left: 0px
+		max-height: 250px
+		overflow-y: auto
+		width: 100%
+		background-color: #fff
+		z-index: 150
+		margin: 0px
+		border: 1px solid #d9dbe9
+		border-top: none
+		li
+			cursor: pointer
+			user-select: none
+			display: block
+			font-size: 12px
+			color: #212223
+			padding: 8px 10px
+
+		&--active
+			display: block

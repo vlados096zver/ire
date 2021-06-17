@@ -1,0 +1,103 @@
+@import 'responsive'
+
+.order
+	margin: 65px auto
+	+media(mdx)
+		margin: 45px auto
+
+	+media(sm)
+		margin: 32px auto
+
+	&__wrap
+		position: relative
+		background-color: #fff
+		padding: 40px
+		border-top: 2px solid #6b6c70
+		+media(md)
+			padding: 32px
+		+media(sm)
+			padding: 24px
+			padding-top: 32px
+
+	&__image
+		margin-bottom: 40px
+		+media(sm)
+			margin-bottom: 20px
+		img
+			display: block
+			width: 100%
+
+	&__text
+		h3
+			font-size: 20px
+			line-height: 1.2
+			padding-bottom: 30px
+			font-weight: 600
+			+media(mdx)
+				font-size: 18px
+			+media(sm)
+				font-size: 16px
+				line-height: 1.25
+				padding-bottom: 15px
+
+		p
+			font-size: 14px
+			line-height: 1.43
+			color: #3d3f42
+			padding-bottom: 8px
+			+media(sm)
+				font-size: 12px
+				padding-bottom: 4px
+
+			&:nth-child(2)
+				padding-bottom: 14px
+				font-weight: 600
+				+media(sm)
+					padding-bottom: 8px
+
+			&:last-child
+				padding-bottom: 0px
+				margin-top: 16px
+				font-weight: 600
+				+media(sm)
+					margin-top: 0px
+
+	&__close
+		position: absolute
+		top: 15px
+		right: 15px
+		width: 14px
+		height: 14px
+		cursor: pointer
+		background-color: transparent
+		border: none
+		outline: none
+		padding: 0px
+		+media(md)
+			top: 12px
+			right: 9px
+			width: 10px
+			height: 10px
+		&:after,
+		&:before
+			content: ''
+			position: absolute
+			top: 7px
+			left: 0px
+			width: 14px
+			height: 1px
+			background-color: #9f9f9f
+			transition: 0.3s background-color
+			+media(md)
+				top: 5px
+				width: 10px
+
+		&:after
+			transform: rotate(45deg)
+		&:before
+			transform: rotate(-45deg)
+
+		&:hover
+			&:after,
+			&:before
+				background-color: #000

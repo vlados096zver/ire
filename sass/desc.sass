@@ -70,25 +70,26 @@
 
 	&__block
 		padding-top: 15px
+		.desc__inner
+			p
+				font-size: 14px
+				line-height: 1.33
+				padding-bottom: 2px
 
-	&__elem
+			&:not(:last-child)
+				margin-bottom: 20px
+
+	.desc__elem
 		font-size: 14px
 		text-transform: uppercase
 		padding-bottom: 25px
 		font-weight: 600
 
-	&__inner
-		p
-			font-size: 14px
-			line-height: 1.33
-
-		&:not(:last-child)
-			margin-bottom: 20px
 
 	&--politic
 		ol li
 			font-weight: normal
-			margin-bottom: 2px
+			margin-bottom: 3px
 
 		.breadcrumbs__title--mobile
 			text-transform: none
