@@ -158,7 +158,7 @@ main {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 33px 30px;
+	padding: 32px 30px;
 }
 
 .main-header__logo {
@@ -386,6 +386,7 @@ main {
 
 .main-header .select__wrap {
 	width: 42px;
+	margin-top: 3px;
 }
 
 .main-header .select__placeholder,
@@ -1676,21 +1677,17 @@ img {
 	display: none;
 }
 
-.desc__block {
+.desc__text .desc__block {
 	padding-top: 15px;
 }
 
-.desc__block .desc__inner p {
+.desc__text .desc__block p {
 	font-size: 14px;
 	line-height: 1.33;
 	padding-bottom: 2px;
 }
 
-.desc__block .desc__inner:not(:last-child) {
-	margin-bottom: 20px;
-}
-
-.desc .desc__elem {
+.desc__text .desc__block h3 {
 	font-size: 14px;
 	text-transform: uppercase;
 	padding-bottom: 25px;
@@ -2058,7 +2055,7 @@ img {
 	visibility: hidden;
 	position: absolute;
 	z-index: 3;
-	max-height: calc(80vh - 50px);
+	max-height: 300px;
 	overflow-y: auto;
 	overflow-x: hidden;
 	top: 100%;
