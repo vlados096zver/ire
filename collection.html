@@ -46,7 +46,7 @@
 		<div class="container container--header">
 			<div class="main-header__wrap">
 				<a href="" class="main-header__logo">
-					<img src="img/icons/header-logo.png" alt="">
+					<img src="img/icons/header-logo.svg" alt="">
 				</a>
 				<div class="main-header__menu">
 					<div class="mobile-wrap">
@@ -59,10 +59,10 @@
 					      <a class="main-header__link" href="">Головна</a>
 					    </li>
 					     <li>
-					        <a class="main-header__link" href="">Купити онлайн</a>
+					        <a class="main-header__link main-header__link--active" href="">Купити онлайн</a>
 					     </li>
 					     <li>
-					        <a class="main-header__link main-header__link--active" href="">Колекції</a>
+					        <a class="main-header__link" href="">Колекції</a>
 					    </li>
 					    <li>
 					       <a class="main-header__link" href="">Про нас</a>
@@ -83,6 +83,7 @@
 							<svg viewBox="0 0 14 16" class="main-header__icon">
 								<use xlink:href="#shop-cart"></use>
 							</svg>
+							<span class="main-header__count">2</span>
 						</a>
 					</div>
 					<div class="main-header__lang">
@@ -119,7 +120,6 @@
 						     		<p class="cart__price">4900 uah</p>
 						     		<p class="cart__size">s</p>
 						     		<p class="cart__count">1</p>
-						     	    <button class="cart__close"></button>
 								</div>
 							</div>
 							<div class="cart__item">
@@ -131,80 +131,96 @@
 						     		<p class="cart__price">4900 uah</p>
 						     		<p class="cart__size">s</p>
 						     		<p class="cart__count">1</p>
-						     		<button class="cart__close"></button>
 								</div>
 							 </div>
-					    </div>
-					<a href="" class="btn btn--basket">Перейти в кошик</a>
+							 <div class="cart__item">
+								<div class="cart__image">
+									 <img src="img/single/single-1.png" alt="">
+								</div>
+								<div class="cart__content">
+								    <p class="cart__title">Сукня з гудзиками</p>
+						     		<p class="cart__price">4900 uah</p>
+						     		<p class="cart__size">s</p>
+						     		<p class="cart__count">1</p>
+								</div>
+							 </div>
+					 </div>
+					 <div class="cart__wrap-btn">	
+					 	<a href="" class="btn btn--basket">Перейти в кошик</a>
+						<button class="btn btn--continue">Продовжити покупки</button>
+					 </div>
 				</div>
 			</div><!--end main-header__wrap-->
 		</div>
 	</header>
 
-	<section class="breadcrumbs breadcrumbs--collection">
-		<div class="container">
-			<div class="breadcrumbs__wrap">
-				<div class="select__wrap" id="select__collection">
-					<div class="select__placeholder">FW 2020-2021</div>
-					<ul class="select__list">
-					    <li class="select__item select__item--active">FW 2020-2021</li>
-					    <li class="select__item"><a href="">SS 2021</a></li>
-					    <li class="select__item"><a href="">Колекція 3</a></li>
+	<section class="wrap">
+
+		<section class="breadcrumbs breadcrumbs--collection">
+			<div class="container">
+				<div class="breadcrumbs__wrap">
+					<div class="select__wrap" id="select__collection">
+						<div class="select__placeholder">FW 2020-2021</div>
+						<ul class="select__list">
+						    <li class="select__item select__item--active">FW 2020-2021</li>
+						    <li class="select__item"><a href="">SS 2021</a></li>
+						    <li class="select__item"><a href="">Колекція 3</a></li>
+						</ul>
+					</div>
+					<ul class="breadcrumbs__list"> 
+						<li><a href="#">Головна</a></li>
+						<li>Колекції</li>
+						<li><span>FW 2020-2021</span></li>
 					</ul>
-				</div>
-				<ul class="breadcrumbs__list"> 
-					<li><a href="#">Головна</a></li>
-					<li>Колекції</li>
-					<li><span>FW 2020-2021</span></li>
-				</ul>
-				<div class="shop__control">
-					<button class="shop__view shop__view--row shop__view--active">
-					    <svg viewBox="0 0 16 16" class="shop__rebuild">
-							<use xlink:href="#btn--row"></use>
-						</svg>
-					</button>
-					<button class="shop__view shop__view--col">
-					   	<svg viewBox="0 0 16 16" class="shop__rebuild">
-							<use xlink:href="#btn--col"></use>
-						</svg>
-					</button>
+					<div class="shop__control">
+						<button class="shop__view shop__view--row shop__view--active">
+						    <svg viewBox="0 0 16 16" class="shop__rebuild">
+								<use xlink:href="#btn--row"></use>
+							</svg>
+						</button>
+						<button class="shop__view shop__view--col">
+						   	<svg viewBox="0 0 16 16" class="shop__rebuild">
+								<use xlink:href="#btn--col"></use>
+							</svg>
+						</button>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
 
-	<section class="collection">
-		<div class="container">
-			<div class="collection__wrap">
-				<a href="" class="collection__item" style="background-image: url(img/photo/photo-10.png);"></a>
-				<a href="" class="collection__item" style="background-image: url(img/photo/photo-8.png);"></a>
-				<a href="" class="collection__item" style="background-image: url(img/photo/photo-1.png);"></a>
-				<a href="" class="collection__item" style="background-image: url(img/photo/photo-4.png);"></a>
-				<a href="" class="collection__item" style="background-image: url(img/photo/photo-3.png);"></a>
-				<a href="" class="collection__item" style="background-image: url(img/photo/photo-5.png);"></a>
-				<a href="" class="collection__item" style="background-image: url(img/photo/photo-11.png);"></a>
-				<a href="" class="collection__item" style="background-image: url(img/photo/photo-2.png);"></a>
-				<a href="" class="collection__item" style="background-image: url(img/photo/photo-12.png);"></a>
-				<a href="" class="collection__item" style="background-image: url(img/photo/photo-13.png);"></a>
-				<a href="" class="collection__item" style="background-image: url(img/photo/photo-6.png);"></a>
-				<a href="" class="collection__item" style="background-image: url(img/photo/photo-14.png);"></a>
-				<a href="" class="collection__item" style="background-image: url(img/photo/photo-15.png);"></a>
-				<a href="" class="collection__item" style="background-image: url(img/photo/photo-16.png);"></a>
-				<a href="" class="collection__item" style="background-image: url(img/photo/photo-9.png);"></a>
-				<a href="" class="collection__item" style="background-image: url(img/photo/photo-17.png);"></a>
-				<a href="" class="collection__item" style="background-image: url(img/photo/photo-18.png);"></a>
-				<a href="" class="collection__item" style="background-image: url(img/photo/photo-19.png);"></a>
+		<section class="collection">
+			<div class="container">
+				<div class="collection__wrap">
+					<a href="" class="collection__item" style="background-image: url(img/photo/photo-10.png);"></a>
+					<a href="" class="collection__item" style="background-image: url(img/photo/photo-8.png);"></a>
+					<a href="" class="collection__item" style="background-image: url(img/photo/photo-1.png);"></a>
+					<a href="" class="collection__item" style="background-image: url(img/photo/photo-4.png);"></a>
+					<a href="" class="collection__item" style="background-image: url(img/photo/photo-3.png);"></a>
+					<a href="" class="collection__item" style="background-image: url(img/photo/photo-5.png);"></a>
+					<a href="" class="collection__item" style="background-image: url(img/photo/photo-11.png);"></a>
+					<a href="" class="collection__item" style="background-image: url(img/photo/photo-2.png);"></a>
+					<a href="" class="collection__item" style="background-image: url(img/photo/photo-12.png);"></a>
+					<a href="" class="collection__item" style="background-image: url(img/photo/photo-13.png);"></a>
+					<a href="" class="collection__item" style="background-image: url(img/photo/photo-6.png);"></a>
+					<a href="" class="collection__item" style="background-image: url(img/photo/photo-14.png);"></a>
+					<a href="" class="collection__item" style="background-image: url(img/photo/photo-15.png);"></a>
+					<a href="" class="collection__item" style="background-image: url(img/photo/photo-16.png);"></a>
+					<a href="" class="collection__item" style="background-image: url(img/photo/photo-9.png);"></a>
+					<a href="" class="collection__item" style="background-image: url(img/photo/photo-17.png);"></a>
+					<a href="" class="collection__item" style="background-image: url(img/photo/photo-18.png);"></a>
+					<a href="" class="collection__item" style="background-image: url(img/photo/photo-19.png);"></a>
+				</div>
+				<button class="btn btn--collection">купити онлайн</button>
 			</div>
-			<button class="btn btn--collection">купити онлайн</button>
-		</div>
+		</section>
 	</section>
 
 	<footer class="main-footer">
 		<div class="container">
 			<div class="main-footer__wrap">
 				<a href="" class="main-footer__logo">
-					<img src="img/icons/footer-logo.png" alt="">
+					<img src="img/icons/footer-logo.svg" alt="">
 				</a>
 				<ul class="main-footer__socials">
 					<li><a href="" class="main-footer__box">Fb.</a></li>

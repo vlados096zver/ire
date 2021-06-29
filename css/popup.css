@@ -1,0 +1,165 @@
+.popup {
+	position: fixed;
+	z-index: 16;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	visibility: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	background-color: #fff;
+	z-index: 20;
+	transition: 0.3s opacity, 0.3s visibility;
+}
+
+.popup--size {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(202, 203, 206, 0.5);
+}
+
+.popup__block {
+	width: 100%;
+	height: 100%;
+	padding: 20px 30px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.popup__block--elem {
+	position: relative;
+	max-width: 545px;
+	height: initial;
+	background-color: #fff;
+	margin: 0 20px;
+}
+
+.popup--menu {
+	display: none;
+}
+
+.popup--active {
+	opacity: 1;
+	visibility: visible;
+}
+
+.popup .main-header__list {
+	display: block;
+	padding-top: 65px;
+}
+
+.popup .main-header__link {
+	color: #3D3F42;
+}
+
+.popup .main-header__lang {
+	margin-bottom: 21px;
+}
+
+.popup__close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 18px;
+	height: 18px;
+	cursor: pointer;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	padding: 0px;
+}
+
+.popup__close:after,
+.popup__close:before {
+	content: '';
+	position: absolute;
+	top: 9px;
+	left: 1px;
+	width: 18px;
+	height: 2px;
+	background-color: #000;
+	transition: 0.3s background-color;
+}
+
+.popup__close:after {
+	transform: rotate(45deg);
+}
+
+.popup__close:before {
+	transform: rotate(-45deg);
+}
+
+.popup__close:hover:after,
+.popup__close:hover:before {
+	background-color: #9f9f9f;
+}
+
+.popup__holder {
+	position: relative;
+	padding-right: 125px;
+}
+
+.popup__image img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.popup__wrap-table {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	width: 100%;
+	max-width: 340px;
+}
+
+.popup__table {
+	width: 100%;
+}
+
+.popup__table thead {
+	border-bottom: 1px solid #000;
+}
+
+.popup__table th {
+	padding-bottom: 8px;
+	font-weight: 500;
+}
+
+.popup__table td {
+	padding: 8px 0;
+}
+
+.popup__table th,
+.popup__table td {
+	font-size: 12px;
+	line-height: 1.2;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+@media screen and (max-width: 840px) {
+
+.popup--menu {
+	display: block;
+}
+
+}
+
+@media screen and (max-width: 480px) {
+
+.popup__holder {
+	padding-right: 0px;
+}
+
+.popup__wrap-table {
+	position: static;
+	max-width: 100%;
+	margin-top: 20px;
+}
+
+}
+

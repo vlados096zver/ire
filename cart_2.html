@@ -46,7 +46,7 @@
 		<div class="container container--header">
 			<div class="main-header__wrap">
 				<a href="" class="main-header__logo">
-					<img src="img/icons/header-logo.png" alt="">
+					<img src="img/icons/header-logo.svg" alt="">
 				</a>
 				<div class="main-header__menu">
 					<div class="mobile-wrap">
@@ -59,7 +59,7 @@
 					      <a class="main-header__link" href="">Головна</a>
 					    </li>
 					     <li>
-					        <a class="main-header__link" href="">Купити онлайн</a>
+					        <a class="main-header__link main-header__link--active" href="">Купити онлайн</a>
 					     </li>
 					     <li>
 					        <a class="main-header__link" href="">Колекції</a>
@@ -83,6 +83,7 @@
 							<svg viewBox="0 0 14 16" class="main-header__icon">
 								<use xlink:href="#shop-cart"></use>
 							</svg>
+							<span class="main-header__count">2</span>
 						</a>
 					</div>
 					<div class="main-header__lang">
@@ -102,7 +103,7 @@
 					</div>
 					<div class="select__wrap" id="select__val-1">
 	                    <div class="select__placeholder">uah</div>
-	                     <ul class="select__list">
+	                    <ul class="select__list">
 	                        <li class="select__item select__item--active">uah</li>
 	                        <li class="select__item">eur</li>
 	                    </ul>
@@ -119,7 +120,6 @@
 						     		<p class="cart__price">4900 uah</p>
 						     		<p class="cart__size">s</p>
 						     		<p class="cart__count">1</p>
-						     	    <button class="cart__close"></button>
 								</div>
 							</div>
 							<div class="cart__item">
@@ -131,11 +131,24 @@
 						     		<p class="cart__price">4900 uah</p>
 						     		<p class="cart__size">s</p>
 						     		<p class="cart__count">1</p>
-						     		<button class="cart__close"></button>
 								</div>
 							 </div>
-					    </div>
-					<a href="" class="btn btn--basket">Перейти в кошик</a>
+							 <div class="cart__item">
+								<div class="cart__image">
+									 <img src="img/single/single-1.png" alt="">
+								</div>
+								<div class="cart__content">
+								    <p class="cart__title">Сукня з гудзиками</p>
+						     		<p class="cart__price">4900 uah</p>
+						     		<p class="cart__size">s</p>
+						     		<p class="cart__count">1</p>
+								</div>
+							 </div>
+					 </div>
+					 <div class="cart__wrap-btn">	
+					 	<a href="" class="btn btn--basket">Перейти в кошик</a>
+						<button class="btn btn--continue">Продовжити покупки</button>
+					 </div>
 				</div>
 			</div><!--end main-header__wrap-->
 		</div>
@@ -179,6 +192,15 @@
 				                               <li class="select__item select__item--search select__item--loader"><input class="select__input" type="text" placeholder="Поиск"></li>
 				                               <li class="select__item select__item--title select__item--active" data-value="">Оберіть країну</li>
 				                               <li class="select__item select__item--ua" data-value="Україна">Україна</li>
+				                               <li class="select__item" data-value="Англия">Англия</li>
+				                               <li class="select__item" data-value="Китай">Китай</li>
+				                               <li class="select__item" data-value="Сша">Сша</li>
+				                               <li class="select__item" data-value="Англия">Англия</li>
+				                               <li class="select__item" data-value="Китай">Китай</li>
+				                               <li class="select__item" data-value="Сша">Сша</li>
+				                               <li class="select__item" data-value="Англия">Англия</li>
+				                               <li class="select__item" data-value="Китай">Китай</li>
+				                               <li class="select__item" data-value="Сша">Сша</li>
 				                               <li class="select__item" data-value="Англия">Англия</li>
 				                               <li class="select__item" data-value="Китай">Китай</li>
 				                               <li class="select__item" data-value="Сша">Сша</li>
@@ -283,7 +305,7 @@
 		<div class="container">
 			<div class="main-footer__wrap">
 				<a href="" class="main-footer__logo">
-					<img src="img/icons/footer-logo.png" alt="">
+					<img src="img/icons/footer-logo.svg" alt="">
 				</a>
 				<ul class="main-footer__socials">
 					<li><a href="" class="main-footer__box">Fb.</a></li>

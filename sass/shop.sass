@@ -2,13 +2,6 @@
 
 .shop
 	background-color: #fff
-	padding-top: 80px
-	padding-bottom: 34px
-	+media(mdx)
-		padding-top: 50px
-	+media(sm)
-		padding-top: 12px
-		padding-bottom: 14px
 
 	&__inner
 		display: flex
@@ -38,7 +31,7 @@
 		border: 1px solid #ECEDF3
 		border-radius: 4px
 		+media(sm)
-			background-image: url(../img/icons/filter.svg)
+			background-image: url(img/icons/filter.svg)
 			background-repeat: no-repeat
 			background-position: left 20px center
 			background-size: 16px 14px
@@ -122,12 +115,20 @@
 
 	&__pic
 		display: block
+		margin: 0 2px
 		img
 			display: block
 			margin: 0 auto
 		
 	&__holder
 		display: flex
+		padding-top: 80px
+		padding-bottom: 34px
+		+media(mdx)
+			padding-top: 50px
+		+media(sm)
+			padding-top: 12px
+			padding-bottom: 14px
 
 	&__box
 		&--aside

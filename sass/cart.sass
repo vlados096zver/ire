@@ -6,7 +6,7 @@
 		visibility: hidden
 		position: absolute
 		z-index: 3
-		max-height: 300px
+		max-height: 355px
 		overflow-y: auto
 		overflow-x: hidden
 		top: 100%
@@ -16,6 +16,7 @@
 		background-color: #fff
 		box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1)
 		padding: 16px
+		padding-bottom: 0px
 		transition: 0.5s opacity, 0.5s visibility
 		+media(xxs)
 			right: initial
@@ -105,3 +106,10 @@
 		max-width: 100%
 		margin-bottom: 0px
 
+
+	&__wrap-btn
+		position: sticky
+		z-index: 3
+		bottom: 0px
+		background-color: #fff
+		padding-bottom: 16px

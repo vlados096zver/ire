@@ -23,6 +23,9 @@
 			flex: 1
 			margin-left: 16px
 
+		&:nth-last-child(-n+2)
+			text-transform: uppercase
+
 	&__holder
 		counter-reset: list_faq
 		&:not(:last-child)
@@ -32,6 +35,10 @@
 			.faq__box:first-child
 				.faq__text
 					display: block
+
+		&:last-child
+			.faq__subtitle
+				text-decoration: underline
 
 	&__box
 		&:not(:last-child)

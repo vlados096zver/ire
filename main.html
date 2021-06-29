@@ -46,7 +46,7 @@
 		<div class="container container--header">
 			<div class="main-header__wrap">
 				<a href="" class="main-header__logo">
-					<img src="img/icons/header-logo.png" alt="">
+					<img src="img/icons/header-logo.svg" alt="">
 				</a>
 				<div class="main-header__menu">
 					<div class="mobile-wrap">
@@ -56,10 +56,13 @@
 					</div>
 					<ul class="main-header__list">
 					    <li>
-					      <a class="main-header__link main-header__link--active" href="">Головна</a>
+					      <a class="main-header__link" href="">Головна</a>
+					    </li>
+					    <li>
+					      <a class="main-header__link" href="">Колекции</a>
 					    </li>
 					     <li>
-					        <a class="main-header__link" href="">Купити онлайн</a>
+					        <a class="main-header__link main-header__link--active" href="">Купити онлайн</a>
 					     </li>
 					     <li>
 					        <a class="main-header__link" href="">Колекції</a>
@@ -83,6 +86,7 @@
 							<svg viewBox="0 0 14 16" class="main-header__icon">
 								<use xlink:href="#shop-cart"></use>
 							</svg>
+							<span class="main-header__count">2</span>
 						</a>
 					</div>
 					<div class="main-header__lang">
@@ -119,7 +123,6 @@
 						     		<p class="cart__price">4900 uah</p>
 						     		<p class="cart__size">s</p>
 						     		<p class="cart__count">1</p>
-						     	    <button class="cart__close"></button>
 								</div>
 							</div>
 							<div class="cart__item">
@@ -131,18 +134,31 @@
 						     		<p class="cart__price">4900 uah</p>
 						     		<p class="cart__size">s</p>
 						     		<p class="cart__count">1</p>
-						     		<button class="cart__close"></button>
 								</div>
 							 </div>
-					    </div>
-					<a href="" class="btn btn--basket">Перейти в кошик</a>
+							 <div class="cart__item">
+								<div class="cart__image">
+									 <img src="img/single/single-1.png" alt="">
+								</div>
+								<div class="cart__content">
+								    <p class="cart__title">Сукня з гудзиками</p>
+						     		<p class="cart__price">4900 uah</p>
+						     		<p class="cart__size">s</p>
+						     		<p class="cart__count">1</p>
+								</div>
+							 </div>
+					 </div>
+					 <div class="cart__wrap-btn">	
+					 	<a href="" class="btn btn--basket">Перейти в кошик</a>
+						<button class="btn btn--continue">Продовжити покупки</button>
+					 </div>
 				</div>
 			</div><!--end main-header__wrap-->
 		</div>
 	</header>
 
 	<section class="photo">
-		<div class="photo__wrap">
+		<div class="photo__wrap photo__loader">
 			<div class="photo__item" style="background-image: url(img/photo/photo-1.png);"></div>
 			<div class="photo__item" style="background-image: url(img/photo/photo-2.png);"></div>
 			<div class="photo__item" style="background-image: url(img/photo/photo-3.png);"></div>
@@ -153,7 +169,40 @@
 			<div class="photo__item" style="background-image: url(img/photo/photo-8.png);"></div>
 			<div class="photo__item" style="background-image: url(img/photo/photo-9.png);"></div>
 		</div>
+		<button class="btn btn--collection">купити онлайн</button>
 	</section>
+
+	<footer class="main-footer">
+		<div class="container">
+			<div class="main-footer__wrap">
+				<a href="" class="main-footer__logo">
+					<img src="img/icons/footer-logo.svg" alt="">
+				</a>
+				<ul class="main-footer__socials">
+					<li><a href="" class="main-footer__box">Fb.</a></li>
+					<li><a href="" class="main-footer__box">Inst.</a></li>
+				</ul>
+				<div class="main-footer__holder">
+					<div class="main-footer__item">
+						<div class="main-footer__block">
+						    <svg viewBox="0 0 13 13" class="main-footer__icon">
+							   <use xlink:href="#phone"></use>
+						    </svg>
+				     	</div>
+						<p class="main-footer__elem">+380 98 171 73 73</p>
+					</div>
+					<div class="main-footer__item">
+						<div class="main-footer__block">
+							<svg viewBox="0 0 9 13" class="main-footer__icon main-footer__icon--marker">
+								<use xlink:href="#marker"></use>
+							</svg>
+						</div>
+						<p class="main-footer__elem">м. Львів, вул.Шевченка, 17</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
 
 	<div class="popup popup--menu">
 		<div class="popup__block">
@@ -166,6 +215,17 @@
 				</li>
 				<li>
 					<a class="main-header__link" href="">Купити онлайн</a>
+				</li>
+				<li>
+					<a href="" class="main-header__link main-header__link--add main-header__link--hide">Всі товари</a>
+					<ul class="submenu">
+						<li><a href="">сукні (10)</a></li>
+						<li><a href="">блузи (17)</a></li>
+						<li><a href="">жакети (11)</a></li>
+						<li><a href="">спідниці (8)</a></li>
+						<li><a href="">штани (10)</a></li>
+						<li><a href="">sale (15)</a></li>
+					</ul>
 				</li>
 				<li>
 					<a class="main-header__link" href="">Колекції</a>

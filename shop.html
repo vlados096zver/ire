@@ -46,7 +46,7 @@
 		<div class="container container--header">
 			<div class="main-header__wrap">
 				<a href="" class="main-header__logo">
-					<img src="img/icons/header-logo.png" alt="">
+					<img src="img/icons/header-logo.svg" alt="">
 				</a>
 				<div class="main-header__menu">
 					<div class="mobile-wrap">
@@ -83,6 +83,7 @@
 							<svg viewBox="0 0 14 16" class="main-header__icon">
 								<use xlink:href="#shop-cart"></use>
 							</svg>
+							<span class="main-header__count">2</span>
 						</a>
 					</div>
 					<div class="main-header__lang">
@@ -119,7 +120,6 @@
 						     		<p class="cart__price">4900 uah</p>
 						     		<p class="cart__size">s</p>
 						     		<p class="cart__count">1</p>
-						     	    <button class="cart__close"></button>
 								</div>
 							</div>
 							<div class="cart__item">
@@ -131,417 +131,433 @@
 						     		<p class="cart__price">4900 uah</p>
 						     		<p class="cart__size">s</p>
 						     		<p class="cart__count">1</p>
-						     		<button class="cart__close"></button>
 								</div>
 							 </div>
-					    </div>
-					<a href="" class="btn btn--basket">Перейти в кошик</a>
+							 <div class="cart__item">
+								<div class="cart__image">
+									 <img src="img/single/single-1.png" alt="">
+								</div>
+								<div class="cart__content">
+								    <p class="cart__title">Сукня з гудзиками</p>
+						     		<p class="cart__price">4900 uah</p>
+						     		<p class="cart__size">s</p>
+						     		<p class="cart__count">1</p>
+								</div>
+							 </div>
+					 </div>
+					 <div class="cart__wrap-btn">	
+					 	<a href="" class="btn btn--basket">Перейти в кошик</a>
+						<button class="btn btn--continue">Продовжити покупки</button>
+					 </div>
 				</div>
 			</div><!--end main-header__wrap-->
 		</div>
 	</header>
 
-	<section class="breadcrumbs">
-		<div class="container">
-			<div class="breadcrumbs__wrap">
-				<h2 class="breadcrumbs__title">Купити онлайн</h2>
-				<ul class="breadcrumbs__list"> 
-					<li><a href="#">Головна</a></li>
-					<li>Купити онлайн</li>
-				</ul>
+	<section class="wrap">
+
+		<section class="breadcrumbs">
+			<div class="container">
+				<div class="breadcrumbs__wrap">
+					<h2 class="breadcrumbs__title">Купити онлайн</h2>
+					<ul class="breadcrumbs__list"> 
+						<li><a href="#">Головна</a></li>
+						<li>Купити онлайн</li>
+					</ul>
+				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
 
-	<section class="shop">
-		<div class="container">
-			<div class="shop__holder">
-				<div class="shop__box shop__box--content">
-					<div class="shop__inner">
-						<p class="shop__elem">Показано <span>9</span> з <span>35</span> результатів</p>
-						<div class="select__wrap" id="select__filter">
-					        <div class="select__placeholder" data-mobile="Фільтрувати" data-desc="До більшої ціни">До більшої ціни</div>
-					        <ul class="select__list">
-					            <li class="select__item select__item--active">До більшої ціни</li>
-					            <li class="select__item">До меншої ціни</li>
-					            <li class="select__item" data-mob>сукні</li>
-					            <li class="select__item" data-mob>блузи</li>
-					            <li class="select__item" data-mob>жакети</li>
-					            <li class="select__item" data-mob>костюми</li>
-					            <li class="select__item" data-mob>спідниці</li>
-					            <li class="select__item" data-mob>штани</li>
-					            <li class="select__item" data-mob>sale</li>
-					        </ul>
-					    </div>
-					    <div class="shop__control">
-					    	<button class="shop__view shop__view--row shop__view--active">
-					    		<svg viewBox="0 0 16 16" class="shop__rebuild">
-									<use xlink:href="#btn--row"></use>
-								</svg>
-					    	</button>
-					    	<button class="shop__view shop__view--col">
-					    		<svg viewBox="0 0 16 16" class="shop__rebuild">
-									<use xlink:href="#btn--col"></use>
-								</svg>
-					    	</button>
+		<section class="shop">
+			<div class="container">
+				<div class="shop__holder">
+					<div class="shop__box shop__box--content">
+						<div class="shop__inner">
+							<p class="shop__elem">Показано <span>9</span> з <span>35</span> результатів</p>
+							<div class="select__wrap" id="select__filter">
+						        <div class="select__placeholder" data-mobile="Фільтрувати" data-desc="До більшої ціни">До більшої ціни</div>
+						        <ul class="select__list">
+						            <li class="select__item select__item--active">До більшої ціни</li>
+						            <li class="select__item">До меншої ціни</li>
+						            <li class="select__item" data-mob>сукні</li>
+						            <li class="select__item" data-mob>блузи</li>
+						            <li class="select__item" data-mob>жакети</li>
+						            <li class="select__item" data-mob>костюми</li>
+						            <li class="select__item" data-mob>спідниці</li>
+						            <li class="select__item" data-mob>штани</li>
+						            <li class="select__item" data-mob>sale</li>
+						        </ul>
+						    </div>
+						    <div class="shop__control">
+						    	<button class="shop__view shop__view--row shop__view--active">
+						    		<svg viewBox="0 0 16 16" class="shop__rebuild">
+										<use xlink:href="#btn--row"></use>
+									</svg>
+						    	</button>
+						    	<button class="shop__view shop__view--col">
+						    		<svg viewBox="0 0 16 16" class="shop__rebuild">
+										<use xlink:href="#btn--col"></use>
+									</svg>
+						    	</button>
+						    </div>
+						</div>
+						<div class="shop__wrap">
+							<div class="shop__item">
+								<div class="shop__row">
+									<div class="shop__slider">
+										<div class="shop__pic">
+											<img src="img/shop/shop-1.png" alt="">
+										</div>
+										<div class="shop__pic">
+											<img src="img/shop/shop-2.png" alt="">
+										</div>
+										<div class="shop__pic">
+											<img src="img/shop/shop-1.png" alt="">
+										</div>
+									</div>
+									<div class="shop__wrap-btn"></div>
+									<div class="shop__dots"></div>
+									<button class="shop__add shop__add--active">
+										<svg viewBox="0 0 19 17" class="shop__icon">
+											<use xlink:href="#favorites-no"></use>
+										</svg>
+									</button>
+									<button class="shop__add">
+										<svg viewBox="0 0 19 17" class="shop__icon">
+											<use xlink:href="#favorites-active"></use>
+										</svg>
+									</button>
+									<ul class="shop__size">
+										<li class="shop__user">xs</li>
+										<li class="shop__user shop__user--active">s</li>
+										<li class="shop__user">m</li>
+										<li class="shop__user shop__user--active">l</li>
+									</ul>
+								</div>
+								<p class="shop__title">Товар 1</p>
+								<div class="shop__block">
+									<p class="shop__price">5000 uah</p>
+								</div>
+							</div>
+							<div class="shop__item">
+								<div class="shop__row">
+									<div class="shop__slider">
+										<div class="shop__pic">
+											<img src="img/shop/shop-2.png" alt="">
+										</div>
+										<div class="shop__pic">
+											<img src="img/shop/shop-2.png" alt="">
+										</div>
+									</div>
+									<div class="shop__wrap-btn"></div>
+									<div class="shop__dots"></div>
+									<button class="shop__add shop__add--active">
+										<svg viewBox="0 0 19 17" class="shop__icon">
+											<use xlink:href="#favorites-no"></use>
+										</svg>
+									</button>
+									<button class="shop__add">
+										<svg viewBox="0 0 19 17" class="shop__icon">
+											<use xlink:href="#favorites-active"></use>
+										</svg>
+									</button>
+									<ul class="shop__size">
+										<li class="shop__user">xs</li>
+										<li class="shop__user shop__user--active">s</li>
+										<li class="shop__user">m</li>
+										<li class="shop__user shop__user--active">l</li>
+									</ul>
+								</div>
+								<p class="shop__title">Товар 2</p>
+								<div class="shop__block">
+									<p class="shop__price shop__price--old">5000 uah</p>
+									<p class="shop__price">3000 uah</p>
+								</div>
+								<p class="shop__sale">sale</p>
+							</div>
+							<div class="shop__item">
+								<div class="shop__row">
+									<div class="shop__slider">
+										<div class="shop__pic">
+											<img src="img/shop/shop-3.png" alt="">
+										</div>
+										<div class="shop__pic">
+											<img src="img/shop/shop-1.png" alt="">
+										</div>
+									</div>
+									<div class="shop__wrap-btn"></div>
+									<div class="shop__dots"></div>
+									<button class="shop__add">
+										<svg viewBox="0 0 19 17" class="shop__icon">
+											<use xlink:href="#favorites-no"></use>
+										</svg>
+									</button>
+									<button class="shop__add shop__add--active">
+										<svg viewBox="0 0 19 17" class="shop__icon">
+											<use xlink:href="#favorites-active"></use>
+										</svg>
+									</button>
+									<ul class="shop__size">
+										<li class="shop__user">xs</li>
+										<li class="shop__user shop__user--active">s</li>
+										<li class="shop__user">m</li>
+										<li class="shop__user shop__user--active">l</li>
+									</ul>
+								</div>
+								<p class="shop__title">Товар 3</p>
+								<div class="shop__block">
+									<p class="shop__price">5000 uah</p>
+								</div>
+							</div>
+							<div class="shop__item">
+								<div class="shop__row">
+									<div class="shop__slider">
+										<div class="shop__pic">
+											<img src="img/shop/shop-4.png" alt="">
+										</div>
+										<div class="shop__pic">
+											<img src="img/shop/shop-2.png" alt="">
+										</div>
+									</div>
+									<div class="shop__wrap-btn"></div>
+									<div class="shop__dots"></div>
+									<button class="shop__add shop__add--active">
+										<svg viewBox="0 0 19 17" class="shop__icon">
+											<use xlink:href="#favorites-no"></use>
+										</svg>
+									</button>
+									<button class="shop__add">
+										<svg viewBox="0 0 19 17" class="shop__icon">
+											<use xlink:href="#favorites-active"></use>
+										</svg>
+									</button>
+									<ul class="shop__size">
+										<li class="shop__user">xs</li>
+										<li class="shop__user shop__user--active">s</li>
+										<li class="shop__user">m</li>
+										<li class="shop__user shop__user--active">l</li>
+									</ul>
+								</div>
+								<p class="shop__title">Товар 4</p>
+								<div class="shop__block">
+									<p class="shop__price">5000 uah</p>
+								</div>
+							</div>
+							<div class="shop__item">
+								<div class="shop__row">
+									<div class="shop__slider">
+										<div class="shop__pic">
+											<img src="img/shop/shop-5.png" alt="">
+										</div>
+										<div class="shop__pic">
+											<img src="img/shop/shop-2.png" alt="">
+										</div>
+									</div>
+									<div class="shop__wrap-btn"></div>
+									<div class="shop__dots"></div>
+									<button class="shop__add">
+										<svg viewBox="0 0 19 17" class="shop__icon">
+											<use xlink:href="#favorites-no"></use>
+										</svg>
+									</button>
+									<button class="shop__add shop__add--active">
+										<svg viewBox="0 0 19 17" class="shop__icon">
+											<use xlink:href="#favorites-active"></use>
+										</svg>
+									</button>
+									<ul class="shop__size">
+										<li class="shop__user">xs</li>
+										<li class="shop__user shop__user--active">s</li>
+										<li class="shop__user">m</li>
+										<li class="shop__user shop__user--active">l</li>
+									</ul>
+								</div>
+								<p class="shop__title">Товар 5</p>
+								<div class="shop__block">
+									<p class="shop__price">5000 uah</p>
+								</div>
+							</div>
+							<div class="shop__item">
+								<div class="shop__row">
+									<div class="shop__slider">
+										<div class="shop__pic">
+											<img src="img/shop/shop-6.png" alt="">
+										</div>
+										<div class="shop__pic">
+											<img src="img/shop/shop-2.png" alt="">
+										</div>
+									</div>
+									<div class="shop__wrap-btn"></div>
+									<div class="shop__dots"></div>
+									<button class="shop__add shop__add--active">
+										<svg viewBox="0 0 19 17" class="shop__icon">
+											<use xlink:href="#favorites-no"></use>
+										</svg>
+									</button>
+									<button class="shop__add">
+										<svg viewBox="0 0 19 17" class="shop__icon">
+											<use xlink:href="#favorites-active"></use>
+										</svg>
+									</button>
+									<ul class="shop__size">
+										<li class="shop__user">xs</li>
+										<li class="shop__user shop__user--active">s</li>
+										<li class="shop__user">m</li>
+										<li class="shop__user shop__user--active">l</li>
+									</ul>
+								</div>
+								<p class="shop__title">Товар 6</p>
+								<div class="shop__block">
+									<p class="shop__price shop__price--old">5000 uah</p>
+									<p class="shop__price">3000 uah</p>
+								</div>
+							</div>
+							<div class="shop__item">
+								<div class="shop__row">
+									<div class="shop__slider">
+										<div class="shop__pic">
+											<img src="img/shop/shop-7.png" alt="">
+										</div>
+										<div class="shop__pic">
+											<img src="img/shop/shop-2.png" alt="">
+										</div>
+									</div>
+									<div class="shop__wrap-btn"></div>
+									<div class="shop__dots"></div>
+									<button class="shop__add shop__add--active">
+										<svg viewBox="0 0 19 17" class="shop__icon">
+											<use xlink:href="#favorites-no"></use>
+										</svg>
+									</button>
+									<button class="shop__add">
+										<svg viewBox="0 0 19 17" class="shop__icon">
+											<use xlink:href="#favorites-active"></use>
+										</svg>
+									</button>
+									<ul class="shop__size">
+										<li class="shop__user">xs</li>
+										<li class="shop__user shop__user--active">s</li>
+										<li class="shop__user">m</li>
+										<li class="shop__user shop__user--active">l</li>
+									</ul>
+								</div>
+								<p class="shop__title">Товар 7</p>
+								<div class="shop__block">
+									<p class="shop__price">5000 uah</p>
+								</div>
+							</div>
+							<div class="shop__item">
+								<div class="shop__row">
+									<div class="shop__slider">
+										<div class="shop__pic">
+											<img src="img/shop/shop-8.png" alt="">
+										</div>
+										<div class="shop__pic">
+											<img src="img/shop/shop-2.png" alt="">
+										</div>
+									</div>
+									<div class="shop__wrap-btn"></div>
+									<div class="shop__dots"></div>
+									<button class="shop__add">
+										<svg viewBox="0 0 19 17" class="main-header__icon">
+											<use xlink:href="#favorites-no"></use>
+										</svg>
+									</button>
+									<ul class="shop__size">
+										<li class="shop__user">xs</li>
+										<li class="shop__user shop__user--active">s</li>
+										<li class="shop__user">m</li>
+										<li class="shop__user shop__user--active">l</li>
+									</ul>
+								</div>
+								<p class="shop__title">Товар 8</p>
+								<div class="shop__block">
+									<p class="shop__price">5000 uah</p>
+								</div>
+							</div>
+							<div class="shop__item">
+								<div class="shop__row">
+									<div class="shop__slider">
+										<div class="shop__pic">
+											<img src="img/shop/shop-9.png" alt="">
+										</div>
+										<div class="shop__pic">
+											<img src="img/shop/shop-2.png" alt="">
+										</div>
+									</div>
+									<div class="shop__wrap-btn"></div>
+									<div class="shop__dots"></div>
+									<button class="shop__add">
+										<svg viewBox="0 0 19 17" class="shop__icon">
+											<use xlink:href="#favorites-no"></use>
+										</svg>
+									</button>
+									<button class="shop__add shop__add--active">
+										<svg viewBox="0 0 19 17" class="shop__icon">
+											<use xlink:href="#favorites-active"></use>
+										</svg>
+									</button>
+									<ul class="shop__size">
+										<li class="shop__user">xs</li>
+										<li class="shop__user shop__user--active">s</li>
+										<li class="shop__user">m</li>
+										<li class="shop__user shop__user--active">l</li>
+									</ul>
+								</div>
+								<p class="shop__title">Товар 9</p>
+								<div class="shop__block">
+									<p class="shop__price">5000 uah</p>
+								</div>
+							</div>
+						</div><!--end shop__wrap-->
+					</div>
+					<div class="shop__box shop__box--aside">
+						<h4 class="shop__subtitle">Категорії</h4>
+						<ul class="shop__list">
+							<li class="shop__col">сукні (<span class="shop__count">10</span>)</li>
+							<li class="shop__col">блузи (<span class="shop__count">17</span>)</li>
+							<li class="shop__col">жакети (<span class="shop__count">11</span>)</li>
+							<li class="shop__col">костюми (<span class="shop__count">10</span>)</li>
+							<li class="shop__col">спідниці (<span class="shop__count">8</span>)</li>
+							<li class="shop__col">штани (<span class="shop__count">10</span>)</li>
+							<li class="shop__col">sale (<span class="shop__count">15</span>)</li>
+						</ul>
+						<h4 class="shop__subtitle">Розмір</h4>
+						<ul class="shop__list shop__list--size">
+							<li class="shop__col">xs (<span class="shop__count">10</span>)</li>
+							<li class="shop__col">s (<span class="shop__count">17</span>)</li>
+							<li class="shop__col">m (<span class="shop__count">11</span>)</li>
+							<li class="shop__col">l (<span class="shop__count">10</span>)</li>
+						</ul>
+						<h4 class="shop__subtitle shop__subtitle--price">Ціна</h4>
+						<div class="custom-range" data-id-custom-range="1" tabindex="0">
+						    <div class="custom-range__line"></div>
+						</div>
+						<div class="shop__inner">
+							<div class="shop__submenu">
+						        <div class="custom-range__inner">
+						            <p class="custom-range__min" data-id-custom-range="1">1000</p>
+						                <div class="custom-range__desc">
+							                <span class="custom-range__min-value" data-id-custom-range="1" data-base-value="1000">1000</span>uah - 
+							               <span class="custom-range__max-value" data-id-custom-range="1"  data-base-value="10000">10000</span>uah
+							           </div>
+						            <p class="custom-range__max" data-id-custom-range="1">10000</p>
+						        </div>     
+						    </div>
+						    <button class="btn btn--show">Показати</button>
 					    </div>
 					</div>
-					<div class="shop__wrap">
-						<div class="shop__item">
-							<div class="shop__row">
-								<div class="shop__slider">
-									<div class="shop__pic">
-										<img src="img/shop/shop-1.png" alt="">
-									</div>
-									<div class="shop__pic">
-										<img src="img/shop/shop-2.png" alt="">
-									</div>
-									<div class="shop__pic">
-										<img src="img/shop/shop-1.png" alt="">
-									</div>
-								</div>
-								<div class="shop__wrap-btn"></div>
-								<div class="shop__dots"></div>
-								<button class="shop__add shop__add--active">
-									<svg viewBox="0 0 19 17" class="shop__icon">
-										<use xlink:href="#favorites-no"></use>
-									</svg>
-								</button>
-								<button class="shop__add">
-									<svg viewBox="0 0 19 17" class="shop__icon">
-										<use xlink:href="#favorites-active"></use>
-									</svg>
-								</button>
-								<ul class="shop__size">
-									<li class="shop__user">xs</li>
-									<li class="shop__user shop__user--active">s</li>
-									<li class="shop__user">m</li>
-									<li class="shop__user shop__user--active">l</li>
-								</ul>
-							</div>
-							<p class="shop__title">Товар 1</p>
-							<div class="shop__block">
-								<p class="shop__price">5000 uah</p>
-							</div>
-						</div>
-						<div class="shop__item">
-							<div class="shop__row">
-								<div class="shop__slider">
-									<div class="shop__pic">
-										<img src="img/shop/shop-2.png" alt="">
-									</div>
-									<div class="shop__pic">
-										<img src="img/shop/shop-2.png" alt="">
-									</div>
-								</div>
-								<div class="shop__wrap-btn"></div>
-								<div class="shop__dots"></div>
-								<button class="shop__add shop__add--active">
-									<svg viewBox="0 0 19 17" class="shop__icon">
-										<use xlink:href="#favorites-no"></use>
-									</svg>
-								</button>
-								<button class="shop__add">
-									<svg viewBox="0 0 19 17" class="shop__icon">
-										<use xlink:href="#favorites-active"></use>
-									</svg>
-								</button>
-								<ul class="shop__size">
-									<li class="shop__user">xs</li>
-									<li class="shop__user shop__user--active">s</li>
-									<li class="shop__user">m</li>
-									<li class="shop__user shop__user--active">l</li>
-								</ul>
-							</div>
-							<p class="shop__title">Товар 2</p>
-							<div class="shop__block">
-								<p class="shop__price shop__price--old">5000 uah</p>
-								<p class="shop__price">3000 uah</p>
-							</div>
-							<p class="shop__sale">sale</p>
-						</div>
-						<div class="shop__item">
-							<div class="shop__row">
-								<div class="shop__slider">
-									<div class="shop__pic">
-										<img src="img/shop/shop-3.png" alt="">
-									</div>
-									<div class="shop__pic">
-										<img src="img/shop/shop-1.png" alt="">
-									</div>
-								</div>
-								<div class="shop__wrap-btn"></div>
-								<div class="shop__dots"></div>
-								<button class="shop__add">
-									<svg viewBox="0 0 19 17" class="shop__icon">
-										<use xlink:href="#favorites-no"></use>
-									</svg>
-								</button>
-								<button class="shop__add shop__add--active">
-									<svg viewBox="0 0 19 17" class="shop__icon">
-										<use xlink:href="#favorites-active"></use>
-									</svg>
-								</button>
-								<ul class="shop__size">
-									<li class="shop__user">xs</li>
-									<li class="shop__user shop__user--active">s</li>
-									<li class="shop__user">m</li>
-									<li class="shop__user shop__user--active">l</li>
-								</ul>
-							</div>
-							<p class="shop__title">Товар 3</p>
-							<div class="shop__block">
-								<p class="shop__price">5000 uah</p>
-							</div>
-						</div>
-						<div class="shop__item">
-							<div class="shop__row">
-								<div class="shop__slider">
-									<div class="shop__pic">
-										<img src="img/shop/shop-4.png" alt="">
-									</div>
-									<div class="shop__pic">
-										<img src="img/shop/shop-2.png" alt="">
-									</div>
-								</div>
-								<div class="shop__wrap-btn"></div>
-								<div class="shop__dots"></div>
-								<button class="shop__add shop__add--active">
-									<svg viewBox="0 0 19 17" class="shop__icon">
-										<use xlink:href="#favorites-no"></use>
-									</svg>
-								</button>
-								<button class="shop__add">
-									<svg viewBox="0 0 19 17" class="shop__icon">
-										<use xlink:href="#favorites-active"></use>
-									</svg>
-								</button>
-								<ul class="shop__size">
-									<li class="shop__user">xs</li>
-									<li class="shop__user shop__user--active">s</li>
-									<li class="shop__user">m</li>
-									<li class="shop__user shop__user--active">l</li>
-								</ul>
-							</div>
-							<p class="shop__title">Товар 4</p>
-							<div class="shop__block">
-								<p class="shop__price">5000 uah</p>
-							</div>
-						</div>
-						<div class="shop__item">
-							<div class="shop__row">
-								<div class="shop__slider">
-									<div class="shop__pic">
-										<img src="img/shop/shop-5.png" alt="">
-									</div>
-									<div class="shop__pic">
-										<img src="img/shop/shop-2.png" alt="">
-									</div>
-								</div>
-								<div class="shop__wrap-btn"></div>
-								<div class="shop__dots"></div>
-								<button class="shop__add">
-									<svg viewBox="0 0 19 17" class="shop__icon">
-										<use xlink:href="#favorites-no"></use>
-									</svg>
-								</button>
-								<button class="shop__add shop__add--active">
-									<svg viewBox="0 0 19 17" class="shop__icon">
-										<use xlink:href="#favorites-active"></use>
-									</svg>
-								</button>
-								<ul class="shop__size">
-									<li class="shop__user">xs</li>
-									<li class="shop__user shop__user--active">s</li>
-									<li class="shop__user">m</li>
-									<li class="shop__user shop__user--active">l</li>
-								</ul>
-							</div>
-							<p class="shop__title">Товар 5</p>
-							<div class="shop__block">
-								<p class="shop__price">5000 uah</p>
-							</div>
-						</div>
-						<div class="shop__item">
-							<div class="shop__row">
-								<div class="shop__slider">
-									<div class="shop__pic">
-										<img src="img/shop/shop-6.png" alt="">
-									</div>
-									<div class="shop__pic">
-										<img src="img/shop/shop-2.png" alt="">
-									</div>
-								</div>
-								<div class="shop__wrap-btn"></div>
-								<div class="shop__dots"></div>
-								<button class="shop__add shop__add--active">
-									<svg viewBox="0 0 19 17" class="shop__icon">
-										<use xlink:href="#favorites-no"></use>
-									</svg>
-								</button>
-								<button class="shop__add">
-									<svg viewBox="0 0 19 17" class="shop__icon">
-										<use xlink:href="#favorites-active"></use>
-									</svg>
-								</button>
-								<ul class="shop__size">
-									<li class="shop__user">xs</li>
-									<li class="shop__user shop__user--active">s</li>
-									<li class="shop__user">m</li>
-									<li class="shop__user shop__user--active">l</li>
-								</ul>
-							</div>
-							<p class="shop__title">Товар 6</p>
-							<div class="shop__block">
-								<p class="shop__price shop__price--old">5000 uah</p>
-								<p class="shop__price">3000 uah</p>
-							</div>
-						</div>
-						<div class="shop__item">
-							<div class="shop__row">
-								<div class="shop__slider">
-									<div class="shop__pic">
-										<img src="img/shop/shop-7.png" alt="">
-									</div>
-									<div class="shop__pic">
-										<img src="img/shop/shop-2.png" alt="">
-									</div>
-								</div>
-								<div class="shop__wrap-btn"></div>
-								<div class="shop__dots"></div>
-								<button class="shop__add shop__add--active">
-									<svg viewBox="0 0 19 17" class="shop__icon">
-										<use xlink:href="#favorites-no"></use>
-									</svg>
-								</button>
-								<button class="shop__add">
-									<svg viewBox="0 0 19 17" class="shop__icon">
-										<use xlink:href="#favorites-active"></use>
-									</svg>
-								</button>
-								<ul class="shop__size">
-									<li class="shop__user">xs</li>
-									<li class="shop__user shop__user--active">s</li>
-									<li class="shop__user">m</li>
-									<li class="shop__user shop__user--active">l</li>
-								</ul>
-							</div>
-							<p class="shop__title">Товар 7</p>
-							<div class="shop__block">
-								<p class="shop__price">5000 uah</p>
-							</div>
-						</div>
-						<div class="shop__item">
-							<div class="shop__row">
-								<div class="shop__slider">
-									<div class="shop__pic">
-										<img src="img/shop/shop-8.png" alt="">
-									</div>
-									<div class="shop__pic">
-										<img src="img/shop/shop-2.png" alt="">
-									</div>
-								</div>
-								<div class="shop__wrap-btn"></div>
-								<div class="shop__dots"></div>
-								<button class="shop__add">
-									<svg viewBox="0 0 19 17" class="main-header__icon">
-										<use xlink:href="#favorites-no"></use>
-									</svg>
-								</button>
-								<ul class="shop__size">
-									<li class="shop__user">xs</li>
-									<li class="shop__user shop__user--active">s</li>
-									<li class="shop__user">m</li>
-									<li class="shop__user shop__user--active">l</li>
-								</ul>
-							</div>
-							<p class="shop__title">Товар 8</p>
-							<div class="shop__block">
-								<p class="shop__price">5000 uah</p>
-							</div>
-						</div>
-						<div class="shop__item">
-							<div class="shop__row">
-								<div class="shop__slider">
-									<div class="shop__pic">
-										<img src="img/shop/shop-9.png" alt="">
-									</div>
-									<div class="shop__pic">
-										<img src="img/shop/shop-2.png" alt="">
-									</div>
-								</div>
-								<div class="shop__wrap-btn"></div>
-								<div class="shop__dots"></div>
-								<button class="shop__add">
-									<svg viewBox="0 0 19 17" class="shop__icon">
-										<use xlink:href="#favorites-no"></use>
-									</svg>
-								</button>
-								<button class="shop__add shop__add--active">
-									<svg viewBox="0 0 19 17" class="shop__icon">
-										<use xlink:href="#favorites-active"></use>
-									</svg>
-								</button>
-								<ul class="shop__size">
-									<li class="shop__user">xs</li>
-									<li class="shop__user shop__user--active">s</li>
-									<li class="shop__user">m</li>
-									<li class="shop__user shop__user--active">l</li>
-								</ul>
-							</div>
-							<p class="shop__title">Товар 9</p>
-							<div class="shop__block">
-								<p class="shop__price">5000 uah</p>
-							</div>
-						</div>
-					</div><!--end shop__wrap-->
-				</div>
-				<div class="shop__box shop__box--aside">
-					<h4 class="shop__subtitle">Категорії</h4>
-					<ul class="shop__list">
-						<li class="shop__col">сукні (<span class="shop__count">10</span>)</li>
-						<li class="shop__col">блузи (<span class="shop__count">17</span>)</li>
-						<li class="shop__col">жакети (<span class="shop__count">11</span>)</li>
-						<li class="shop__col">костюми (<span class="shop__count">10</span>)</li>
-						<li class="shop__col">спідниці (<span class="shop__count">8</span>)</li>
-						<li class="shop__col">штани (<span class="shop__count">10</span>)</li>
-						<li class="shop__col">sale (<span class="shop__count">15</span>)</li>
-					</ul>
-					<h4 class="shop__subtitle">Розмір</h4>
-					<ul class="shop__list shop__list--size">
-						<li class="shop__col">xs (<span class="shop__count">10</span>)</li>
-						<li class="shop__col">s (<span class="shop__count">17</span>)</li>
-						<li class="shop__col">m (<span class="shop__count">11</span>)</li>
-						<li class="shop__col">l (<span class="shop__count">10</span>)</li>
-					</ul>
-					<h4 class="shop__subtitle shop__subtitle--price">Ціна</h4>
-					<div class="custom-range" data-id-custom-range="1" tabindex="0">
-					    <div class="custom-range__line"></div>
-					</div>
-					<div class="shop__inner">
-						<div class="shop__submenu">
-					        <div class="custom-range__inner">
-					            <p class="custom-range__min" data-id-custom-range="1">1000</p>
-					                <div class="custom-range__desc">
-						                <span class="custom-range__min-value" data-id-custom-range="1" data-base-value="1000">1000</span>uah - 
-						               <span class="custom-range__max-value" data-id-custom-range="1"  data-base-value="10000">10000</span>uah
-						           </div>
-					            <p class="custom-range__max" data-id-custom-range="1">10000</p>
-					        </div>     
-					    </div>
-					    <button class="btn btn--show">Показати</button>
-				    </div>
-				</div>
-			</div><!--end shop__holder-->
-		</div>
+				</div><!--end shop__holder-->
+			</div>
+		</section>
 	</section>
 
 	<footer class="main-footer">
 		<div class="container">
 			<div class="main-footer__wrap">
 				<a href="" class="main-footer__logo">
-					<img src="img/icons/footer-logo.png" alt="">
+					<img src="img/icons/footer-logo.svg" alt="">
 				</a>
 				<ul class="main-footer__socials">
 					<li><a href="" class="main-footer__box">Fb.</a></li>

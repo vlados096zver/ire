@@ -1,0 +1,136 @@
+.desc {
+	background-color: #fff;
+	padding-top: 88px;
+	padding-bottom: 78px;
+}
+
+.desc__text h3,
+.desc__text h4 {
+	line-height: 1.3;
+	padding-bottom: 22px;
+}
+
+.desc__text h3 {
+	font-size: 18px;
+}
+
+.desc__text h4 {
+	font-size: 14px;
+}
+
+.desc__text p {
+	font-size: 14px;
+	line-height: 1.15;
+}
+
+.desc__text p:not(:last-child) {
+	padding-bottom: 16px;
+}
+
+.desc__text ol {
+	counter-reset: list1;
+	list-style-position: inside;
+	padding: 0px;
+	margin: 0px;
+}
+
+.desc__text ol li {
+	list-style-type: none;
+	font-size: 14px;
+	line-height: 1.33;
+	color: #3D3F42;
+	margin-bottom: 23px;
+	font-weight: 600;
+}
+
+.desc__text ol li:before {
+	font-size: 14px;
+	counter-increment: list1;
+	content: counter(list1) ".";
+	margin-right: 5px;
+}
+
+.desc__text ol ol {
+	margin-top: 23px;
+	counter-reset: list2;
+}
+
+.desc__text ol ol li {
+	font-weight: normal;
+}
+
+.desc__text ol ol li:before {
+	counter-increment: list2;
+	content: counter(list1) "." counter(list2) ".";
+}
+
+.desc__text ol ol ol {
+	margin-top: 23px;
+	counter-reset: list3;
+}
+
+.desc__text ol ol ol li {
+	font-weight: normal;
+}
+
+.desc__text ol ol ol li:before {
+	counter-increment: list3;
+	content: counter(list1) "." counter(list2) "." counter(list3) ".";
+}
+
+.desc__text ol li:nth-child(3) ol li:last-child li:before {
+	display: none;
+}
+
+.desc__text .desc__block {
+	padding-top: 15px;
+}
+
+.desc__text .desc__block p {
+	font-size: 14px;
+	line-height: 1.33;
+	padding-bottom: 2px;
+}
+
+.desc__text .desc__block h3 {
+	font-size: 14px;
+	text-transform: uppercase;
+	padding-bottom: 25px;
+	font-weight: 600;
+}
+
+.desc--politic ol li {
+	font-weight: normal;
+	margin-bottom: 3px;
+}
+
+.desc--politic .breadcrumbs__title--mobile {
+	text-transform: none;
+}
+
+@media screen and (max-width: 1050px) {
+
+.desc {
+	padding-top: 50px;
+	padding-bottom: 42px;
+}
+
+}
+
+@media screen and (max-width: 960px) {
+
+.desc__text p {
+	line-height: 1.3;
+}
+
+}
+
+@media screen and (max-width: 780px) {
+
+.desc {
+	padding-top: 32px;
+	padding-bottom: 24px;
+}
+
+}
+

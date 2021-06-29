@@ -46,7 +46,7 @@
 		<div class="container container--header">
 			<div class="main-header__wrap">
 				<a href="" class="main-header__logo">
-					<img src="img/icons/header-logo.png" alt="">
+					<img src="img/icons/header-logo.svg" alt="">
 				</a>
 				<div class="main-header__menu">
 					<div class="mobile-wrap">
@@ -59,7 +59,7 @@
 					      <a class="main-header__link" href="">Головна</a>
 					    </li>
 					     <li>
-					        <a class="main-header__link" href="">Купити онлайн</a>
+					        <a class="main-header__link main-header__link--active" href="">Купити онлайн</a>
 					     </li>
 					     <li>
 					        <a class="main-header__link" href="">Колекції</a>
@@ -68,7 +68,7 @@
 					       <a class="main-header__link" href="">Про нас</a>
 					    </li>
 					    <li>
-					       <a class="main-header__link main-header__link--active" href="">Faq</a>
+					       <a class="main-header__link" href="">Faq</a>
 					    </li>
 					</ul>
 				</div>
@@ -83,6 +83,7 @@
 							<svg viewBox="0 0 14 16" class="main-header__icon">
 								<use xlink:href="#shop-cart"></use>
 							</svg>
+							<span class="main-header__count">2</span>
 						</a>
 					</div>
 					<div class="main-header__lang">
@@ -119,7 +120,6 @@
 						     		<p class="cart__price">4900 uah</p>
 						     		<p class="cart__size">s</p>
 						     		<p class="cart__count">1</p>
-						     	    <button class="cart__close"></button>
 								</div>
 							</div>
 							<div class="cart__item">
@@ -131,125 +131,150 @@
 						     		<p class="cart__price">4900 uah</p>
 						     		<p class="cart__size">s</p>
 						     		<p class="cart__count">1</p>
-						     		<button class="cart__close"></button>
 								</div>
 							 </div>
-					    </div>
-					<a href="" class="btn btn--basket">Перейти в кошик</a>
+							 <div class="cart__item">
+								<div class="cart__image">
+									 <img src="img/single/single-1.png" alt="">
+								</div>
+								<div class="cart__content">
+								    <p class="cart__title">Сукня з гудзиками</p>
+						     		<p class="cart__price">4900 uah</p>
+						     		<p class="cart__size">s</p>
+						     		<p class="cart__count">1</p>
+								</div>
+							 </div>
+					 </div>
+					 <div class="cart__wrap-btn">	
+					 	<a href="" class="btn btn--basket">Перейти в кошик</a>
+						<button class="btn btn--continue">Продовжити покупки</button>
+					 </div>
 				</div>
 			</div><!--end main-header__wrap-->
 		</div>
 	</header>
 
-	<section class="breadcrumbs">
-		<div class="container">
-			<div class="breadcrumbs__wrap">
-				<h2 class="breadcrumbs__title">Faq</h2>
-				<ul class="breadcrumbs__list"> 
-					<li><a href="#">Головна</a></li>
-					<li>Faq</li>
-				</ul>
-			</div>
-		</div>
-	</section>
+	<section class="wrap">
 
-	<section class="faq">
-		<div class="container">
-			<h2 class="breadcrumbs__title breadcrumbs__title--mobile">Faq</h2>
-			<div class="faq__wrap">
-				<h3 class="faq__title">Замовлення</h3>
-				<div class="faq__holder">
-					<div class="faq__box">
-						<p class="faq__subtitle faq__subtitle--active">Чи можлива примірка перед купівлею?</p>
-						<div class="faq__text">
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, corporis commodi esse, laudantium modi eos, tempora nihil quas aperiam dolore sunt quis maxime obcaecati expedita quibusdam tenetur repellat! Nulla, incidunt!</p>
-						</div>
-					</div>
-					<div class="faq__box">
-						<p class="faq__subtitle">Чи можу я повернути товар?</p>
-						<div class="faq__text">
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, corporis commodi esse, laudantium modi eos, tempora nihil quas aperiam dolore sunt quis maxime obcaecati expedita quibusdam tenetur repellat! Nulla, incidunt!</p>
-						</div>
-					</div>
-					<div class="faq__box">
-						<p class="faq__subtitle">Як повернути товар, який мені не підійшов?</p>
-						<div class="faq__text">
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, corporis commodi esse, laudantium modi eos, tempora nihil quas aperiam dolore sunt quis maxime obcaecati expedita quibusdam tenetur repellat! Nulla, incidunt!</p>
-						</div>
-					</div>
-					<div class="faq__box">
-						<p class="faq__subtitle">Коли я отримаю назад свої гроші?</p>
-						<div class="faq__text">
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, corporis commodi esse, laudantium modi eos, tempora nihil quas aperiam dolore sunt quis maxime obcaecati expedita quibusdam tenetur repellat! Nulla, incidunt!</p>
-						</div>
-					</div>
-					<div class="faq__box">
-						<p class="faq__subtitle">Які документи потрібні для здійснення повернення?</p>
-						<div class="faq__text">
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, corporis commodi esse, laudantium modi eos, tempora nihil quas aperiam dolore sunt quis maxime obcaecati expedita quibusdam tenetur repellat! Nulla, incidunt!</p>
-						</div>
-					</div>
-					<div class="faq__box">
-						<p class="faq__subtitle">Асортимент інтернет-магазину й офлайн-магазину однаковий?</p>
-						<div class="faq__text">
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, corporis commodi esse, laudantium modi eos, tempora nihil quas aperiam dolore sunt quis maxime obcaecati expedita quibusdam tenetur repellat! Nulla, incidunt!</p>
-						</div>
-					</div>
-					<div class="faq__box">
-						<p class="faq__subtitle">Якщо виявлено дефект товару, я можу розраховувати на знижку?</p>
-						<div class="faq__text">
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, corporis commodi esse, laudantium modi eos, tempora nihil quas aperiam dolore sunt quis maxime obcaecati expedita quibusdam tenetur repellat! Nulla, incidunt!</p>
-						</div>
-					</div>
-					<div class="faq__box">
-						<p class="faq__subtitle">Чи є у вас бонусна програма?</p>
-						<div class="faq__text">
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, corporis commodi esse, laudantium modi eos, tempora nihil quas aperiam dolore sunt quis maxime obcaecati expedita quibusdam tenetur repellat! Nulla, incidunt!</p>
-						</div>
-					</div>
-					<div class="faq__box">
-						<p class="faq__subtitle">Чи відрізняється колір виробів на сайті від їх реального кольору?</p>
-						<div class="faq__text">
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, corporis commodi esse, laudantium modi eos, tempora nihil quas aperiam dolore sunt quis maxime obcaecati expedita quibusdam tenetur repellat! Nulla, incidunt!</p>
-						</div>
-					</div>
+		<section class="breadcrumbs">
+			<div class="container">
+				<div class="breadcrumbs__wrap">
+					<h2 class="breadcrumbs__title">Faq</h2>
+					<ul class="breadcrumbs__list"> 
+						<li><a href="#">Головна</a></li>
+						<li>Faq</li>
+					</ul>
 				</div>
-				<h3 class="faq__title">Доставка</h3>
-				<div class="faq__holder">
-					<div class="faq__box">
-						<p class="faq__subtitle">Як ми доставляємо товар?</p>
-						<div class="faq__text">
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, corporis commodi esse, laudantium modi eos, tempora nihil quas aperiam dolore sunt quis maxime obcaecati expedita quibusdam tenetur repellat! Nulla, incidunt!</p>
+			</div>
+		</section>
+
+		<section class="faq">
+			<div class="container">
+				<h2 class="breadcrumbs__title breadcrumbs__title--mobile">Faq</h2>
+				<div class="faq__wrap">
+					<h3 class="faq__title">Замовлення</h3>
+					<div class="faq__holder">
+						<div class="faq__box">
+							<p class="faq__subtitle faq__subtitle--active">Чи можлива примірка перед купівлею?</p>
+							<div class="faq__text">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, corporis commodi esse, laudantium modi eos, tempora nihil quas aperiam dolore sunt quis maxime obcaecati expedita quibusdam tenetur repellat! Nulla, incidunt!</p>
+							</div>
+						</div>
+						<div class="faq__box">
+							<p class="faq__subtitle">Чи можу я повернути товар?</p>
+							<div class="faq__text">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, corporis commodi esse, laudantium modi eos, tempora nihil quas aperiam dolore sunt quis maxime obcaecati expedita quibusdam tenetur repellat! Nulla, incidunt!</p>
+							</div>
+						</div>
+						<div class="faq__box">
+							<p class="faq__subtitle">Як повернути товар, який мені не підійшов?</p>
+							<div class="faq__text">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, corporis commodi esse, laudantium modi eos, tempora nihil quas aperiam dolore sunt quis maxime obcaecati expedita quibusdam tenetur repellat! Nulla, incidunt!</p>
+							</div>
+						</div>
+						<div class="faq__box">
+							<p class="faq__subtitle">Коли я отримаю назад свої гроші?</p>
+							<div class="faq__text">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, corporis commodi esse, laudantium modi eos, tempora nihil quas aperiam dolore sunt quis maxime obcaecati expedita quibusdam tenetur repellat! Nulla, incidunt!</p>
+							</div>
+						</div>
+						<div class="faq__box">
+							<p class="faq__subtitle">Які документи потрібні для здійснення повернення?</p>
+							<div class="faq__text">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, corporis commodi esse, laudantium modi eos, tempora nihil quas aperiam dolore sunt quis maxime obcaecati expedita quibusdam tenetur repellat! Nulla, incidunt!</p>
+							</div>
+						</div>
+						<div class="faq__box">
+							<p class="faq__subtitle">Асортимент інтернет-магазину й офлайн-магазину однаковий?</p>
+							<div class="faq__text">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, corporis commodi esse, laudantium modi eos, tempora nihil quas aperiam dolore sunt quis maxime obcaecati expedita quibusdam tenetur repellat! Nulla, incidunt!</p>
+							</div>
+						</div>
+						<div class="faq__box">
+							<p class="faq__subtitle">Якщо виявлено дефект товару, я можу розраховувати на знижку?</p>
+							<div class="faq__text">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, corporis commodi esse, laudantium modi eos, tempora nihil quas aperiam dolore sunt quis maxime obcaecati expedita quibusdam tenetur repellat! Nulla, incidunt!</p>
+							</div>
+						</div>
+						<div class="faq__box">
+							<p class="faq__subtitle">Чи є у вас бонусна програма?</p>
+							<div class="faq__text">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, corporis commodi esse, laudantium modi eos, tempora nihil quas aperiam dolore sunt quis maxime obcaecati expedita quibusdam tenetur repellat! Nulla, incidunt!</p>
+							</div>
+						</div>
+						<div class="faq__box">
+							<p class="faq__subtitle">Чи відрізняється колір виробів на сайті від їх реального кольору?</p>
+							<div class="faq__text">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, corporis commodi esse, laudantium modi eos, tempora nihil quas aperiam dolore sunt quis maxime obcaecati expedita quibusdam tenetur repellat! Nulla, incidunt!</p>
+							</div>
 						</div>
 					</div>
-					<div class="faq__box">
-						<p class="faq__subtitle">Скільки часу може зайняти доставка?</p>
-						<div class="faq__text">
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, corporis commodi esse, laudantium modi eos, tempora nihil quas aperiam dolore sunt quis maxime obcaecati expedita quibusdam tenetur repellat! Nulla, incidunt!</p>
+					<h3 class="faq__title">Доставка</h3>
+					<div class="faq__holder">
+						<div class="faq__box">
+							<p class="faq__subtitle">Як ми доставляємо товар?</p>
+							<div class="faq__text">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, corporis commodi esse, laudantium modi eos, tempora nihil quas aperiam dolore sunt quis maxime obcaecati expedita quibusdam tenetur repellat! Nulla, incidunt!</p>
+							</div>
+						</div>
+						<div class="faq__box">
+							<p class="faq__subtitle">Скільки часу може зайняти доставка?</p>
+							<div class="faq__text">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, corporis commodi esse, laudantium modi eos, tempora nihil quas aperiam dolore sunt quis maxime obcaecati expedita quibusdam tenetur repellat! Nulla, incidunt!</p>
+							</div>
+						</div>
+						<div class="faq__box">
+							<p class="faq__subtitle">Яка вартість доставки?</p>
+							<div class="faq__text">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, corporis commodi esse, laudantium modi eos, tempora nihil quas aperiam dolore sunt quis maxime obcaecati expedita quibusdam tenetur repellat! Nulla, incidunt!</p>
+							</div>
+						</div>
+						<div class="faq__box">
+							<p class="faq__subtitle">Як оплатити замовлення?</p>
+							<div class="faq__text">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, corporis commodi esse, laudantium modi eos, tempora nihil quas aperiam dolore sunt quis maxime obcaecati expedita quibusdam tenetur repellat! Nulla, incidunt!</p>
+							</div>
 						</div>
 					</div>
-					<div class="faq__box">
-						<p class="faq__subtitle">Яка вартість доставки?</p>
-						<div class="faq__text">
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, corporis commodi esse, laudantium modi eos, tempora nihil quas aperiam dolore sunt quis maxime obcaecati expedita quibusdam tenetur repellat! Nulla, incidunt!</p>
-						</div>
-					</div>
-					<div class="faq__box">
-						<p class="faq__subtitle">Як оплатити замовлення?</p>
-						<div class="faq__text">
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, corporis commodi esse, laudantium modi eos, tempora nihil quas aperiam dolore sunt quis maxime obcaecati expedita quibusdam tenetur repellat! Nulla, incidunt!</p>
+					<h3 class="faq__title">Публічний договір (оферта)</h3>
+					<div class="faq__holder">
+						<div class="faq__box">
+							<p class="faq__subtitle">Ознайомитись детальнiше</p>
+							<div class="faq__text">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, corporis commodi esse, laudantium modi eos, tempora nihil quas aperiam dolore sunt quis maxime obcaecati expedita quibusdam tenetur repellat! Nulla, incidunt!</p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	</section>
 
 	<footer class="main-footer">
 		<div class="container">
 			<div class="main-footer__wrap">
 				<a href="" class="main-footer__logo">
-					<img src="img/icons/footer-logo.png" alt="">
+					<img src="img/icons/footer-logo.svg" alt="">
 				</a>
 				<ul class="main-footer__socials">
 					<li><a href="" class="main-footer__box">Fb.</a></li>

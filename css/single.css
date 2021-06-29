@@ -1,0 +1,423 @@
+.single {
+	background-color: #fff;
+}
+
+.single__wrap {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 80px 0;
+	margin: 0 -20px;
+}
+
+.single__item {
+	width: calc(100% / 2 - 40px);
+	margin: 0 20px;
+}
+
+.single__item:last-child {
+	padding-left: 105px;
+}
+
+.single__big {
+	position: relative;
+}
+
+.single__big img {
+	display: block;
+}
+
+.single__user {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 40px;
+}
+
+.single__user .slick-track {
+	display: flex;
+	align-items: center;
+}
+
+.single__pic img {
+	display: block;
+	margin: 0 auto;
+}
+
+.single__gallery .slick-track {
+	display: flex;
+	align-items: center;
+}
+
+.single__box {
+	width: calc(100% / 3 - 40px);
+	height: 172px;
+	cursor: pointer;
+	margin: 0 20px;
+	margin-bottom: 40px;
+}
+
+.single__box img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.single__title {
+	font-size: 28px;
+	line-height: 1.2;
+	padding-bottom: 38px;
+	font-weight: 600;
+}
+
+.single__price {
+	font-size: 20px;
+	line-height: 1.2;
+	text-transform: uppercase;
+	padding-bottom: 18px;
+	font-weight: 600;
+}
+
+.single__text p {
+	font-size: 18px;
+	line-height: 1.56;
+	color: #6B6C70;
+	padding-bottom: 24px;
+}
+
+.single__holder {
+	display: flex;
+	align-items: center;
+	padding-bottom: 9px;
+	margin: 0 -8px;
+}
+
+.single__elem {
+	width: 32px;
+	height: 32px;
+	border: 1px dotted transparent;
+	padding: 2px;
+	margin: 0 8px;
+	margin-bottom: 15px;
+}
+
+.single__elem--active {
+	border-color: #6B6C70;
+}
+
+.single__input {
+	display: none;
+}
+
+.single__label {
+	cursor: pointer;
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: 4px;
+}
+
+.single__line {
+	cursor: pointer;
+	user-select: none;
+	width: max-content;
+	font-size: 12px;
+	line-height: 1.2;
+	color: #9f9f9f;
+	background-image: url(img/icons/hint-text.svg);
+	background-size: 15px 16px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 23px;
+	margin-left: auto;
+	margin-bottom: 10px;
+	font-weight: normal;
+}
+
+.single__container {
+	position: relative;
+}
+
+.single__wrap-btn {
+	border-top: 1px solid #9f9f9f;
+	border-bottom: 1px solid #9f9f9f;
+	margin-bottom: 24px;
+}
+
+.single__info {
+	cursor: pointer;
+	user-select: none;
+	display: block;
+	width: 100%;
+	font-size: 14px;
+	line-height: 1.2;
+	text-transform: uppercase;
+	padding: 12px 20px;
+	transition: 0.3s background-color;
+}
+
+.single__add-info {
+	user-select: none;
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
+	font-size: 12px;
+	line-height: 1.2;
+	color: #9f9f9f;
+}
+
+.single__point {
+	display: none;
+}
+
+.single__point:checked + .single__info {
+	background-color: #e8e8e8;
+}
+
+.single__point:disabled + .single__info {
+	cursor: default;
+}
+
+.single__error {
+	color: #cc0000;
+	padding-bottom: 16px;
+}
+
+.single__content p {
+	font-size: 14px;
+	line-height: 1.4;
+	color: #3D3F42;
+	margin-bottom: 20px;
+}
+
+.single__content p span {
+	color: #c9c9c9;
+	padding-left: 5px;
+}
+
+.single__content a {
+	display: inline-block;
+	color: #c9c9c9;
+	margin-left: 5px;
+	text-decoration: underline;
+}
+
+.single__content a:hover {
+	text-decoration: none;
+}
+
+.single__content--delivery {
+	border-bottom: 1px solid #E8E8E8;
+}
+
+.single__content--delivery p {
+	margin-bottom: 24px;
+}
+
+.single__row {
+	padding-bottom: 12px;
+}
+
+.single__row p {
+	font-size: 14px;
+	line-height: 1.2;
+	color: #c9c9c9;
+	margin-bottom: 4px;
+}
+
+.single__socials {
+	display: flex;
+	align-items: center;
+	padding-top: 22px;
+}
+
+.single__desc {
+	font-size: 14px;
+	line-height: 1.4;
+	color: #3D3F42;
+	margin-right: 40px;
+}
+
+.single__list {
+	display: flex;
+	align-items: center;
+}
+
+.single__col {
+	display: block;
+	font-size: 14px;
+	line-height: 1.4;
+	color: #9f9f9f;
+	text-transform: uppercase;
+	margin-right: 40px;
+	transition: 0.3s color;
+}
+
+.single__col:hover {
+	color: #3D3F42;
+}
+
+.single .shop__add {
+	top: 20px;
+	left: 20px;
+}
+
+.single .shop__icon {
+	width: 28px;
+	height: 32px;
+}
+
+.single__dots-list {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 4px;
+	background-color: #e8e8e8;
+}
+
+.single__dots-list li {
+	position: relative;
+	cursor: pointer;
+	font-size: 0px;
+	flex: 1;
+	height: 4px;
+	background-color: inherit;
+}
+
+.single__dots-list li:after {
+	position: absolute;
+	content: ' ';
+	top: calc(50% - 8px);
+	left: 0px;
+	height: 16px;
+	width: 100%;
+	background-color: transparent;
+}
+
+.single__dots-list li.slick-active {
+	position: relative;
+}
+
+.single__dots-list li.slick-active:before {
+	position: absolute;
+	content: ' ';
+	top: calc(50% - 2px);
+	left: 0px;
+	height: 4px;
+	width: 100%;
+	background-color: #cacbce;
+}
+
+.single__controls-list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 4px;
+	margin: 0 -4px;
+}
+
+.single__controls-list li {
+	position: relative;
+	cursor: pointer;
+	font-size: 0px;
+	width: 8px;
+	height: 8px;
+	background-color: #e8e8e8;
+	border-radius: 13px;
+	margin: 0 4px;
+}
+
+.single__controls-list li.slick-active {
+	position: relative;
+	background-color: #9f9f9f;
+}
+
+@media screen and (max-width: 1250px) {
+
+.single__item:last-child {
+	padding-left: 0px;
+}
+
+}
+
+@media screen and (max-width: 960px) {
+
+.single__wrap {
+	padding: 45px 0;
+	margin: 0px;
+}
+
+.single__item {
+	width: 100%;
+	margin: 0px;
+}
+
+.single__item:first-child {
+	margin-bottom: 14px;
+}
+
+.single__user {
+	margin-bottom: 16px;
+}
+
+.single__slider {
+	display: none;
+}
+
+.single__title {
+	font-size: 24px;
+	padding-bottom: 24px;
+}
+
+.single__price {
+	font-size: 17px;
+}
+
+.single__text p {
+	font-size: 16px;
+}
+
+.single__content p {
+	margin-bottom: 10px;
+}
+
+.single__content--delivery p {
+	margin-bottom: 22px;
+}
+
+.single .shop__add {
+	top: 10px;
+	left: 10px;
+}
+
+.single .shop__icon {
+	width: 18px;
+	height: 18px;
+}
+
+}
+
+@media screen and (max-width: 780px) {
+
+.single__wrap {
+	padding: 30px 0;
+}
+
+.single__title {
+	font-size: 20px;
+	padding-bottom: 16px;
+}
+
+.single__price {
+	font-size: 14px;
+}
+
+.single__text p {
+	font-size: 14px;
+	line-height: 1.45;
+}
+
+}
+

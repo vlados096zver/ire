@@ -1,0 +1,53 @@
+.block {
+	background-color: #212223;
+	position: fixed;
+	z-index: 10;
+	width: 100%;
+	left: 0px;
+	bottom: 0px;
+}
+
+.block__wrap {
+	display: flex;
+	align-items: center;
+	padding: 23px 40px;
+}
+
+.block__desc {
+	padding-right: 48px;
+}
+
+.block__desc p {
+	font-size: 12px;
+	line-height: 1.2;
+	color: #E8E8E8;
+}
+
+.block__desc p a {
+	color: #E8E8E8;
+	text-decoration: underline;
+}
+
+.block__desc p a:hover {
+	text-decoration: none;
+}
+
+.block__inner {
+	display: flex;
+	align-items: center;
+}
+
+@media screen and (max-width: 840px) {
+
+.block__wrap {
+	display: block;
+	padding: 23px 30px;
+}
+
+.block__desc {
+	padding-right: 0px;
+	margin-bottom: 24px;
+}
+
+}
+

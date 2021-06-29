@@ -2,26 +2,26 @@
 
 .breadcrumbs
 	background-color: #f8f8f8
-	padding: 64px 0
-	+media(mdx)
-		padding: 45px 0
 	+media(sm)
 		display: none
 
 	&--collection		
-		padding: 57px 0
 		+media(sm)
 			display: block	
 			background-color: #fff
-			padding-top: 13px
-			padding-bottom: 40px
+
+		.breadcrumbs__wrap
+			padding: 57px 0
+			+media(sm)
+				padding-top: 13px
+				padding-bottom: 40px
 
 		.shop__control
 			margin-bottom: 0px
 
 		.select__wrap
 			max-width: 178px
-			background-image: url(../img/icons/decor-select.svg)
+			background-image: url(img/icons/decor-select.svg)
 			background-size: 10px 24px
 			background-repeat: no-repeat
 			background-position: right 2px center
@@ -67,6 +67,9 @@
 		display: flex
 		align-items: center
 		justify-content: space-between
+		padding: 64px 0
+		+media(mdx)
+			padding: 45px 0
 
 	&__title
 		font-size: 20px

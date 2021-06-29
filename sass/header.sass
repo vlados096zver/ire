@@ -1,8 +1,15 @@
 @import 'responsive'
 
 .main-header
-	position: relative
+	position: fixed
+	z-index: 12
+	width: 100%
 	background-color: #fff
+	&+section
+		padding-top: 92px
+		+media(smdx)
+			padding-top: 55px
+
 	.btn--basket
 		max-width: 100%
 		margin-bottom: 0px
@@ -14,8 +21,7 @@
 		align-items: center
 		padding: 32px 30px
 		+media(smdx)
-			padding: 15px 30px
-			padding-top: 20px
+			padding: 17px 30px
 
 	&__logo
 		display: block
@@ -38,12 +44,15 @@
 			margin-right: 48px
 			+media(mdx)
 				margin-right: 25px
+			+media(md)
+				margin-right: 16px
 			+media(smdx)
 				margin-right: 0px
 		+media(smdx)
 			display: none
 			background-color: #fff
-			margin-bottom: 35px	
+			padding-bottom: 3px
+			margin-bottom: 26px	
 			border-bottom: 1px solid #E8E8E8
 
 	&__link
@@ -56,12 +65,30 @@
 		font-weight: 400
 		transition: 0.3s color
 		+media(smdx)
-			margin-bottom: 35px
+			margin-bottom: 28px
 		&--active
 			color: #3D3F42
 
 		&:hover:not(.main-header__link--active)
 			color: #3D3F42
+
+		&--add
+			display: block
+			&:after
+				position: absolute
+				content: ' '
+				top: 1px
+				width: 9px
+				height: 9px
+				right: 2px
+				border-right: 2px solid #9f9f9f
+				border-bottom: 2px solid #9f9f9f
+				transform: rotate(45deg)
+				transition: 0.3s transform, 0.3s top
+
+			&.main-header__link--hide:after
+				transform: rotate(45deg) scale(-1)
+				top: 6px
 
 	&__holder
 		display: flex	
@@ -71,6 +98,8 @@
 		display: flex
 		align-items: center
 		margin-right: 48px	
+		+media(md)
+			margin-right: 30px
 		+media(smdx)
 			margin-right: 0px	
 
@@ -84,10 +113,19 @@
 		background-color: transparent
 		padding: 0px
 		&--basket
-			width: 14px
+			position: relative
+			width: max-content
+			display: flex
 			margin-left: 24px
 			.main-header__icon
 				width: 14px
+
+	&__count
+		font-size: 14px
+		color: #6B6C70
+		padding-left: 5px
+		+media(smdx)
+			color: #3D3F42
 
 	&__icon
 		display: block
@@ -103,7 +141,7 @@
 
 	&__lang
 		position: relative
-		width: 40px
+		width: 38px
 		min-height: 24px
 	
 	.main-header__lang,
@@ -218,9 +256,29 @@
 .main-header
 	.select__wrap
 		width: 42px
-		margin-top: 3px
+		margin-top: 2px
 
 	.select__placeholder,
 	.select__item
 		padding-left: 5px
 		padding-right: 5px	
+
+	.select__placeholder
+		line-height: 1.45
+
+	.select__item
+		padding-top: 0px
+		padding-bottom: 2px
+
+.submenu
+	display: none
+	margin-left: 20px
+	li
+		&:not(:last-child)
+			margin-bottom: 12px
+		&:last-child
+			margin-bottom: 28px
+		a
+			font-size: 14px
+			color: #9F9F9F
+			font-weight: 300

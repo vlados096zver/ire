@@ -46,7 +46,7 @@
 		<div class="container container--header">
 			<div class="main-header__wrap">
 				<a href="" class="main-header__logo">
-					<img src="img/icons/header-logo.png" alt="">
+					<img src="img/icons/header-logo.svg" alt="">
 				</a>
 				<div class="main-header__menu">
 					<div class="mobile-wrap">
@@ -59,13 +59,13 @@
 					      <a class="main-header__link" href="">Головна</a>
 					    </li>
 					     <li>
-					        <a class="main-header__link" href="">Купити онлайн</a>
+					        <a class="main-header__link main-header__link--active" href="">Купити онлайн</a>
 					     </li>
 					     <li>
 					        <a class="main-header__link" href="">Колекції</a>
 					    </li>
 					    <li>
-					       <a class="main-header__link main-header__link--active" href="">Про нас</a>
+					       <a class="main-header__link" href="">Про нас</a>
 					    </li>
 					    <li>
 					       <a class="main-header__link" href="">Faq</a>
@@ -83,6 +83,7 @@
 							<svg viewBox="0 0 14 16" class="main-header__icon">
 								<use xlink:href="#shop-cart"></use>
 							</svg>
+							<span class="main-header__count">2</span>
 						</a>
 					</div>
 					<div class="main-header__lang">
@@ -119,7 +120,6 @@
 						     		<p class="cart__price">4900 uah</p>
 						     		<p class="cart__size">s</p>
 						     		<p class="cart__count">1</p>
-						     	    <button class="cart__close"></button>
 								</div>
 							</div>
 							<div class="cart__item">
@@ -131,56 +131,72 @@
 						     		<p class="cart__price">4900 uah</p>
 						     		<p class="cart__size">s</p>
 						     		<p class="cart__count">1</p>
-						     		<button class="cart__close"></button>
 								</div>
 							 </div>
-					    </div>
-					<a href="" class="btn btn--basket">Перейти в кошик</a>
+							 <div class="cart__item">
+								<div class="cart__image">
+									 <img src="img/single/single-1.png" alt="">
+								</div>
+								<div class="cart__content">
+								    <p class="cart__title">Сукня з гудзиками</p>
+						     		<p class="cart__price">4900 uah</p>
+						     		<p class="cart__size">s</p>
+						     		<p class="cart__count">1</p>
+								</div>
+							 </div>
+					 </div>
+					 <div class="cart__wrap-btn">	
+					 	<a href="" class="btn btn--basket">Перейти в кошик</a>
+						<button class="btn btn--continue">Продовжити покупки</button>
+					 </div>
 				</div>
 			</div><!--end main-header__wrap-->
 		</div>
 	</header>
 
-	<section class="breadcrumbs">
-		<div class="container">
-			<div class="breadcrumbs__wrap">
-				<h2 class="breadcrumbs__title">Про нас</h2>
-				<ul class="breadcrumbs__list"> 
-					<li><a href="#">Головна</a></li>
-					<li>Про нас</li>
-				</ul>
-			</div>
-		</div>
-	</section>
+	<section class="wrap">
 
-	<section class="about">
-		<div class="about__image">
-			<img src="img/about-pic.png" alt="">
-		</div>
-		<div class="container container--about">
-			<div class="about__wrap">
-				<div class="about__item">
-					<h3 class="about__title">Про нас</h3>
-					<div class="about__text">
-						<p>Жіночий бренд одягу IRE був заснований лише нещодавно, але успішно
-						набуває популярності серед українок. У грудні 2020 року вийшла перша
-						капсульна колекція 2020-2021 рр. </p>
-						<p>Основою бренду є вишуканість і жіночність –
-						це речі, які максимально яскраво підкреслять вашу красу. Без винятку всі
-						вироби виконані з якісних натуральних італійських тканин, а також шиються на
-						власному виробництві у Львові. </p>
-						<p>Над посадкою кожної моделі працює
-						висококваліфікована команда ІRE, щоб отримати безумовно досконалий
-						результат.</p>
+		<section class="breadcrumbs">
+			<div class="container">
+				<div class="breadcrumbs__wrap">
+					<h2 class="breadcrumbs__title">Про нас</h2>
+					<ul class="breadcrumbs__list"> 
+						<li><a href="#">Головна</a></li>
+						<li>Про нас</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="about">
+			<div class="about__image">
+				<img src="img/icons/footer-logo.svg" alt="">
+			</div>
+			<div class="container container--about">
+				<div class="about__wrap">
+					<div class="about__item">
+						<h3 class="about__title">Про нас</h3>
+						<div class="about__text">
+							<p>Жіночий бренд одягу IRE був заснований лише нещодавно, але успішно
+							набуває популярності серед українок. У грудні 2020 року вийшла перша
+							капсульна колекція 2020-2021 рр. </p>
+							<p>Основою бренду є вишуканість і жіночність –
+							це речі, які максимально яскраво підкреслять вашу красу. Без винятку всі
+							вироби виконані з якісних натуральних італійських тканин, а також шиються на
+							власному виробництві у Львові. </p>
+							<p>Над посадкою кожної моделі працює
+							висококваліфікована команда ІRE, щоб отримати безумовно досконалий
+							результат.</p>
+						</div>
+					</div>
+					<div class="about__item">
+						<img src="img/about-image.png" alt="">
 					</div>
 				</div>
-				<div class="about__item">
-					<img src="img/about-image.png" alt="">
-				</div>
 			</div>
-		</div>
+		</section>
 	</section>
-
+	
 	<footer class="main-footer">
 		<div class="container">
 			<div class="main-footer__wrap">

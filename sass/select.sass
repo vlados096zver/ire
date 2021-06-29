@@ -49,8 +49,11 @@
 		line-height: 24px
 		cursor: pointer
 		user-select: none
+		overflow: hidden
+		text-overflow: ellipsis
+		white-space: pre
 		&.select__item--loader
-			&:after
+			&:before
 				right: 40px
 
 	&__list 
@@ -107,21 +110,22 @@
 
 		&--search
 			padding: 0px
-			
+			outline: 1px solid #333
 			input
 				display: block
 				width: 100%
 				border: none
 				outline: none
-				padding: 4px 12px
+				padding: 7px 12px
 				padding-left: 20px
 				padding-right: 40px
-				padding-bottom: 5px
-				border-bottom: 1px solid #333
+				padding-bottom: 8px
+				
 
 		&--loader
-			position: relative
-			&:after
+			position: sticky
+			top: 0px
+			&:before
 				content: ''
 				position: absolute
 				top: calc(50% - 10px)

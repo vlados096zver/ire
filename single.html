@@ -46,7 +46,7 @@
 		<div class="container container--header">
 			<div class="main-header__wrap">
 				<a href="" class="main-header__logo">
-					<img src="img/icons/header-logo.png" alt="">
+					<img src="img/icons/header-logo.svg" alt="">
 				</a>
 				<div class="main-header__menu">
 					<div class="mobile-wrap">
@@ -59,7 +59,7 @@
 					      <a class="main-header__link" href="">Головна</a>
 					    </li>
 					     <li>
-					        <a class="main-header__link" href="">Купити онлайн</a>
+					        <a class="main-header__link main-header__link--active" href="">Купити онлайн</a>
 					     </li>
 					     <li>
 					        <a class="main-header__link" href="">Колекції</a>
@@ -83,6 +83,7 @@
 							<svg viewBox="0 0 14 16" class="main-header__icon">
 								<use xlink:href="#shop-cart"></use>
 							</svg>
+							<span class="main-header__count">2</span>
 						</a>
 					</div>
 					<div class="main-header__lang">
@@ -119,7 +120,6 @@
 						     		<p class="cart__price">4900 uah</p>
 						     		<p class="cart__size">s</p>
 						     		<p class="cart__count">1</p>
-						     	    <button class="cart__close"></button>
 								</div>
 							</div>
 							<div class="cart__item">
@@ -131,152 +131,165 @@
 						     		<p class="cart__price">4900 uah</p>
 						     		<p class="cart__size">s</p>
 						     		<p class="cart__count">1</p>
-						     		<button class="cart__close"></button>
 								</div>
 							 </div>
-					    </div>
-					<a href="" class="btn btn--basket">Перейти в кошик</a>
+							 <div class="cart__item">
+								<div class="cart__image">
+									 <img src="img/single/single-1.png" alt="">
+								</div>
+								<div class="cart__content">
+								    <p class="cart__title">Сукня з гудзиками</p>
+						     		<p class="cart__price">4900 uah</p>
+						     		<p class="cart__size">s</p>
+						     		<p class="cart__count">1</p>
+								</div>
+							 </div>
+					 </div>
+					 <div class="cart__wrap-btn">	
+					 	<a href="" class="btn btn--basket">Перейти в кошик</a>
+						<button class="btn btn--continue">Продовжити покупки</button>
+					 </div>
 				</div>
 			</div><!--end main-header__wrap-->
 		</div>
 	</header>
 
-
-	<section class="breadcrumbs">
-		<div class="container">
-			<div class="breadcrumbs__wrap">
-				<h2 class="breadcrumbs__title">item page</h2>
-				<ul class="breadcrumbs__list"> 
-					<li><a href="#">Головна</a></li>
-					<li>item page</li>
-				</ul>
+	<section class="wrap">
+		<section class="breadcrumbs">
+			<div class="container">
+				<div class="breadcrumbs__wrap">
+					<h2 class="breadcrumbs__title">item page</h2>
+					<ul class="breadcrumbs__list"> 
+						<li><a href="#">Головна</a></li>
+						<li>item page</li>
+					</ul>
+				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<section class="single">
-		<div class="container">
-			<div class="single__wrap">
-				<div class="single__item">
-					<div class="single__big">
-						<div class="single__block">
-							<div class="single__user">
-								<div class="single__pic">
-									<img src="img/single/single-1.png" alt="">
+		<section class="single">
+			<div class="container">
+				<div class="single__wrap">
+					<div class="single__item">
+						<div class="single__big">
+							<div class="single__block">
+								<div class="single__user">
+									<div class="single__pic">
+										<img src="img/single/single-1.png" alt="">
+									</div>
+									<div class="single__pic">
+										<img src="img/single/single-2.png" alt="">
+									</div>
+									<div class="single__pic">
+										<img src="img/single/single-3.png" alt="">
+									</div>
+									<div class="single__pic">
+										<img src="img/single/single-1.png" alt="">
+									</div>
 								</div>
-								<div class="single__pic">
-									<img src="img/single/single-2.png" alt="">
-								</div>
-								<div class="single__pic">
-									<img src="img/single/single-3.png" alt="">
-								</div>
-								<div class="single__pic">
-									<img src="img/single/single-1.png" alt="">
-								</div>
+								<div class="single__controls"></div>
 							</div>
-							<div class="single__controls"></div>
+							<button class="shop__add">
+								<svg viewBox="0 0 19 17" class="shop__icon">
+									<use xlink:href="#favorites-no"></use>
+								</svg>
+							</button>
+							<button class="shop__add shop__add--active">
+								<svg viewBox="0 0 19 17" class="shop__icon">
+									<use xlink:href="#favorites-active"></use>
+								</svg>
+							</button>
 						</div>
-						<button class="shop__add">
-							<svg viewBox="0 0 19 17" class="shop__icon">
-								<use xlink:href="#favorites-no"></use>
-							</svg>
-						</button>
-						<button class="shop__add shop__add--active">
-							<svg viewBox="0 0 19 17" class="shop__icon">
-								<use xlink:href="#favorites-active"></use>
-							</svg>
-						</button>
-					</div>
-					<div class="single__slider">
-						<div class="single__gallery">
-						   <div class="single__box">
-						   	<img src="img/single/single-1.png" alt="">
-						   </div>
-						   <div class="single__box">
-						   	<img src="img/single/single-2.png" alt="">
-						   </div>
-						   <div class="single__box">
-						   	<img src="img/single/single-3.png" alt="">
-						   </div>
-						    <div class="single__box">
-						   	<img src="img/single/single-1.png" alt="">
-						   </div>
-				     	</div>
-				     	<div class="single__dots"></div>
-					</div>
-				</div><!--end single__item-->
-				<div class="single__item">
-					<h3 class="single__title">Сукня з гудзиками</h3>
-					<p class="single__price">4900 uah</p>
-					<div class="single__text">
-						<p>Сукня з італійської шерсті з шовком. Прямого крою, молочні гудзики на лівому плечі, прихована застібка-блискавка ззаду виробу.</p>
-					</div>
-					<div class="single__holder">
-						<div class="single__elem">
-							<label for="s_1" class="single__label" style="background-color: #e0d5bd;"></label>
-							<input id="s_1" type="radio" class="single__input" name="color1" checked>
+						<div class="single__slider">
+							<div class="single__gallery">
+							   <div class="single__box">
+							   	<img src="img/single/single-1.png" alt="">
+							   </div>
+							   <div class="single__box">
+							   	<img src="img/single/single-2.png" alt="">
+							   </div>
+							   <div class="single__box">
+							   	<img src="img/single/single-3.png" alt="">
+							   </div>
+							    <div class="single__box">
+							   	<img src="img/single/single-1.png" alt="">
+							   </div>
+					     	</div>
+					     	<div class="single__dots"></div>
 						</div>
-						<div class="single__elem">
-							<label for="s_2" class="single__label" style="background-color: #3D3F42;"></label>
-							<input id="s_2" type="radio" class="single__input" name="color1">
+					</div><!--end single__item-->
+					<div class="single__item">
+						<h3 class="single__title">Сукня з гудзиками</h3>
+						<p class="single__price">4900 uah</p>
+						<div class="single__text">
+							<p>Сукня з італійської шерсті з шовком. Прямого крою, молочні гудзики на лівому плечі, прихована застібка-блискавка ззаду виробу.</p>
 						</div>
-					</div>
-					<div class="single__size">
-						<h3 class="single__line">Розмірна сітка</h3>
-						<div class="single__wrap-btn">
-							<div class="single__container">
-								<input id="i_1" type="radio" class="single__point" name="size">
-								<label for="i_1" class="single__info">xs</label>
+						<div class="single__holder">
+							<div class="single__elem single__elem--active">
+								<label for="s_1" class="single__label" style="background-color: #e0d5bd;"></label>
+								<input id="s_1" type="radio" class="single__input" name="color1" checked>
 							</div>
-							<div class="single__container">
-								<p class="single__add-info">немає в наявності</p>
-								<input id="i_2" type="radio" disabled class="single__point" name="size">
-								<label for="i_2" class="single__info">s</label>
-							</div>
-							<div class="single__container">
-								<input id="i_3" type="radio" checked class="single__point" name="size">
-								<label for="i_3" class="single__info">m</label>
-							</div>
-							<div class="single__container">
-								<input id="i_4" type="radio" class="single__point" name="size">
-								<label for="i_4"  class="single__info">l</label>
+							<div class="single__elem">
+								<label for="s_2" class="single__label" style="background-color: #3D3F42;"></label>
+								<input id="s_2" type="radio" class="single__input" name="color1">
 							</div>
 						</div>
-					</div>
-					<button class="btn btn--basket">Добавить у кошик</button>
-					<p class="single__error">Вы не выбрали размер</p>
-					<div class="single__content">
-						<p>Колір: <span>молочний</span></p>
-						<p>Країна виробництва:<span>Україна</span></p>
-						<p>Склад: <span>70% шерсть, 30% шовк</span></p>
-						<p>Додаткова інформація:</p>
-					</div>
-					<div class="single__row">
-						<p>На моделі - розмір S</p>
-						<p> Зріст моделі - 170 см</p>
-					</div>
-					<div class="single__content single__content--delivery">
-						<p>Умови доставки:<a href="">Ознайомитись</a></p>
-					</div>
-					<div class="single__socials">
-						<p class="single__desc">Поділитись:</p>
-						<ul class="single__list">
-							<li><a href="" class="single__col">ig.</a></li>
-							<li><a href="http://facebook.com/sharer.php?url=<?php the_permalink(); ?>" class="single__col">fb.</a></li>
-							<li><a href="https://www.pinterest.com/pin/create/button/?url=<yourURL>&media=<yourImgSrc>" class="single__col">pint.</a></li>
-						</ul>
-					</div>
-				</div><!--end single__item-->
+						<div class="single__size">
+							<h3 class="single__line">Розмірна сітка</h3>
+							<div class="single__wrap-btn">
+								<div class="single__container">
+									<input id="i_1" type="radio" class="single__point" name="size">
+									<label for="i_1" class="single__info">xs</label>
+								</div>
+								<div class="single__container">
+									<p class="single__add-info">немає в наявності</p>
+									<input id="i_2" type="radio" disabled class="single__point" name="size">
+									<label for="i_2" class="single__info">s</label>
+								</div>
+								<div class="single__container">
+									<input id="i_3" type="radio" checked class="single__point" name="size">
+									<label for="i_3" class="single__info">m</label>
+								</div>
+								<div class="single__container">
+									<input id="i_4" type="radio" class="single__point" name="size">
+									<label for="i_4"  class="single__info">l</label>
+								</div>
+							</div>
+						</div>
+						<button class="btn btn--basket">Добавить у кошик</button>
+						<p class="single__error">Вы не выбрали размер</p>
+						<div class="single__content">
+							<p>Колір: <span>молочний</span></p>
+							<p>Країна виробництва:<span>Україна</span></p>
+							<p>Склад: <span>70% шерсть, 30% шовк</span></p>
+							<p>Додаткова інформація:</p>
+						</div>
+						<div class="single__row">
+							<p>На моделі - розмір S</p>
+							<p> Зріст моделі - 170 см</p>
+						</div>
+						<div class="single__content single__content--delivery">
+							<p>Умови доставки:<a href="">Ознайомитись</a></p>
+						</div>
+						<div class="single__socials">
+							<p class="single__desc">Поділитись:</p>
+							<ul class="single__list">
+								<li><a href="" class="single__col">ig.</a></li>
+								<li><a href="http://facebook.com/sharer.php?url=<?php the_permalink(); ?>" class="single__col">fb.</a></li>
+								<li><a href="https://www.pinterest.com/pin/create/button/?url=<yourURL>&media=<yourImgSrc>" class="single__col">pint.</a></li>
+							</ul>
+						</div>
+					</div><!--end single__item-->
+				</div>
 			</div>
-		</div>
+		</section>
 	</section>
-
 
 	<footer class="main-footer">
 		<div class="container">
 			<div class="main-footer__wrap">
 				<a href="" class="main-footer__logo">
-					<img src="img/icons/footer-logo.png" alt="">
+					<img src="img/icons/footer-logo.svg" alt="">
 				</a>
 				<ul class="main-footer__socials">
 					<li><a href="" class="main-footer__box">Fb.</a></li>
