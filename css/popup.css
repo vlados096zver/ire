@@ -41,6 +41,25 @@
 	display: none;
 }
 
+.popup--filter {
+	display: none !important;
+}
+
+.popup--filter .select__placeholder {
+	color: #3D3F42;
+	padding-left: 0px;
+}
+
+.popup--filter .select__wrap {
+	margin-top: -10px;
+	margin-bottom: 30px;
+}
+
+.popup--filter .select__wrap:after {
+	right: 2px;
+	border-color: #3D3F42;
+}
+
 .popup--active {
 	opacity: 1;
 	visibility: visible;
@@ -141,10 +160,129 @@
 	text-transform: uppercase;
 }
 
+.popup__title {
+	font-size: 14px;
+	line-height: 1.2;
+	color: #3D3F42;
+	padding-bottom: 36px;
+	font-weight: 600;
+}
+
+.popup__wrap {
+	padding-top: 65px;
+	padding-bottom: 14px;
+	margin-bottom: 40px;
+	border-bottom: 1px solid #E8E8E8;
+}
+
+.popup__item:not(:last-child) {
+	margin-bottom: 11px;
+}
+
+.popup__cat {
+	cursor: pointer;
+	user-select: none;
+	position: relative;
+	margin-bottom: 24px;
+}
+
+.popup__cat:after,
+.popup__cat:before {
+	position: absolute;
+	content: '';
+	background-color: #6B6C70;
+	transition: 0.3s opacity;
+}
+
+.popup__cat:after {
+	top: 8px;
+	right: 0px;
+	width: 18px;
+	height: 2px;
+}
+
+.popup__cat:before {
+	opacity: 1;
+	top: 0px;
+	right: 8px;
+	width: 2px;
+	height: 18px;
+}
+
+.popup__cat--active:before {
+	opacity: 0;
+}
+
+.popup__submenu {
+	margin-bottom: 22px;
+}
+
+.popup__elem {
+	display: none;
+}
+
+.popup__elem:checked + .popup__desc:after {
+	background-color: #3d3f42;
+	border-color: #3d3f42;
+}
+
+.popup__elem:checked + .popup__desc:before {
+	background-image: url(../img/icons/check.svg);
+}
+
+.popup__desc {
+	display: inline-block;
+	user-select: none;
+	position: relative;
+	font-size: 14px;
+	line-height: 1.2;
+	color: #6B6C70;
+	padding: 4px 0;
+	padding-left: 35px;
+}
+
+.popup__desc:after {
+	position: absolute;
+	content: ' ';
+	top: 2px;
+	left: 0px;
+	width: 20px;
+	height: 20px;
+	background-color: transparent;
+	border: 1px solid #cacbce;
+	border-radius: 4px;
+}
+
+.popup__desc:before {
+	position: absolute;
+	z-index: 2;
+	content: ' ';
+	top: 6px;
+	left: 3px;
+	width: 16px;
+	height: 16px;
+	background-image: none;
+	background-repeat: no-repeat;
+	background-size: 16px;
+}
+
+.popup .btn--basket {
+	max-width: 298px;
+	margin-bottom: 28px;
+}
+
 @media screen and (max-width: 840px) {
 
 .popup--menu {
 	display: block;
+}
+
+}
+
+@media screen and (max-width: 780px) {
+
+.popup--filter {
+	display: initial !important;
 }
 
 }

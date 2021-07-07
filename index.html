@@ -511,10 +511,34 @@
 								</div>
 							</div>
 						</div><!--end shop__wrap-->
+						<div class="shop__navigation">
+							<div class="shop__onpage">
+								<div class="select__wrap" id="select__view">
+							        <div class="select__placeholder">9</div>
+							        <ul class="select__list">
+							            <li class="select__item select__item--active" data-value="9">9</li>
+							            <li class="select__item" data-value="18">18</li>
+							            <li class="select__item" data-value="27">27</li>
+							        </ul>
+							    </div>
+							</div>
+							<nav class="navigation pagination" role="navigation">
+							    <div class="nav-links">
+							        <a class="page-numbers prev" href="#"></a>
+							        <a class="page-numbers" href="#">1</a>
+							        <span class="page-numbers current">2</span>
+							        <span class="page-numbers dots">…</span>
+							        <a class="page-numbers" href="#">5</a>
+							        <a class="page-numbers" href="#">6</a>
+							        <a class="page-numbers next" href="#"></a>
+							    </div>
+							</nav>
+						</div>
 					</div>
 					<div class="shop__box shop__box--aside">
 						<h4 class="shop__subtitle">Категорії</h4>
 						<ul class="shop__list">
+							<li class="shop__col shop__col--active">Всі (<span class="shop__count">1550</span>)</li>
 							<li class="shop__col">сукні (<span class="shop__count">10</span>)</li>
 							<li class="shop__col">блузи (<span class="shop__count">17</span>)</li>
 							<li class="shop__col">жакети (<span class="shop__count">11</span>)</li>
@@ -629,6 +653,101 @@
 		            <li class="select__item">eur</li>
 		        </ul>
 		    </div>
+		</div>
+	</div>
+
+	<div class="popup popup--filter">
+		<div class="popup__block">
+			<div class="main-nav__toggle">
+				<span class="line-burger line-active"></span>
+			</div>
+			<div class="popup__wrap">
+				<p class="popup__title">Фільтрувати по:</p>
+				<p class="popup__cat popup__cat--active">Категорія</p>
+				<div class="popup__submenu">
+					<div class="popup__item">
+						<input type="checkbox" id="p_1" class="popup__elem" checked>
+						<label for="p_1" class="popup__desc">сукні (<span>10</span>)</label>
+					</div>
+					<div class="popup__item">
+						<input type="checkbox" id="p_2" class="popup__elem" >
+						<label for="p_2" class="popup__desc">блузи (<span>17</span>)</label>
+					</div>
+					<div class="popup__item">
+						<input type="checkbox" id="p_3" class="popup__elem" >
+						<label for="p_2" class="popup__desc">жакети (<span>11</span>)</label>
+					</div>
+					<div class="popup__item">
+						<input type="checkbox" id="p_3" class="popup__elem" >
+						<label for="p_2" class="popup__desc">костюми (<span>10</span>)</label>
+					</div>
+					<div class="popup__item">
+						<input type="checkbox" id="p_4" class="popup__elem" >
+						<label for="p_4" class="popup__desc">спідниці (<span>8</span>)</label>
+					</div>
+					<div class="popup__item">
+						<input type="checkbox" id="p_6" class="popup__elem" >
+						<label for="p_6" class="popup__desc">штани (<span>10</span>)</label>
+					</div>
+					<div class="popup__item">
+						<input type="checkbox" id="p_7" class="popup__elem" >
+						<label for="p_7" class="popup__desc">sale (<span>15</span>)</label>
+					</div>
+				</div>
+				<p class="popup__cat">Розмір</p>
+				<div class="popup__submenu" style="display: none;">
+					<div class="popup__item">
+						<input type="checkbox" id="p_8" class="popup__elem" checked>
+						<label for="p_8" class="popup__desc">xs (<span>10</span>)</label>
+					</div>
+					<div class="popup__item">
+						<input type="checkbox" id="p_9" class="popup__elem" >
+						<label for="p_9" class="popup__desc">s (<span>17</span>)</label>
+					</div>
+					<div class="popup__item">
+						<input type="checkbox" id="p_10" class="popup__elem" >
+						<label for="p_10" class="popup__desc">m (<span>11</span>)</label>
+					</div>
+					<div class="popup__item">
+						<input type="checkbox" id="p_11" class="popup__elem" >
+						<label for="p_11" class="popup__desc">l (<span>10</span>)</label>
+					</div>
+				</div>
+				<p class="popup__cat">Ціна</p>
+				<div class="popup__submenu" style="display: none;">
+					<div class="custom-range" data-id-custom-range="2" tabindex="0">
+						<div class="custom-range__line"></div>
+					</div>
+					<div class="shop__inner">
+						<div class="shop__submenu">
+							 <div class="custom-range__inner">
+							    <p class="custom-range__min" data-id-custom-range="2">1000</p>
+							     <div class="custom-range__desc">
+								     <span class="custom-range__min-value" data-id-custom-range="2" data-base-value="1000">1000</span>uah - 
+								    <span class="custom-range__max-value" data-id-custom-range="2"  data-base-value="10000">10000</span>uah
+								</div>
+							    <p class="custom-range__max" data-id-custom-range="2">10000</p>
+							 </div>     
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="popup__title">Сортувати за:</p>
+			<div class="select__wrap" id="select__popup">
+				<div class="select__placeholder" data-mobile="Фільтрувати" data-desc="До більшої ціни">До більшої ціни</div>
+				<ul class="select__list">
+					<li class="select__item select__item--active">До більшої ціни</li>
+					<li class="select__item">До меншої ціни</li>
+					<li class="select__item" data-mob>сукні</li>
+					<li class="select__item" data-mob>блузи</li>
+					<li class="select__item" data-mob>жакети</li>
+					<li class="select__item" data-mob>костюми</li>
+					<li class="select__item" data-mob>спідниці</li>
+					<li class="select__item" data-mob>штани</li>
+					<li class="select__item" data-mob>sale</li>
+				</ul>
+			</div>
+			<button class="btn btn--basket">Застосувати</button>
 		</div>
 	</div>
 

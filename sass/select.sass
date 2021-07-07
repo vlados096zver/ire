@@ -84,16 +84,16 @@
 		transition: 0.3s background-color, 0.3s color
 
 		&:hover 
-			//background-color: #0b2347
-			//color: #fff
+			background-color: #ECEDF3
+			color: #333
 
 		&--active 
-			//background-color: darken(#f7f7f7, 10%)
-			//color: #fff
+			background-color: #3D3F42
+			color: #fff
 
-			&:hover 
-				//background-color: darken(#f7f7f7, 10%)
-				//color: #fff
+			&:hover
+				background-color: #3D3F42
+				color: #fff
 
 		&--disabled
 			text-decoration: line-through
@@ -109,6 +109,8 @@
 			display: none
 
 		&--search
+			position: sticky
+			top: 0px
 			padding: 0px
 			outline: 1px solid #333
 			input
@@ -123,8 +125,8 @@
 				
 
 		&--loader
-			position: sticky
-			top: 0px
+			// position: sticky
+			// top: 0px
 			&:before
 				content: ''
 				position: absolute
@@ -132,7 +134,7 @@
 				right: 14px
 				width: 20px
 				height: 20px
-				background-image: url(../img/icons/loader.svg)
+				background-image: url(img/icons/loader.svg)
 				background-repeat: no-repeat
 				background-size: 20px
 				background-position: center

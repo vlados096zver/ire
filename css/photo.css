@@ -1,6 +1,6 @@
 .photo {
 	overflow: hidden;
-	padding-bottom: 50px;
+	padding-bottom: 30px;
 }
 
 .photo__wrap {
@@ -11,14 +11,23 @@
 	margin-bottom: 30px;
 }
 
+.photo__wrap .slick-track {
+	display: flex;
+}
+
 .photo__item {
-	display: none;
-	height: 0px;
-	padding-top: 5%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: top center;
 	margin: 0 10px;
+	outline: none;
+	height: auto;
+	max-height: calc(100vh - 302px);
+}
+
+.photo__item img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: top center;
 }
 
 .photo__item.slick-slide {
@@ -49,16 +58,6 @@
 .photo__wrap {
 	margin: 0px;
 	margin-bottom: 25px;
-}
-
-.photo__item {
-	display: block;
-	width: 100%;
-	min-height: 300px;
-	height: 300px;
-	padding-top: 0px;
-	margin: 0px auto;
-	margin-bottom: 8px;
 }
 
 }

@@ -37,10 +37,6 @@
 	display: block;
 }
 
-.faq__holder:last-child .faq__subtitle {
-	text-decoration: underline;
-}
-
 .faq__box:not(:last-child) {
 	margin-bottom: 20px;
 }
@@ -79,6 +75,14 @@
 	border-bottom: 2px solid #9f9f9f;
 	transform: rotate(45deg);
 	transition: 0.3s transform, 0.3s top;
+}
+
+.faq__subtitle--link {
+	text-decoration: underline;
+}
+
+.faq__subtitle--link:after {
+	display: none;
 }
 
 .faq__subtitle.faq__subtitle--active:after {

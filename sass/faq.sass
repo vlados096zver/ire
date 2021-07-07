@@ -36,10 +36,6 @@
 				.faq__text
 					display: block
 
-		&:last-child
-			.faq__subtitle
-				text-decoration: underline
-
 	&__box
 		&:not(:last-child)
 			margin-bottom: 20px
@@ -76,6 +72,11 @@
 			border-bottom: 2px solid #9f9f9f
 			transform: rotate(45deg)
 			transition: 0.3s transform, 0.3s top
+
+		&--link
+			text-decoration: underline
+			&:after
+				display: none
 
 		&.faq__subtitle--active:after
 			transform: rotate(45deg) scale(-1)

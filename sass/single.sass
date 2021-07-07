@@ -30,9 +30,21 @@
 
 	&__big
 		position: relative
-		
 		img
 			display: block
+		.shop__add
+			top: 20px
+			left: 20px
+			+media(md)
+				top: 10px
+				left: 10px
+
+		.shop__icon
+			width: 28px
+			height: 32px
+			+media(md)
+				width: 18px
+				height: 18px
 
 	&__user
 		display: flex
@@ -118,15 +130,14 @@
 	&__elem
 		width: 32px
 		height: 32px
-		border: 1px dotted transparent
-		padding: 2px
 		margin: 0 8px
 		margin-bottom: 15px
-		&--active
-			border-color: #6B6C70
 
 	&__input
 		display: none
+
+		&:checked + label
+			border: 2px solid #6B6C70	
 
 	&__label
 		cursor: pointer
@@ -134,7 +145,7 @@
 		width: 100%
 		height: 100%
 		border-radius: 4px
-		
+		border: 1px solid #6B6C70		
 
 	&__line
 		cursor: pointer
@@ -168,6 +179,7 @@
 		font-size: 14px
 		line-height: 1.2
 		text-transform: uppercase
+		border-radius: 4px
 		padding: 12px 20px
 		transition: 0.3s background-color
 
@@ -223,7 +235,7 @@
 		padding-bottom: 12px
 		p
 			font-size: 14px
-			line-height: 1.2
+			line-height: 1.7
 			color: #c9c9c9
 			margin-bottom: 4px
 
@@ -252,20 +264,6 @@
 		transition: 0.3s color
 		&:hover
 			color: #3D3F42
-
-	.shop__add
-		top: 20px
-		left: 20px
-		+media(md)
-			top: 10px
-			left: 10px
-
-	.shop__icon
-		width: 28px
-		height: 32px
-		+media(md)
-			width: 18px
-			height: 18px
 
 	&__dots-list
 		display: flex
@@ -319,3 +317,14 @@
 				position: relative
 				background-color: #9f9f9f
 
+	&__all
+		font-size: 28px
+		line-height: 1.2
+		padding-bottom: 38px
+		font-weight: 600
+		+media(md)
+			font-size: 24px
+			padding-bottom: 24px
+		+media(sm)
+			font-size: 20px
+			padding-bottom: 16px

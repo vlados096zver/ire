@@ -25,11 +25,13 @@
 
 	&__logo
 		display: block
-		max-width: 55px
+		max-width: 56px
 		width: 100%
 		margin-top: -4px
 		+media(smdx)
 			max-width: 42px
+			margin-left: 50px
+
 		img
 			display: block
 			width: 100%
@@ -77,18 +79,18 @@
 			&:after
 				position: absolute
 				content: ' '
-				top: 1px
+				top: 6px
 				width: 9px
 				height: 9px
 				right: 2px
 				border-right: 2px solid #9f9f9f
 				border-bottom: 2px solid #9f9f9f
-				transform: rotate(45deg)
+				transform: rotate(45deg) scale(-1)
 				transition: 0.3s transform, 0.3s top
 
 			&.main-header__link--hide:after
-				transform: rotate(45deg) scale(-1)
-				top: 6px
+				transform: rotate(45deg) 
+				top: 1px
 
 	&__holder
 		display: flex	
@@ -215,6 +217,8 @@
 			display: none
 		&.active
 			order: -1
+			+media(smdx)
+				margin-bottom: 2px
 	li, li a
 		display: block
 		font-size: 14px	
@@ -225,7 +229,9 @@
 			color: #3D3F42
 
 
-.popup, .main-header
+
+
+.popup--menu, .main-header
 
 	.select__wrap
 		padding: 0px
@@ -241,7 +247,7 @@
 
 	.select__item
 		color: #6B6C70
-		padding: 5px 0
+		padding: 0px
 		text-transform: uppercase
 		&:hover
 			background-color: #fff

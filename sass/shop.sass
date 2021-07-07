@@ -16,55 +16,65 @@
 		+media(smdx)
 			display: none
 
-	.select__wrap
-		max-width: 290px
-		z-index: 4
-		margin-bottom: 32px
-		+media(sm)
-			max-width: 172px
-			margin-bottom: 28px
-		&:after
+	#select__filter
+		&.select__wrap
+			max-width: 290px
+			z-index: 4
+			margin-bottom: 32px
 			+media(sm)
+				max-width: 172px
+				margin-bottom: 28px
+			&:after
+				+media(sm)
+					display: none
+
+		.select__placeholder
+			border: 1px solid #ECEDF3
+			border-radius: 4px
+			+media(sm)
+				background-image: url(img/icons/filter.svg)
+				background-repeat: no-repeat
+				background-position: left 20px center
+				background-size: 16px 14px
+				font-size: 12px
+				color: #3D3F42
+				text-transform: uppercase
+				border-color: #3D3F42
+				padding-left: 48px
+				padding-right: 15px
+
+		.select__item
+			+media(sm)
+				font-size: 12px
+				color: #3D3F42
+			&[data-mob]
 				display: none
+				+media(sm)
+					display: block
+					text-transform: capitalize
 
-	.select__placeholder
-		border: 1px solid #ECEDF3
-		border-radius: 4px
-		+media(sm)
-			background-image: url(img/icons/filter.svg)
-			background-repeat: no-repeat
-			background-position: left 20px center
-			background-size: 16px 14px
-			font-size: 12px
-			color: #3D3F42
-			text-transform: uppercase
-			border-color: #3D3F42
-			padding-left: 48px
-			padding-right: 15px
-
-	.select__item
-		+media(sm)
-			font-size: 12px
-			color: #3D3F42
-		&[data-mob]
-			display: none
-			+media(sm)
-				display: block
-				text-transform: capitalize
+			&:hover
+				background-color: #ECEDF3
+				color: #333
 
 
-	.select__item--active
-		background-color: #3D3F42
-		color: #fff
-		+media(sm)
+		.select__item--active
+			background-color: #3D3F42
 			color: #fff
+			+media(sm)
+				color: #fff
 
-	.select__list
-		margin-top: 10px
-		border: 1px solid #ECEDF3
-		border-radius: 4px
-		+media(sm)	
-			border-color: #3D3F42
+			&:hover
+				background-color: #3D3F42
+				color: #fff
+
+		.select__list
+			margin-top: 10px
+			border: 1px solid #ECEDF3
+			border-radius: 4px
+			+media(sm)	
+				display: none
+				border-color: #3D3F42
 
 	&__wrap
 		display: flex
@@ -122,16 +132,17 @@
 		
 	&__holder
 		display: flex
-		padding-top: 80px
-		padding-bottom: 34px
+		padding: 80px 0
 		+media(mdx)
-			padding-top: 50px
+			padding: 50px 0
 		+media(sm)
-			padding-top: 12px
-			padding-bottom: 14px
+			padding-top: 0px
 
 	&__box
 		&--aside
+			position: sticky
+			top: 100px
+			align-self: flex-start
 			width: 290px
 			padding-top: 2px
 			+media(smdx)
@@ -160,9 +171,6 @@
 		display: flex
 		flex-direction: column
 		padding-bottom: 48px
-		&--size
-			.shop__col
-				text-transform: uppercase
 
 	&__col
 		cursor: pointer
@@ -176,11 +184,14 @@
 		&:hover
 			color: #212223
 
+		&--active
+			color: #212223
+
 	&__row
 		position: relative
 		margin-bottom: 16px
 		+media(smdx)
-			margin-bottom: 8px
+			margin-bottom: 30px
 
 	&__add
 		cursor: pointer
@@ -276,6 +287,8 @@
 		display: flex
 		align-items: center
 		margin-top: 9px
+		+media(sm)
+			margin-top: 12px
 
 	&__btn
 		position: absolute
@@ -315,7 +328,7 @@
 		z-index: 3
 		left: 50%
 		transform: translateX(-50%)
-		bottom: 0px
+		bottom: -15px
 		display: flex
 		flex-wrap: wrap
 		margin: 0 -4px
@@ -327,7 +340,6 @@
 			background-color: #E8E8E8
 			border-radius: 13px
 			margin: 0 4px
-			margin-bottom: 10px
 			&.slick-active
 				background-color: #9F9F9F
 
@@ -370,3 +382,57 @@
 			&.shop__view--active
 				.shop__rebuild
 					fill: #3D3F42
+
+	&__navigation
+		display: flex
+		align-items: center
+		margin-top: 24px
+
+		.pagination
+			margin: 0 auto
+
+	&__onpage
+		width: 100%
+		max-width: 80px
+
+		.select__wrap
+			margin-bottom: 0
+
+		.select__placeholder
+			border: 1px solid #D9DBE9
+			color: #B6B8CB
+			font-size: 14px
+			border-radius: 4px
+
+.nav-links
+	display: flex
+
+	.page-numbers
+		font-size: 14px
+		color: #3D3F42
+		padding: 3px
+		margin: 0 6px
+
+		&.current
+			color: #B6B8CB
+
+	.prev,
+	.next
+		position: relative
+
+		&:before
+			content: ''
+			position: absolute
+			top: 7px
+			left: 1px
+			width: 8px
+			height: 8px
+			border-top: 2px solid #3D3F42
+			border-left: 2px solid #3D3F42
+			transform: rotate(-45deg)
+
+	.next
+		&:before
+			left: auto
+			right: 1px
+			transform: rotate(-45deg) scale(-1)
