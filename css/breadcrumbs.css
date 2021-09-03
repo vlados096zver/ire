@@ -50,13 +50,23 @@
 	font-size: 12px;
 	padding: 0px;
 	color: #3D3F42;
-	padding: 0 24px;
+	padding: 7px 12px;
 	margin-bottom: 10px;
 }
 
 .breadcrumbs--collection .select__item a {
 	display: inherit;
 	color: inherit;
+}
+
+.breadcrumbs--collection .select__item--active {
+	background-color: #3D3F42;
+	color: #fff;
+}
+
+.breadcrumbs--collection .select__item--active:hover {
+	background-color: #3D3F42;
+	color: #fff;
 }
 
 .breadcrumbs__wrap {

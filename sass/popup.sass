@@ -41,7 +41,7 @@
 
 	&--filter
 		display: none !important
-		+media(sm)
+		+media(smdx)
 			display: initial !important
 		.select__placeholder
 			color: #3D3F42
@@ -200,7 +200,19 @@
 					background-color: #3d3f42
 					border-color: #3d3f42
 				&:before
-					background-image: url(../img/icons/check.svg)
+					background-image: url(img/icons/check.svg)
+
+	&__info
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+
+		.main-header__lang
+			margin-bottom: 0
+			min-height: auto
+
+		.language-chooser
+			position: static
 
 	&__desc
 		display: inline-block

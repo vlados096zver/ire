@@ -2,18 +2,19 @@
 
 .photo
 	overflow: hidden
-	padding-bottom: 30px
+	// padding-bottom: 30px
 	+media(sm)
 		overflow: visible
 	&__wrap
+		display: flex
 		position: relative
-		min-height: 60vh
+		// min-height: 60vh
 		margin: 0 -10px
 		margin-top: 10px
-		margin-bottom: 30px
+		// margin-bottom: 30px
 		+media(sm)
 			margin: 0px
-			margin-bottom: 25px
+			min-height: calc(100vh - 65px)
 
 		.slick-track
 			display: flex
@@ -22,8 +23,15 @@
 		margin: 0 10px
 		outline: none
 		height: auto
-		max-height: calc(100vh - 302px)
+		width: calc(100% / 3 - 20px)
+		max-height: calc(100vh - 102px)
 		+media(sm)
+			display: none
+			max-height: calc(100vh - 120px)
+			margin: 0
+
+		// +media(xs)
+		// 	max-height: calc(100vh - 308px)
 
 		img
 			display: block
@@ -34,6 +42,10 @@
 
 		&.slick-slide
 			display: block
+			width: 100%
+			+media(sm)
+				display: block
+				min-height: calc(100vh - 65px)
 
 	&__loader:before
 		content: ''

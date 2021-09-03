@@ -227,7 +227,22 @@
 }
 
 .popup__elem:checked + .popup__desc:before {
-	background-image: url(../img/icons/check.svg);
+	background-image: url(img/icons/check.svg);
+}
+
+.popup__info {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.popup__info .main-header__lang {
+	margin-bottom: 0;
+	min-height: auto;
+}
+
+.popup__info .language-chooser {
+	position: static;
 }
 
 .popup__desc {
@@ -276,10 +291,6 @@
 .popup--menu {
 	display: block;
 }
-
-}
-
-@media screen and (max-width: 780px) {
 
 .popup--filter {
 	display: initial !important;

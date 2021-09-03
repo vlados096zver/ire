@@ -258,7 +258,9 @@
 }
 
 .basket--form .cart__wrap {
-	padding-top: 24px;
+	padding: 24px 0 0;
+	overflow: unset;
+	max-height: none;
 }
 
 .basket--form .cart__item:last-child {
@@ -273,6 +275,14 @@
 .basket__success {
 	font-size: 16px;
 	padding-bottom: 15px;
+}
+
+.basket__error--all {
+	display: none;
+	font-weight: bold;
+	line-height: 1.5;
+	color: #b00;
+	margin-top: 15px;
 }
 
 @media screen and (max-width: 1050px) {
@@ -360,6 +370,8 @@
 
 .basket__input {
 	max-width: 253px;
+	border: 1px solid #d9dbe9;
+	border-radius: 4px;
 }
 
 .basket--form .info__wrap {

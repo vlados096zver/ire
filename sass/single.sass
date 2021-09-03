@@ -15,6 +15,7 @@
 			padding: 30px 0
 
 	&__item
+		position: relative
 		width: calc(100% / 2 - 40px)
 		margin: 0 20px
 		+media(md)
@@ -28,23 +29,30 @@
 			+media(lgs)
 				padding-left: 0px
 
-	&__big
-		position: relative
-		img
-			display: block
 		.shop__add
-			top: 20px
-			left: 20px
+			top: 10px
+			left: 10px
+			z-index: 1
+			width: 38px
+			height: 38px
+			background-color: #fff
+			border-radius: 50%
 			+media(md)
 				top: 10px
 				left: 10px
 
 		.shop__icon
-			width: 28px
-			height: 32px
-			+media(md)
-				width: 18px
-				height: 18px
+			width: 18px
+
+	&__tab
+		display: none
+		&--active
+			display: block
+
+	&__big
+		// position: relative
+		img
+			display: block
 
 	&__user
 		display: flex
@@ -53,18 +61,86 @@
 		margin-bottom: 40px
 		+media(md)
 			margin-bottom: 16px
+
 		.slick-track
 			display: flex
-			align-items: center
+			align-items: flex-start
+
+		.slick-arrow
+			position: absolute
+			top: calc(50% - 19px)
+			cursor: pointer
+			display: block
+			width: 38px
+			height: 38px
+			padding: 0
+			background-color: rgba(#fff, 0.6)
+			border: none
+			outline: none
+			z-index: 1
+			transition: 0.3s opacity, 0.3s visibility
+
+			&:after
+				position: absolute
+				content: ' '
+				width: 10px
+				height: 10px
+				top: calc(50% - 5px)
+				left: calc(50% - 3px)
+				border-left: 2px solid #6B6C70
+				border-top: 2px solid #6B6C70
+				transform: rotate(-45deg)
+
+			&.slick-disabled
+				opacity: 0
+				visibility: hidden
+
+		.slick-prev
+			left: 0
+
+		.slick-next
+			right: 0
+			transform: scaleX(-1)
+
 
 	&__pic
+		min-height: 300px
+		+media(xs)
+			height: auto
+
 		img
 			display: block
 			margin: 0 auto
+			+media(xs)
+				object-fit: cover
+				object-position: center
+				max-width: unset
+				width: 100%
+				height: 100%
 
 	&__slider
 		+media(md)
 			display: none
+
+		.slick-list
+			position: relative
+			margin: 0 -20px
+
+			&:after,
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				right: -5px
+				width: 25px
+				height: 100%
+				background-color: #fff
+				z-index: 1
+
+			&:after
+				right: -5px
+			&:before
+				left: -5px
 
 	&__gallery
 		// display: flex
@@ -73,6 +149,88 @@
 		.slick-track
 			display: flex
 			align-items: center
+
+
+
+	&__tab--new
+		display: flex	
+
+	&__big--new
+		position: relative
+		width: calc(100% - 150px)
+		+media(md)
+			width: 100%
+			max-width: 450px
+			margin: 0 auto
+			
+	&__gal--big
+		+media(md)
+			margin-bottom: 20px
+
+		.slick-arrow
+			position: absolute
+			top: 270px
+			cursor: pointer
+			display: block
+			width: 38px
+			height: 38px
+			padding: 0
+			background-color: rgba(#fff, 0.6)
+			border: none
+			outline: none
+			z-index: 1
+			transition: 0.3s opacity, 0.3s visibility
+			+media(lgs)
+				top: 230px
+			+media(lgxs)
+				top: 200px
+			+media(md)
+				top: 250px
+			+media(xxs)
+				top: 215px
+			+media(mini)
+				top: 170px
+
+			&:after
+				position: absolute
+				content: ' '
+				width: 10px
+				height: 10px
+				top: calc(50% - 5px)
+				left: calc(50% - 3px)
+				border-left: 2px solid #6B6C70
+				border-top: 2px solid #6B6C70
+				transform: rotate(-45deg)
+
+			&.slick-disabled
+				opacity: 0
+				visibility: hidden
+
+		.slick-prev
+			left: 0
+
+		.slick-next
+			right: 0
+			transform: scaleX(-1)
+
+	&__small
+		order: -1
+		width: 150px
+		padding-right: 15px
+		+media(md)
+			display: none
+
+		.single__box
+			width: 100%
+			height: 175px
+			margin: 0 0 15px
+
+			img
+				object-fit: contain
+				object-position: top center
+
+
+
 
 	&__box
 		width: calc(100% / 3 - 40px)
@@ -137,7 +295,8 @@
 		display: none
 
 		&:checked + label
-			border: 2px solid #6B6C70	
+			// border: 2px solid #6B6C70
+			box-shadow: 0 0 0 2px #fff, 0 0 0 3px #000
 
 	&__label
 		cursor: pointer
@@ -298,26 +457,82 @@
 					background-color: #cacbce
 
 	&__controls-list
+		position: absolute
+		bottom: 0
+		left: 0
 		display: flex
-		justify-content: center
 		align-items: center
 		width: 100%
 		height: 4px
-		margin: 0 -4px
+		background-color: #e8e8e8
+		+media(md)
+			position: static
+			margin: 0 -4px
+			background-color: transparent
+			justify-content: center
+
 		li
 			position: relative
 			cursor: pointer
 			font-size: 0px
-			width: 8px
-			height: 8px
-			background-color: #e8e8e8
-			border-radius: 13px
-			margin: 0 4px
+			flex: 1
+			height: 4px
+			background-color: inherit
+			+media(md)
+				flex: unset
+				width: 8px
+				height: 8px
+				background-color: #e8e8e8
+				border-radius: 13px
+				margin: 0 4px
+
+			&:after
+				position: absolute
+				content: ' '
+				top: calc(50% - 8px)
+				left: 0px
+				height: 16px
+				width: 100%
+				background-color: transparent
+				z-index: 1
+				+media(md)
+					display: none
 			&.slick-active
 				position: relative
-				background-color: #9f9f9f
+				+media(md)
+					background-color: #9f9f9f
 
-	&__all
+				&:before
+					position: absolute
+					content: ' '
+					top: calc(50% - 2px)
+					left: 0px
+					height: 4px
+					width: 100%
+					background-color: #cacbce
+					+media(md)
+						display: none
+
+		// display: flex
+		// justify-content: center
+		// align-items: center
+		// width: 100%
+		// height: 4px
+		// margin: 0 -4px
+		// li
+		// 	position: relative
+		// 	cursor: pointer
+		// 	font-size: 0px
+		// 	width: 8px
+		// 	height: 8px
+		// 	background-color: #e8e8e8
+		// 	border-radius: 13px
+		// 	margin: 0 4px
+		// 	&.slick-active
+		// 		position: relative
+		// 		background-color: #9f9f9f
+
+	&__relative
 		font-size: 28px
 		line-height: 1.2
 		padding-bottom: 38px
@@ -328,3 +543,6 @@
 		+media(sm)
 			font-size: 20px
 			padding-bottom: 16px
+
+	&__tabs
+		position: relative

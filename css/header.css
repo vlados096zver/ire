@@ -24,7 +24,7 @@
 
 .main-header__logo {
 	display: block;
-	max-width: 56px;
+	max-width: 54px;
 	width: 100%;
 	margin-top: -4px;
 }
@@ -36,9 +36,10 @@
 
 .main-header__list {
 	display: flex;
+	align-items: center;
 }
 
-.main-header__list li:not(:last-child) {
+.main-header__list > li:not(:last-child) {
 	margin-right: 48px;
 }
 
@@ -63,24 +64,25 @@
 
 .main-header__link--add {
 	display: block;
+	padding-right: 28px;
 }
 
 .main-header__link--add:after {
 	position: absolute;
 	content: ' ';
-	top: 6px;
+	top: 1px;
 	width: 9px;
 	height: 9px;
 	right: 2px;
 	border-right: 2px solid #9f9f9f;
 	border-bottom: 2px solid #9f9f9f;
-	transform: rotate(45deg) scale(-1);
+	transform: rotate(45deg);
 	transition: 0.3s transform, 0.3s top;
 }
 
-.main-header__link--add.main-header__link--hide:after {
-	transform: rotate(45deg);
-	top: 1px;
+.main-header__link--add.main-header__link--toggle:after {
+	transform: rotate(45deg) scale(-1);
+	top: 6px;
 }
 
 .main-header__holder {
@@ -97,8 +99,8 @@
 .main-header__box {
 	cursor: pointer;
 	display: block;
-	width: 16px;
-	height: 16px;
+	width: 25px;
+	height: 25px;
 	border: none;
 	outline: none;
 	background-color: transparent;
@@ -109,15 +111,20 @@
 	position: relative;
 	width: max-content;
 	display: flex;
-	margin-left: 24px;
+	margin-left: 20px;
 }
 
 .main-header__box--basket .main-header__icon {
 	width: 14px;
 }
 
+.main-header__box:hover .main-header__icon {
+	fill: #3D3F42;
+}
+
 .main-header__count {
 	font-size: 14px;
+	line-height: 25px;
 	color: #6B6C70;
 	padding-left: 5px;
 }
@@ -125,12 +132,10 @@
 .main-header__icon {
 	display: block;
 	width: 100%;
+	max-width: 16px;
 	height: 100%;
+	margin: 0 auto;
 	fill: #6B6C70;
-}
-
-.main-header__icon:hover {
-	fill: #3D3F42;
 }
 
 .main-header__lang {
@@ -236,6 +241,14 @@
 	color: #3D3F42;
 }
 
+.dropdown {
+	position: relative;
+}
+
+.dropdown:hover > a {
+	color: #3D3F42;
+}
+
 .popup--menu .select__wrap,
 .main-header .select__wrap {
 	padding: 0px;
@@ -296,27 +309,45 @@
 }
 
 .submenu {
-	display: none;
-	margin-left: 20px;
+	position: absolute;
+	top: 54px;
+	left: -24px;
+	border-bottom: 1px solid #CACBCE;
+	background-color: #fff;
+	width: 180px;
+	padding: 24px;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.3s opacity, 0.3s visibility;
+}
+
+.submenu--active {
+	opacity: 1;
+	visibility: visible;
+}
+
+.submenu:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 60px;
+	top: -38px;
+	left: 0;
 }
 
 .submenu li:not(:last-child) {
-	margin-bottom: 12px;
-}
-
-.submenu li:last-child {
-	margin-bottom: 28px;
+	margin: 0 0 10px;
 }
 
 .submenu li a {
-	font-size: 14px;
-	color: #9F9F9F;
-	font-weight: 300;
+	display: block;
+	font-size: 12px;
+	color: #3D3F42;
 }
 
 @media screen and (max-width: 1050px) {
 
-.main-header__list li:not(:last-child) {
+.main-header__list > li:not(:last-child) {
 	margin-right: 25px;
 }
 
@@ -324,7 +355,7 @@
 
 @media screen and (max-width: 960px) {
 
-.main-header__list li:not(:last-child) {
+.main-header__list > li:not(:last-child) {
 	margin-right: 16px;
 }
 
@@ -353,16 +384,16 @@
 	order: -1;
 }
 
-.main-header__list li:not(:last-child) {
-	margin-right: 0px;
-}
-
 .main-header__list {
 	display: none;
 	background-color: #fff;
 	padding-bottom: 3px;
 	margin-bottom: 26px;
 	border-bottom: 1px solid #E8E8E8;
+}
+
+.main-header__list > li:not(:last-child) {
+	margin-right: 0px;
 }
 
 .main-header__link {
@@ -373,16 +404,16 @@
 	margin-right: 0px;
 }
 
+.main-header__box:hover .main-header__icon {
+	fill: #6B6C70;
+}
+
 .main-header__count {
 	color: #3D3F42;
 }
 
 .main-header__icon {
 	fill: #3D3F42;
-}
-
-.main-header__icon:hover {
-	fill: #6B6C70;
 }
 
 .main-header .main-header__lang,
@@ -401,6 +432,41 @@
 
 .language-chooser li.active {
 	margin-bottom: 2px;
+}
+
+.popup--menu .select__placeholder,
+.main-header .select__placeholder {
+	margin-bottom: 4px;
+	line-height: inherit;
+}
+
+.submenu {
+	position: static;
+	display: none;
+	opacity: 1;
+	visibility: visible;
+	padding: 0;
+	border-bottom: 0;
+	width: auto;
+	margin-left: 20px;
+}
+
+.submenu:after {
+	display: none;
+}
+
+.submenu li:not(:last-child) {
+	margin-bottom: 12px;
+}
+
+.submenu li:last-child {
+	margin-bottom: 28px;
+}
+
+.submenu li a {
+	font-size: 14px;
+	color: #9F9F9F;
+	font-weight: 300;
 }
 
 }

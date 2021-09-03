@@ -16,7 +16,30 @@
 		+media(smdx)
 			display: none
 
+	&__filter
+		display: none
+		+media(smdx)
+			display: block
+			font-family: inherit
+			font-size: 14px
+			border: 1px solid #3D3F42
+			border-radius: 4px
+			background-color: transparent
+			background-image: url(img/icons/filter.svg)
+			background-repeat: no-repeat
+			background-position: left 20px center
+			background-size: 16px 14px
+			font-size: 12px
+			color: #3D3F42
+			text-transform: uppercase
+			padding: 10px 20px 11px 46px
+			padding-left: 48px
+			padding-right: 20px
+
+
 	#select__filter
+		+media(smdx)
+			display: none
 		&.select__wrap
 			max-width: 290px
 			z-index: 4
@@ -47,11 +70,6 @@
 			+media(sm)
 				font-size: 12px
 				color: #3D3F42
-			&[data-mob]
-				display: none
-				+media(sm)
-					display: block
-					text-transform: capitalize
 
 			&:hover
 				background-color: #ECEDF3
@@ -83,6 +101,29 @@
 		+media(smdx)
 			flex-direction: column
 			margin: 0px
+
+		&--relative
+			+media(smdx)
+				flex-direction: row
+				justify-content: flex-start
+				+media(xs)
+					flex-direction: column
+					margin: 0px
+			.shop__item
+				width: calc(25% - 40px)
+				+media(mdx)
+					width: calc(100% / 3 - 40px)
+				+media(smdx)
+					width: calc(100% / 3 - 40px)
+					margin: 0 20px
+					margin-bottom: 32px
+				+media(sm)
+					width: calc(50% - 40px)
+				+media(xs)
+					max-width: 300px
+					width: 100%
+					margin: 0 auto
+					margin-bottom: 16px
 
 	&__slider
 		position: relative
@@ -126,9 +167,16 @@
 	&__pic
 		display: block
 		margin: 0 2px
+		outline: none
+
 		img
 			display: block
 			margin: 0 auto
+			object-fit: cover
+			object-position: center
+			max-height: 380px
+			height: 380px
+			width: 100%
 		
 	&__holder
 		display: flex
@@ -198,13 +246,18 @@
 		position: absolute
 		display: none
 		top: 10px
-		left: 10px
-		width: 18px
-		height: 18px
+		left: 12px
+		width: 38px
+		height: 38px
 		border: none
 		outline: none
 		padding: 0px
-		background-color: transparent
+		background-color: #fff
+		border-radius: 50%
+
+		svg
+			width: 18px
+
 		&--active
 			display: block
 			.shop__icon
@@ -287,24 +340,27 @@
 		display: flex
 		align-items: center
 		margin-top: 9px
-		+media(sm)
+		+media(smdx)
 			margin-top: 12px
+			margin-bottom: 20px
 
 	&__btn
 		position: absolute
 		opacity: 0
 		visibility: hidden
-		top: 50%
-		transform: translateY(-50%)
+		top: calc(50% - 19px)
 		cursor: pointer
 		display: block
-		width: 44px
-		height: 44px
-		background-color: transparent
-		color: #ffffff
+		width: 38px
+		height: 38px
+		background-color: rgba(#fff, 0.6)
 		border: none
 		outline: none
-		transition: 0.5s opacity, 0.5s visibility
+		transition: 0.3s opacity, 0.3s visibility
+		&.slick-disabled
+			opacity: 0
+			visibility: hidden
+
 		&--dir_left,
 		&--dir_right
 			&:after
@@ -318,9 +374,12 @@
 				border-top: 2px solid #6B6C70
 				transform: rotate(-45deg)
 
+		&--dir_left
+			left: 0
+
 		&--dir_right
-			right: 0px
-			transform: translateY(-50%) scaleX(-1)
+			right: 0
+			transform: scaleX(-1)
 
 
 	&__dots-list
@@ -328,8 +387,9 @@
 		z-index: 3
 		left: 50%
 		transform: translateX(-50%)
-		bottom: -15px
+		bottom: -20px
 		display: flex
+		justify-content: center
 		flex-wrap: wrap
 		margin: 0 -4px
 		li
@@ -339,7 +399,7 @@
 			height: 5px
 			background-color: #E8E8E8
 			border-radius: 13px
-			margin: 0 4px
+			margin: 2px 4px
 			&.slick-active
 				background-color: #9F9F9F
 
@@ -347,7 +407,6 @@
 		display: none
 		+media(smdx)
 			display: flex
-			margin-bottom: 28px
 
 	&__rebuild
 		display: block
@@ -369,19 +428,19 @@
 			margin-right: 24px
 			.shop__rebuild	
 				fill: transparent
-				stroke: #6B6C70
+				stroke: #ccc
 
 			&.shop__view--active
 				.shop__rebuild
-					stroke: #3D3F42
+					stroke: #6B6C70
 
 		&--col
 			.shop__rebuild
-				fill: #6B6C70
+				fill: #ccc
 				stroke: transparent
 			&.shop__view--active
 				.shop__rebuild
-					fill: #3D3F42
+					fill: #6B6C70
 
 	&__navigation
 		display: flex

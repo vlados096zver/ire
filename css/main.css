@@ -221,6 +221,7 @@ img {
 .btn--use {
 	width: 100%;
 	max-width: 253px;
+	border-radius: 4px;
 }
 
 }
