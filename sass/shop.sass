@@ -244,7 +244,9 @@
 	&__add
 		cursor: pointer
 		position: absolute
-		display: none
+		display: flex
+		justify-content: center
+		align-items: center
 		top: 10px
 		left: 12px
 		width: 38px
@@ -256,11 +258,19 @@
 		border-radius: 50%
 
 		svg
+			display: block
 			width: 18px
+			fill: transparent
+			stroke: #3D3F42
+			stroke-width: 16px
+			transition: 0.3s fill
 
 		&--active
 			display: block
-			.shop__icon
+			svg
+				fill: #3D3F42
+		&:hover
+			svg
 				fill: #3D3F42
 		
 	&__icon
@@ -353,7 +363,8 @@
 		display: block
 		width: 38px
 		height: 38px
-		background-color: rgba(#fff, 0.6)
+		//background-color: rgba(#fff, 0.6)
+		background-color: transparent
 		border: none
 		outline: none
 		transition: 0.3s opacity, 0.3s visibility

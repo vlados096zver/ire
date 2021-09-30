@@ -22,6 +22,7 @@
 }
 
 .about__image {
+	display: none;
 	margin-bottom: 80px;
 }
 
@@ -48,13 +49,12 @@
 }
 
 .about__decor {
-	display: none;
 	min-height: 176px;
 	background-image: url(img/decor_about.svg);
 	background-repeat: repeat no-repeat;
 	background-size: auto 100%;
 	margin-top: 20px;
-	margin-bottom: 80px;
+	margin-bottom: 100px;
 }
 
 @media screen and (max-width: 960px) {
@@ -86,7 +86,8 @@
 }
 
 .about__image {
-	margin-bottom: 26px;
+	display: block;
+	margin-bottom: 28px;
 }
 
 .about__title {
@@ -108,7 +109,7 @@
 }
 
 .about__decor {
-	display: block;
+	display: none;
 }
 
 }

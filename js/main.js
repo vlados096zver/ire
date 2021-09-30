@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+
 var lang = window.location.href;
 
 $('.popup__cat').on('click', function() {
@@ -37,6 +38,10 @@ $('.main-header__link--add').on('click', function(e) {
 $('#popup-cart').on('click', function (e) {
     e.stopPropagation();
     $('.cart__holder').toggleClass('cart__holder--active');
+})
+
+$('.cart__wrap, .cart__wrap-btn').on('click', e => {
+    e.stopPropagation();
 })
 
 $('.single__line').on('click', function (e) {
